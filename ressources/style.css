@@ -1,23 +1,9 @@
-@font-face {
-	font-family: Orkney;
-	src: url("../fonts/Orkney-Light.ttf");
-	font-weight: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: Orkney;
-	src: url("../fonts/Orkney-Medium.ttf");
-	font-weight: bold;
-	font-display: swap;
-}
-
-* {
+html {
 	scroll-behavior: smooth;
 }
 
 body {
-	font-family: Orkney, SegoeUI, Futura, Helvetica, Tahoma, Geneva, sans-serif;
+	font-family: Lato, Segoe UI, Helvetica, sans-serif;
 	color: #434d4e;
 	font-size: 16px;
 	line-height: 1.7em;
@@ -41,7 +27,6 @@ nav {
 	max-width: 600px;
 	margin: auto;
 	padding: 1em;
-	height: 2em;
 }
 
 nav a img {
@@ -52,6 +37,7 @@ nav a img {
 }
 
 nav .liens a {
+	line-height: 2.5em;
 	margin: 0 1em;
 	color: #666;
 }
@@ -111,16 +97,6 @@ h2 {
 	line-height: 1.7em;
 }
 
-.retired {
-	padding-left: 1em;
-}
-
-.sous-cat {
-	margin: 3em 0;
-}
-
-
-
 
 .contacts {
 	display: flex;
@@ -131,8 +107,10 @@ h2 {
 
 .contacts div {
 	padding: 1.5em;
+	margin: auto;
 	width: calc(50% - 3em);
     min-width: 200px;
+    text-align: center;
 }
 
 .contacts h3 {
@@ -161,10 +139,6 @@ h2 {
 
 .croquis small {
 	color: #666;
-}
-
-ul li {
-	margin: 2em 0;
 }
 
 .address {
