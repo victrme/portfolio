@@ -10,17 +10,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="ressources/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="ressources/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="ressources/icons/favicon-16x16.png">
-	<link rel="manifest" href="ressources/icons/site.webmanifest">
-	<link rel="mask-icon" href="ressources/icons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=LbzLljP6xz">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=LbzLljP6xz">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=LbzLljP6xz">
+	<link rel="manifest" href="/site.webmanifest?v=LbzLljP6xz">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=LbzLljP6xz" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicon.ico?v=LbzLljP6xz">
+	<meta name="apple-mobile-web-app-title" content="victor-azevedo.me">
+	<meta name="application-name" content="victor-azevedo.me">
+	<meta name="theme-color" content="#222222">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="stylesheet" type="text/css" href="ressources/styles/style.min.css">
-	<script src="ressources/scripts/jquery-3.3.1.min.js"></script>
-	<script src="ressources/scripts/translate.min.js"></script>
-	<script src="ressources/scripts/main.min.js" defer></script>
+	<script src="ressources/scripts/main.min.js" async defer></script>
+	<script src="sw.min.js" async defer></script>
 </head>
 <body>
 	<nav>
@@ -110,6 +113,20 @@
 			<div class="item">
 				<div>
 					<div>
+						<img src="ressources/images/icons/compressed/bitcoincash.png" alt="wallet icon">
+						<a title="Bitcoin wallet - web app" href="/wallet">Bitcoin Cash Wallet</a>
+					</div>
+					<div class="tag">
+						<small class="trn">web app</small>
+						<small>2019</small>
+					</div>
+				</div>
+				<p class="trn">Un design minimaliste de portefeuille bitcoin !</p>
+			</div>
+			
+			<div class="item">
+				<div>
+					<div>
 						<img src="ressources/images/icons/compressed/mes.png" alt="mes icon">
 						<a title="Memo Enhancement Suite - Firefox extension" href="https://addons.mozilla.org/en-GB/firefox/addon/memo-enhancement-suite/">Memo Enhancement Suite</a>
 					</div>
@@ -134,43 +151,9 @@
 				</div>
 				<p class="trn">Recherche rapidement la valeur actuelle d'une quantité de crypto en tapant dans la barre de recherche.</p>
 			</div>
-
-			
-			<h3 class="trn">Retraités</h3>
-
-			<div class="retired">
-				<div class="item">
-					<div>
-						<div>
-							<img src="ressources/images/icons/compressed/productif.png" alt="productif icon">
-							<a title="Productif - Firefox extension" href="https://github.com/victorazevedo-me/productif">Productif</a>
-						</div>
-						<div class="tag">
-							<small>extension</small>
-							<small>2018</small>
-						</div>
-						
-					</div>
-					<p class="trn">Limite l'utilisation de sites chronophages en sélectionnant un quota par jour. Nécessite beaucoup de permissions et doit être revu.</p>
-				</div>
-
-				<div class="item">
-					<div>
-						<div>
-							<img src="ressources/images/icons/compressed/wsb.png" alt="wsb icon">
-							<a title="Who Searches Better - Web App" href="/wsb/index.php">Who searches better</a>
-						</div>
-						<div class="tag">
-							<small>web app</small>
-							<small>2017</small>
-						</div>
-					</div>
-					<p class="trn">Choisi les moteurs de recherches à comparer avec des mots clefs et affiche les 10 premiers résultats de chacun.</p>
-				</div>
-			</div>
 		</section>
 
-		<section id="about">	
+		<section id="about">
 	
 			<h2 class="trn">A propos</h2>
 
@@ -200,10 +183,10 @@
 	
 			<div>
 				<div class="address">	
-					<img src="ressources/images/addresses/croquis.png" alt="bch qrcode">
+					<img src="ressources/images/bchqrcode.png" alt="bch qrcode">
 					<div>
 						<h4>
-							<img src="ressources/images/icons/compressed/bitcoincash.png">
+							<img src="ressources/images/icons/compressed/bitcoincash.png" alt="bch icon">
 							<span>Bitcoin Cash</span>
 						</h4>
 						<p><b>qpazeved0</b>e2rcrz38vh0ze7xzus8jjuk8sk4y<b>snuuw</b></p>
@@ -230,8 +213,8 @@
 			</select> -->
 		</div>
 		<div>
-			<h4 class="trn">Thème</h4>
-			<select class="theme">
+			<label for="theme" class="trn">Thème</h4>
+			<select id="theme" name="theme">
 				<option value="aut">Auto</option>
 				<option value="day" class="trn">Jour</option>
 				<option value="nit" class="trn">Nuit</option>

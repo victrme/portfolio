@@ -26,12 +26,12 @@ body {
 
 a {
 	text-decoration: none;
-	color: #0087d5;
+	color: #007bc1;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: #0071af;
+	color: #005c8e;
 }
 
 nav {
@@ -53,7 +53,7 @@ nav a img {
 
 nav .liens a {
 	margin: 0 1em;
-	color: #777;
+	color: #666;
 }
 
 header {
@@ -97,8 +97,8 @@ h2 {
 }
 
 .item small {
-	color: #5cb85c;
-	border: 1px solid #5cb85c;
+	color: #418241;
+	border: 1px solid #418241;
 	border-radius: 4px;
 	font-size: .7rem;
 	margin: 0 .2em;
@@ -160,7 +160,7 @@ h2 {
 }
 
 .croquis small {
-	color: #777;
+	color: #666;
 }
 
 ul li {
@@ -192,7 +192,7 @@ ul li {
 	padding: .5em;
 	background: #fff;
 	border-radius: 4px;
-	
+	color: #444;
 }
 
 .address > div {
@@ -222,7 +222,7 @@ footer {
 	padding: 1em;
 	box-shadow: inset 0 .5rem .5rem -.5rem rgba(0,0,0,.5);
 	text-align: center;
-	color: #aaa;
+	color: #ccc;
 }
 
 footer div {
@@ -233,14 +233,25 @@ footer div {
 	margin: 0 2em;
 }
 
+
+footer div label {font-weight: bold;}
+
 footer div select {
 	margin: 0 1em;
 	outline: none;
-	border: 1px solid #ddd;
+	min-width: 70px;
 	border-radius: 4px;
 	padding: .5em .2em;
-	background: white;
+	border: 1px solid #666;
+	background: #fff;
 	color: #444;
+	transition: background .1s;
+}
+
+footer div select:focus {
+	border: 1px solid #222;
+	background: #fff;
+	color: #222;
 }
 
 @media only screen and (max-width: 500px) {
@@ -259,98 +270,120 @@ footer div select {
 
 /* NIGHTMODE LOL */
 
-body.nit {
-	background: #222;
-	color: #bbb !important;
-}
-
-body.nit nav .liens a,
-body.nit .address a {
-	color: #bbb !important;
-}
-
-body.nit nav .liens a:hover,
-body.nit .address a:hover {
-	color: #999 !important;
-}
-
-body.nit nav a img,
-body.nit .croquis img,
-body.nit blockquote,
-body.nit .address {
-	border-color: #444 !important;
-}
-
-body.nit .item small {
-	color: #499349 !important;
-	border-color: #499349 !important;
-}
-
-body.nit footer {
-	background: #111 !important;
-}
-
-body.nit footer div select {
-	border-color: #444 !important;
+body#nit {
 	background: #222;
 	color: #bbb;
+}
+
+body#nit a {
+	color: #0094e8;
+}
+
+body#nit a:hover {
+	color: #006CAA;
+}
+
+body#nit nav .liens a,
+body#nit .address a {
+	color: #bbb;
+}
+
+body#nit nav .liens a:hover,
+body#nit .address a:hover {
+	color: #999;
+}
+
+body#nit nav a img,
+body#nit .croquis img,
+body#nit blockquote,
+body#nit .address {
+	border-color: #444;
+}
+
+body#nit .croquis small {
+	color: #8a8a8a;
+}
+
+body#nit .item small {
+	color: #60c660;
+	border-color: #60c660;
+}
+
+body#nit footer {
+	background: #111;
+}
+
+body#nit footer div select {
+	border-color: #444;
+	background: #222;
+	color: #bbb;
+}
+body#nit footer div select:focus {
+	border-color: #555;
+	background: #333;
+	color: #eee;
 }
 
 
 
 /* BLACKMODE */
 
-body.bla {
+body#bla {
 	background: #000;
-	color: #bbb !important;
+	color: #bbb;
 }
 
-body.bla a {
-	color: #006CAA !important;
+body#bla a {
+	color: #0094e8;
 }
 
-body.bla a:hover {
-	color: #005688 !important;
+body#bla a:hover {
+	color: #006CAA;
 }
 
-body.bla nav .liens a,
-body.bla .address a {
-	color: #bbb !important;
+body#bla nav .liens a,
+body#bla .address a {
+	color: #bbb;
 }
 
-body.bla nav .liens a:hover,
-body.bla .address a:hover {
-	color: #999 !important;
+body#bla nav .liens a:hover,
+body#bla .address a:hover {
+	color: #999;
 }
 
-body.bla nav a img,
-body.bla .croquis img,
-body.bla blockquote,
-body.bla .address {
-	border-color: transparent !important;
+body#bla nav a img,
+body#bla .croquis img,
+body#bla blockquote,
+body#bla .address {
+	border-color: transparent;
 }
 
-body.bla img {
+body#bla img {
 	filter: brightness(.8);
 }
 
-body.bla .address {
+body#bla .address {
 	filter: brightness(.8);
 }
 
-body.bla .item small {
-	color: #555 !important;
-	border-color: #555 !important;
+body#bla .item small {
+	color: #7d7d7d;
+	border-color: #7d7d7d;
 }
 
-body.bla footer {
+body#bla footer {
 	box-shadow: none;
-	color: #666 !important;
-	background: #000 !important;
+	color: #777;
+	background: #000;
 } 
 
-body.bla footer div select {
-	border-color: #555 !important;
+body#bla footer div select {
+	border-color: #555;
 	background: #000;
-	color: #666;
+	color: #777;
+}
+body#bla footer div select:focus {
+	border-color: #666;
+	background: #111;
+	color: #aaa;
 }
