@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /base64/
-Disallow: /edt/
-Disallow: /paste/
-Disallow: /pastev2/
-Disallow: /wallet/
-
-Sitemap: https://victor-azevedo.me/sitemap.xml
