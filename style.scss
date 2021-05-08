@@ -54,32 +54,26 @@ body {
 			margin-top: 2em;
 			min-width: 250px;
 
-			> div {
-				margin: 0.5em;
-			}
-
-			a,
-			p {
+			a {
 				line-height: 30px;
 				margin: 0;
 				font-size: 1.2em;
-			}
-
-			.ext {
 				display: flex;
 				justify-content: center;
+				width: 100%;
 
-				a {
-					margin: 0 0.5em;
+				&:hover {
+					background-color: transparent;
+					text-decoration: underline;
 				}
-			}
 
-			#mail {
-				text-align: center;
-				cursor: pointer;
+				span {
+					width: 55%;
 
-				&.discovered {
-					cursor: text;
+					&:nth-child(1) {
+						width: 45%;
+						text-align: right;
+					}
 				}
 			}
 		}
@@ -135,7 +129,7 @@ body {
 				color: white;
 				background-color: $accent;
 				margin: 0 0.25em;
-				padding: 0.7em 1em;
+				padding: 0.2em 1em;
 				font-family: 'Roboto', sans-serif;
 				font-size: 0.8em;
 				transition: all 0.2s;

@@ -24,6 +24,16 @@ window.onload = () => {
 	const titres = document.querySelectorAll('.project h2') as NodeListOf<HTMLTitleElement>
 	const projects = document.querySelectorAll('.project') as NodeListOf<HTMLDivElement>
 	let lastOpen = -1
+	let maxHeight = 0
+
+	// projects.forEach((proj) => {
+	// 	const more = proj.querySelector('.more')
+	// 	const height = more.getBoundingClientRect().height
+
+	// 	maxHeight = maxHeight <= height ? height : maxHeight
+	// })
+
+	console.log(maxHeight)
 
 	titres.forEach((titre, i) => {
 		titre.addEventListener('click', () => {
@@ -38,8 +48,8 @@ window.onload = () => {
 		})
 	})
 
-	mail.addEventListener('click', () => {
-		mail.innerText = atob('dmljdG9yLmF6ZXZlZG9AbWFpbC5jb20=')
-		mail.classList.add('discovered')
-	})
+	// mail.addEventListener('click', () => {
+	// 	mail.innerText = atob('dmljdG9yLmF6ZXZlZG9AbWFpbC5jb20=')
+	// 	mail.classList.add('discovered')
+	// })
 }
