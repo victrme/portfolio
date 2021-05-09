@@ -175,12 +175,35 @@ body {
 
 		.contact,
 		.works {
-			width: 90%;
-			margin: 20% 5%;
+			width: 80%;
+			margin: 20% 10%;
 		}
 
-		.works .links {
-			flex-wrap: wrap;
+		.works {
+			.annee {
+				flex-direction: column-reverse;
+
+				p {
+					align-self: center;
+				}
+
+				.liste {
+					margin: 0;
+				}
+			}
+
+			h2 {
+				text-align: center;
+			}
+
+			.links {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.description {
+				text-align: justify;
+			}
 		}
 	}
 }
