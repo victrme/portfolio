@@ -1,9 +1,6 @@
-$accent: #89b75c;
 $big: 25px;
 
 body {
-	color: #333;
-	background-color: #fff;
 	font-family: 'Sumana', serif;
 	max-width: 1200px;
 	min-height: 90vh;
@@ -11,7 +8,6 @@ body {
 	margin: auto;
 
 	a {
-		color: #333;
 		line-height: 20px;
 		text-decoration: none;
 	}
@@ -27,8 +23,6 @@ body {
 			.icon {
 				width: 200px;
 				height: 200px;
-				background-color: $accent;
-				color: white;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -40,7 +34,6 @@ body {
 			}
 
 			.sub-text {
-				color: $accent;
 				line-height: 20px;
 				text-align: center;
 			}
@@ -68,15 +61,6 @@ body {
 					}
 				}
 			}
-
-			&:hover {
-				a {
-					color: #ccc;
-					&:hover {
-						color: #333;
-					}
-				}
-			}
 		}
 	}
 
@@ -92,7 +76,6 @@ body {
 			> p {
 				align-self: flex-end;
 				font-family: 'Roboto Mono', monospace;
-				color: $accent;
 			}
 
 			.liste {
@@ -103,7 +86,6 @@ body {
 				margin-top: 2em;
 
 				h2 {
-					color: #222;
 					line-height: $big;
 					font-size: $big;
 					cursor: pointer;
@@ -116,21 +98,9 @@ body {
 				}
 
 				&.opened {
-					h2 {
-						color: #333;
-					}
 					.more {
 						display: block;
 					}
-				}
-			}
-		}
-
-		&:hover {
-			.project h2 {
-				color: #ccc;
-				&:hover {
-					color: #333;
 				}
 			}
 		}
@@ -140,8 +110,6 @@ body {
 			align-items: center;
 
 			a {
-				color: white;
-				background-color: $accent;
 				margin: 0 0.25em;
 				padding: 0.2em 1em;
 				font-family: 'Roboto', sans-serif;
@@ -158,11 +126,10 @@ body {
 		}
 
 		.description {
+			opacity: 0.6;
 			font-family: 'Roboto', sans-serif;
-			color: #999;
 
 			a {
-				color: #999;
 				text-decoration: underline;
 			}
 		}
@@ -203,6 +170,134 @@ body {
 
 			.description {
 				text-align: justify;
+				margin: auto;
+				max-width: 350px;
+			}
+		}
+	}
+}
+
+body {
+	$text: #333;
+	$dim: #ccc;
+	$bg: #fff;
+	$accent: #89b75c;
+
+	color: $text;
+	background-color: $bg;
+
+	.icon {
+		background-color: $accent;
+		color: white;
+	}
+
+	.sub-text {
+		color: $accent;
+	}
+
+	a {
+		color: $text;
+	}
+
+	.socials {
+		&:hover {
+			a {
+				color: $dim;
+				&:hover {
+					color: $text;
+				}
+			}
+		}
+	}
+
+	.works {
+		.annee > p {
+			color: $accent;
+		}
+
+		&:hover {
+			.project h2 {
+				color: $dim;
+				&:hover {
+					color: $text;
+				}
+			}
+		}
+
+		.project {
+			.links a {
+				color: white;
+				background-color: $accent;
+			}
+
+			&.opened {
+				h2 {
+					color: $text;
+				}
+			}
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		$text: #ddd;
+		$dim: #777;
+		$bg: #2a2a2a;
+		$accent: #728b59;
+
+		color: $text;
+		background-color: $bg;
+
+		.icon {
+			background-color: $accent;
+			color: white;
+		}
+
+		.sub-text {
+			color: $accent;
+		}
+
+		a {
+			color: $text;
+		}
+
+		.socials {
+			&:hover {
+				a {
+					color: $dim;
+					&:hover {
+						color: $text;
+					}
+				}
+			}
+		}
+
+		.works {
+			.annee > p {
+				color: $accent;
+			}
+
+			&:hover {
+				.project h2 {
+					color: $dim;
+					&:hover {
+						color: $text;
+					}
+				}
+			}
+
+			.project {
+				.links a {
+					color: white;
+					background-color: $accent;
+				}
+
+				&.opened {
+					h2 {
+						color: $text;
+					}
+				}
 			}
 		}
 	}
