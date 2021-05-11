@@ -1,18 +1,18 @@
-$big: 25px;
-
 :root {
 	--text: #333;
 	--dim: #ccc;
 	--bg: #fff;
 	--accent: #89b75c;
+	--hovered: #89b75c22;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--text: #ddd;
+		--text: #cacaca;
 		--dim: #777;
 		--bg: #2a2a2a;
 		--accent: #728b59;
+		--hovered: #728b5922;
 	}
 }
 
@@ -29,6 +29,7 @@ body {
 		line-height: 20px;
 		text-decoration: none;
 		color: var(--text);
+		transition: color 0.3s, opacity 0.3s;
 	}
 
 	.contact {
@@ -62,17 +63,16 @@ body {
 		}
 
 		.socials {
-			margin-top: 2em;
+			margin-top: 4em;
 			min-width: 250px;
 
 			a {
-				margin: 1em 0;
-				line-height: $big;
-				font-size: $big;
+				margin-bottom: 1em;
+				line-height: 25px;
+				font-size: 25px;
 				display: flex;
 				justify-content: center;
 				width: 100%;
-				transition: color 0.2s;
 
 				span {
 					width: 55%;
@@ -89,6 +89,10 @@ body {
 					color: var(--dim);
 					&:hover {
 						color: var(--text);
+					}
+
+					&:active {
+						opacity: 0.6;
 					}
 				}
 			}
@@ -118,11 +122,15 @@ body {
 				margin-top: 2em;
 
 				h2 {
-					line-height: $big;
-					font-size: $big;
+					line-height: 25px;
+					font-size: 25px;
 					cursor: pointer;
 					user-select: none;
-					transition: all 0.3s;
+					transition: color 0.3s, opacity 0.3s;
+
+					&:active {
+						opacity: 0.6;
+					}
 				}
 
 				.more {
@@ -131,7 +139,7 @@ body {
 
 				&.opened {
 					h2 {
-						color: vaar(--text);
+						color: var(--text);
 					}
 
 					.more {
@@ -154,6 +162,15 @@ body {
 				white-space: nowrap;
 				color: white;
 				background-color: var(--accent);
+
+				&:hover {
+					background-color: var(--hovered);
+					color: var(--accent);
+				}
+
+				&:active {
+					opacity: 0.6;
+				}
 			}
 
 			img {
@@ -164,7 +181,8 @@ body {
 		}
 
 		.description {
-			opacity: 0.6;
+			opacity: 0.8;
+			max-width: 400px;
 			font-family: 'Roboto', sans-serif;
 
 			a {
