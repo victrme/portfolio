@@ -8,16 +8,16 @@ const trns = {
 	'A webapp where you can add multiple metronomes with different rythms to see what it sounds like': {
 		fr: 'Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne',
 	},
-	'Bombparty is a french vocabulary minigame from jklm.fun. This page finds the smallest word from a given syllable.': {
-		fr: 'Bombparty est un mini-jeu de vocabulaire français par jklm.fun. Cette page trouve les plus petit mots pour une syllabe donnée.',
+	'Bombparty is a french vocabulary minigame from jklm.fun. This page finds the smallest word from a given syllable': {
+		fr: 'Bombparty est un mini-jeu de vocabulaire français par jklm.fun. Cette page trouve les plus petit mots pour une syllabe donnée',
 	},
-	'This page guesses the next ethereum mining payout from 2miners, ethermine or hiveon. API updates might break reward in the future.':
+	'This page guesses the next ethereum mining payout from 2miners, ethermine or hiveon. API updates might break reward in the future':
 		{
-			fr: "Cette page détermine le prochain paiement d'ethereum depuis 2miners, ethermine ou hiveon.",
+			fr: "Cette page détermine le prochain paiement d'ethereum depuis 2miners, ethermine ou hiveon",
 		},
 	'Attestation is a fork from the govt lockdown travel certificate. This fork locally saves your infos and substract 25min to the creation date':
 		{
-			fr: "Attestation est une fork de celle du gouv. Elle enregistre les infos localement et soustraie 25 min a l'heure de sortie",
+			fr: "Attestation est une fork de celle du gouv. Elle enregistre les infos localement et soustraie 25 min à l'heure de sortie",
 		},
 	'Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with': {
 		fr: "Bonjourr est une page d'accueil minimaliste pour naviguateur, pour firefox et chrome. En collaboration avec ",
@@ -40,6 +40,9 @@ window.onload = () => {
 				// use innerText as trns object key
 				const subtexts = document.querySelectorAll('.sub-text .t') as NodeListOf<HTMLParagraphElement>
 				subtexts.forEach((st) => (st.innerText = trns[st.innerText].fr))
+
+				// Head
+				document.documentElement.lang = 'fr'
 			}
 		},
 

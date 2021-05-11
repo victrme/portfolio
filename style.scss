@@ -208,10 +208,13 @@ body {
 		.contact,
 		.works {
 			width: 80%;
-			margin: 20% 10%;
+			margin: auto;
+			min-height: 100vh;
 		}
 
 		.works {
+			margin-bottom: 100px;
+
 			.annee {
 				flex-direction: column-reverse;
 
@@ -231,12 +234,16 @@ body {
 			.links {
 				flex-wrap: wrap;
 				justify-content: center;
+
+				img {
+					filter: brightness(0.9);
+				}
 			}
 
 			.description {
-				text-align: justify;
+				text-align: center;
 				margin: auto;
-				max-width: 350px;
+				max-width: 300px;
 			}
 		}
 	}
