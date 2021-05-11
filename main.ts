@@ -32,6 +32,7 @@ const trns = {
 
 window.onload = () => {
 	const projects = document.querySelectorAll('.project') as NodeListOf<HTMLDivElement>
+	const mail = document.getElementById('mail')
 	let lastOpen = -1
 
 	const traduction = {
@@ -57,6 +58,38 @@ window.onload = () => {
 			}
 		},
 	}
+
+	function mailObfuscation() {
+		const addr = ['m', 'a', 'i', 'l']
+		const name = mail.children[0].innerHTML
+		let strarr = name.split('')
+
+		function discovers() {
+			setTimeout(() => {
+				//
+				// Gets star indexes
+				const indexes: number[] = []
+				for (let i = 0; i < strarr.length; i++) strarr[i] === '*' ? indexes.push(i) : ''
+
+				if (indexes.length > 0) {
+					// Randomly chooses one
+					const pointer = indexes[Math.floor(Math.random() * indexes.length)]
+
+					// Star char becomes address char
+					strarr[pointer] = addr[pointer]
+					mail.children[0].innerHTML = strarr.join('')
+
+					// Recursion while stars are present
+					discovers()
+				}
+			}, Math.floor(Math.random() * 200))
+		}
+
+		discovers()
+	}
+
+	// Mail
+	mailObfuscation()
 
 	// Check translation
 	traduction.subtext()
