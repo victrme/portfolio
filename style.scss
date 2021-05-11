@@ -1,15 +1,34 @@
 $big: 25px;
 
+:root {
+	--text: #333;
+	--dim: #ccc;
+	--bg: #fff;
+	--accent: #89b75c;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #ddd;
+		--dim: #777;
+		--bg: #2a2a2a;
+		--accent: #728b59;
+	}
+}
+
 body {
 	font-family: 'Sumana', serif;
 	max-width: 1200px;
 	min-height: 90vh;
 	display: flex;
 	margin: auto;
+	color: var(--text);
+	background-color: var(--bg);
 
 	a {
 		line-height: 20px;
 		text-decoration: none;
+		color: var(--text);
 	}
 
 	.contact {
@@ -26,6 +45,8 @@ body {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				background-color: var(--accent);
+				color: white;
 
 				h1 {
 					line-height: 1em;
@@ -36,6 +57,7 @@ body {
 			.sub-text {
 				line-height: 20px;
 				text-align: center;
+				color: var(--accent);
 			}
 		}
 
@@ -61,6 +83,15 @@ body {
 					}
 				}
 			}
+
+			&:hover {
+				a {
+					color: var(--dim);
+					&:hover {
+						color: var(--text);
+					}
+				}
+			}
 		}
 	}
 
@@ -74,6 +105,7 @@ body {
 			display: flex;
 
 			> p {
+				color: var(--accent);
 				align-self: flex-end;
 				font-family: 'Roboto Mono', monospace;
 			}
@@ -98,6 +130,10 @@ body {
 				}
 
 				&.opened {
+					h2 {
+						color: vaar(--text);
+					}
+
 					.more {
 						display: block;
 					}
@@ -116,6 +152,8 @@ body {
 				font-size: 0.8em;
 				transition: all 0.2s;
 				white-space: nowrap;
+				color: white;
+				background-color: var(--accent);
 			}
 
 			img {
@@ -131,6 +169,15 @@ body {
 
 			a {
 				text-decoration: underline;
+			}
+		}
+
+		&:hover {
+			.project h2 {
+				color: var(--dim);
+				&:hover {
+					color: var(--text);
+				}
 			}
 		}
 	}
@@ -172,132 +219,6 @@ body {
 				text-align: justify;
 				margin: auto;
 				max-width: 350px;
-			}
-		}
-	}
-}
-
-body {
-	$text: #333;
-	$dim: #ccc;
-	$bg: #fff;
-	$accent: #89b75c;
-
-	color: $text;
-	background-color: $bg;
-
-	.icon {
-		background-color: $accent;
-		color: white;
-	}
-
-	.sub-text {
-		color: $accent;
-	}
-
-	a {
-		color: $text;
-	}
-
-	.socials {
-		&:hover {
-			a {
-				color: $dim;
-				&:hover {
-					color: $text;
-				}
-			}
-		}
-	}
-
-	.works {
-		.annee > p {
-			color: $accent;
-		}
-
-		&:hover {
-			.project h2 {
-				color: $dim;
-				&:hover {
-					color: $text;
-				}
-			}
-		}
-
-		.project {
-			.links a {
-				color: white;
-				background-color: $accent;
-			}
-
-			&.opened {
-				h2 {
-					color: $text;
-				}
-			}
-		}
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		$text: #ddd;
-		$dim: #777;
-		$bg: #2a2a2a;
-		$accent: #728b59;
-
-		color: $text;
-		background-color: $bg;
-
-		.icon {
-			background-color: $accent;
-			color: white;
-		}
-
-		.sub-text {
-			color: $accent;
-		}
-
-		a {
-			color: $text;
-		}
-
-		.socials {
-			&:hover {
-				a {
-					color: $dim;
-					&:hover {
-						color: $text;
-					}
-				}
-			}
-		}
-
-		.works {
-			.annee > p {
-				color: $accent;
-			}
-
-			&:hover {
-				.project h2 {
-					color: $dim;
-					&:hover {
-						color: $text;
-					}
-				}
-			}
-
-			.project {
-				.links a {
-					color: white;
-					background-color: $accent;
-				}
-
-				&.opened {
-					h2 {
-						color: $text;
-					}
-				}
 			}
 		}
 	}
