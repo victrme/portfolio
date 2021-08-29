@@ -29,7 +29,7 @@ body {
 		line-height: 20px;
 		text-decoration: none;
 		color: var(--text);
-		transition: color 0.3s, opacity 0.3s;
+		transition: color 0.1s, opacity 0.3s;
 	}
 
 	.contact {
@@ -64,25 +64,14 @@ body {
 
 		.socials {
 			margin-top: 4em;
-			min-width: 250px;
 
 			> p,
 			> a {
-				margin-bottom: 1em;
+				margin: 0 0 1em 0;
 				line-height: 25px;
 				font-size: 25px;
 				display: flex;
-				justify-content: center;
 				width: 100%;
-
-				span {
-					width: 55%;
-
-					&:nth-child(1) {
-						width: 45%;
-						text-align: right;
-					}
-				}
 			}
 
 			&:hover {
@@ -128,7 +117,7 @@ body {
 					font-size: 25px;
 					cursor: pointer;
 					user-select: none;
-					transition: color 0.3s, opacity 0.3s;
+					transition: color 0.1s, opacity 0.3s;
 
 					&:active {
 						opacity: 0.6;

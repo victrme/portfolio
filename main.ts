@@ -61,7 +61,7 @@ window.onload = () => {
 
 	function mailObfuscation() {
 		const addr = ['m', 'a', 'i', 'l']
-		const name = mail.children[0].innerHTML
+		const name = mail.textContent
 		let strarr = name.split('')
 
 		function discovers() {
@@ -77,7 +77,7 @@ window.onload = () => {
 
 					// Star char becomes address char
 					strarr[pointer] = addr[pointer]
-					mail.children[0].innerHTML = strarr.join('')
+					mail.textContent = strarr.join('')
 
 					// Recursion while stars are present
 					discovers()
