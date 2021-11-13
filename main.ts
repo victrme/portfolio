@@ -25,8 +25,8 @@ const trns = {
 	'Encrypts and decrypts text in base64, can encode with a PIN': {
 		fr: 'Chiffre et déchiffre un texte en base64, encode aussi avec un PIN',
 	},
-	'Type your username and access your note across any device. Paste died in 2020': {
-		fr: "Choisis ton nom d'utilisateur et accèdes à tes notes sur tout tes appareils",
+	'Type your username and access your note across any device. Paste no longer works because firebase is expensve': {
+		fr: "Choisis ton nom d'utilisateur et accèdes à tes notes sur tout tes appareils. Paste ne fonctionne plus parceque Firebase est cher",
 	},
 }
 
@@ -98,7 +98,7 @@ window.onload = () => {
 	projects.forEach((project, i) => {
 		//
 		// Click
-		project.querySelector('h2').addEventListener('click', () => {
+		project.querySelector('.title').addEventListener('click', () => {
 			//
 			// Close all
 			if (lastOpen !== -1 && lastOpen !== i) {
