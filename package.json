@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
+		"@parcel/transformer-sass": "^2.0.1",
 		"cssnano": "^5.0.10",
 		"postcss": "^8.3.11",
 		"sass": "^1.43.4",
