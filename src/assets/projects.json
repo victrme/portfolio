@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Bonjourr",
+    "tools": ["js", "sass", "gulp"],
+    "homepage": "https://bonjourr.fr",
+    "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
+  },
+  {
+    "title": "Polytronome",
+    "tools": ["ts", "sass", "react"],
+    "homepage": "https://polytronome.com",
+    "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
+  },
+  {
+    "title": "La Curieuse",
+    "tools": ["next", "css", "html"],
+    "homepage": "https://savonnerielacurieuse.com",
+    "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
+  }
+]
