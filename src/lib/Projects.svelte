@@ -25,11 +25,11 @@
 	}
 
 	.list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, 450px);
-		justify-content: center;
-		margin: auto;
+		display: flex;
+		overflow-x: hidden;
+		padding: 3em;
+		margin-left: calc(20% - 40px);
 		width: 80%;
-		gap: 3em;
+		gap: 4em;
     }
 </style>

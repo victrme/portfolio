@@ -19,6 +19,7 @@
 		align-items: center;
 		text-align: left;
 		gap: 2em;
+		min-width: 550px;
     }
 
 	img {

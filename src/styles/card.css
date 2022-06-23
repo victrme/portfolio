@@ -1,8 +1,12 @@
 .card {
-    display: inline-block;
     border-radius: 20px;
     border: 2px solid #fff;
     box-shadow: 10px 10px 80px #4D709922;
     background-color: #fffd;
     padding: 3em;
+    max-width: 400px;
+}
+
+.links span {
+    transition: margin-left .3s;
 }

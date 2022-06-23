@@ -43,7 +43,6 @@
         gap: 2em;
         justify-content: space-between;
         align-items: center;
-        max-width: 500px;
 		margin-top: 2em;
 		margin-bottom: 1.5em;
     }

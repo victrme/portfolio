@@ -57,7 +57,7 @@
 	}
 
     main {
-        padding: 1em;
+        padding-bottom: 20vh;
         margin: 0 auto;
 		font-size: 20px;
         font-weight: 500;
