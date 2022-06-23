@@ -4,7 +4,7 @@
 </script>
 
 <div class="card">
-	<img src={Moi} alt="Image de moi a la montagne">
+	<img src={Moi} alt="Image de moi a la montagne" draggable="false">
 	<div class="intro">
 		<p>Hi 👋</p>
 		<p>This is <span>victor.azevedo,</span></p>

@@ -21,14 +21,15 @@
 	h2 {
 		font-size: 2em;
 		margin-bottom: 2em;
+		text-align: center;
 	}
 
 	.list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, 600px);
+		grid-template-columns: repeat(auto-fit, 450px);
 		justify-content: center;
 		margin: auto;
 		width: 80%;
-		gap: 40px;
+		gap: 3em;
     }
 </style>

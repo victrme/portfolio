@@ -1,7 +1,7 @@
 <script>
-    import gulptag from '../assets/gulp.png'
-    import jstag from '../assets/js.png'
-    import sasstag from '../assets/Sass.png'
+    import gulptag from '../assets/icons/gulp.png'
+    import jstag from '../assets/icons/javascript.svg'
+    import sasstag from '../assets/icons/sass.svg'
 
     export let title = ''
     export let desc = ''
@@ -10,72 +10,94 @@
 
 </script>
 
-<div class="card-header">
-	<h3><a href={homepage}>{title}</a></h3>
+<img class="preview" src="https://bonjourr.fr/illu.webp" alt={title + " preview"} draggable="false">
+
+<div class="card-title">
+
+	<h3>{title}</h3>
+
 	<div class="tags">
 		{#each tags as tag}
-			<img src={tag} alt="tools used"/>
+			<img src={tag} alt="tools used" draggable="false"/>
 		{/each}
 	</div>
 </div>
 
-<div class="card-main">
-	<img src="https://bonjourr.fr/illu.webp" alt={title + " preview"}>
-	<p>{desc}</p>
+<p>{desc}</p>
+
+<div class="links">
+	<a href={homepage}>homepage <span>→</span></a>
+	<a href="https://github.com">source code <span>→</span></a>
 </div>
 
 
 <style>
 
-    h3 {
-        font-size: 1.6em;
-        margin: 0;
+    img.preview {
+        width: 100%;
+        min-width: 200px;
     }
 
-    h3 a {
-        display: inline-block;
-        height: 1em;
-        color: #333333;
-        text-decoration: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    h3 a:hover {
-        color: #5399EC;
-        border-color: #5399EC;
-    }
-
-    .card-header,
-    .card-main {
+    .card-title {
         display: flex;
         gap: 2em;
         justify-content: space-between;
         align-items: center;
         max-width: 500px;
+		margin-top: 2em;
+		margin-bottom: 1.5em;
     }
 
-    .card-header {
-        margin-bottom: 2em;
+    h3 {
+        font-size: 1.4em;
+        margin: 0;
     }
 
-    .card-header span {
+    .card-title span {
         margin: 0 10px;
     }
 
-    .tags img {
-        width: 20px;
-        height: 20px;
-        margin-left: 16px;
+	.card-title .tags {
+		display: flex;
+	}
+
+    .card-title .tags img {
+        width: 1em;
+        height: 1em;
+        margin-left: .6em;
     }
 
-    .card-main img {
-        width: 50%;
-        min-width: 200px;
-    }
-
-    .card-main p {
+    p {
+        width: 300px;
         text-align: left;
+		margin: 1.5em 0;
     }
+
+	.links {
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	.links a {
+		margin: .2em 0 0 -1em;
+		padding: .2em 1em;
+		text-decoration: none;
+		border-radius: 10px;
+	}
+
+	.links span {
+		font-size: 1.2em;
+        margin-left: .3em;
+	}
+
+	.links a:hover {
+		background-color: #5399EC;
+		color: white;
+	}
+
+	.links a:hover span {
+		margin-left: 1em;
+	}
 </style>
 
 

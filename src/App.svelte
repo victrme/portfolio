@@ -34,15 +34,18 @@
         height: 100%;
         background-color: #F6FBFD;
 		overflow-x: hidden;
-		/*background-image: url("assets/grain.png");*/
 		background-size: cover;
     }
 
     * {
         font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
     }
+
+	:global(a) {
+		text-decoration: none;
+		color: inherit;
+	}
 
 	.top {
 		display: flex;
@@ -54,9 +57,9 @@
 	}
 
     main {
-        text-align: center;
         padding: 1em;
         margin: 0 auto;
+		font-size: 20px;
         font-weight: 500;
         color: #3a3b3c;
         line-height: 1.4em;
