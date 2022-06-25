@@ -1,18 +1,15 @@
 <script>
     import ProjectCard from "./ProjectCard.svelte";
     import projectList from '../../src/assets/projects.json'
-	import InlineSvg from 'svelte-inline-svg'
+    import InlineSvg from 'svelte-inline-svg'
     import arrowLeft from '../assets/arrows/left.svg'
     import arrowRight from '../assets/arrows/right.svg'
     import '../styles/card.css'
 
     let moved = 0
-    let cardDOM
-    let width
-    let disabled = false
+    let w
 
     function updateNavigation(dir) {
-        width = cardDOM?.getBoundingClientRect().width + 80
 
         if (dir > 0 && moved < projectList.length - 1) {
             moved++
@@ -30,20 +27,20 @@
 	<div class="list">
 		{#each projectList as project}
 			<div class="card"
-				 bind:this={cardDOM}
-				 style={'transform: translateX(' + -(moved * width) + 'px)'}>
+				 bind:offsetWidth={w}
+				 style={'transform: translateX(' + -(moved * (w + 80)) + 'px)'}>
 				<ProjectCard {...project}/>
 			</div>
 		{/each}
 	</div>
 
 	<div class="navigator">
-		<button on:click='{e => updateNavigation(-1, e)}'>
-			<InlineSvg src={arrowLeft} alt="" />
+		<button class={moved === 0 ? 'off' : ''} on:click='{e => updateNavigation(-1, e)}'>
+			<InlineSvg src={arrowLeft} alt=""/>
 		</button>
 
-		<button on:click='{e => updateNavigation(1, e)}'>
-			<InlineSvg src={arrowRight} alt="" />
+		<button class={moved === projectList.length - 1 ? 'off' : ''} on:click='{e => updateNavigation(1, e)}'>
+			<InlineSvg src={arrowRight} alt=""/>
 		</button>
 	</div>
 </div>
@@ -62,23 +59,35 @@
         padding: 3em;
         width: 100%;
         gap: 4em;
-        transform: translateX(-80px);
+        /*transform: translateX(-120px);*/
+    }
+
+    .navigator {
+        text-align: center;
     }
 
     .navigator button {
         border: none;
-        border-radius: 10px;
+        border-radius: 2em;
         background-color: transparent;
-        font-size: 2em;
-        line-height: 1em;
         color: #3a3b3c;
         cursor: pointer;
-        padding: 0 2em;
+        padding: .5em 2em;
     }
 
     .navigator button:hover {
         color: white;
         background-color: #5399EC;
+    }
+
+    .navigator button.off {
+        opacity: .4;
+        cursor: default;
+    }
+
+    .navigator button.off:hover {
+        color: #3a3b3c;
+        background-color: transparent;
     }
 
 

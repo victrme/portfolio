@@ -12,11 +12,13 @@
 }
 
 .navigator button svg {
-    width: 1em;
-    height: 1em;
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: #3a3b3c;
 }
 
-.navigator button:hover svg {
+.navigator button:not(.off):hover svg {
    fill: white
 }
 

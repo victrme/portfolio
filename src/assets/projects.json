@@ -23,7 +23,6 @@
   {
     "title": "Ce portfolio",
     "tools": ["next", "css", "html"],
-    "homepage": "https://savonnerielacurieuse.com",
     "source": "https://github.com/victrme/portfolio",
     "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
   }
