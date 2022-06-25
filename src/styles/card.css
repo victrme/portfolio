@@ -1,14 +1,10 @@
 .card {
+    padding: 3em;
     border-radius: 20px;
     border: 2px solid #fff;
-    box-shadow: 10px 10px 80px #4D709922;
-    background-color: #fffd;
-    padding: 3em;
+    box-shadow: .5em .5em 4em #4D709922;
+    background-color: #fffc;
     transition: transform 1s;
-}
-
-.links span {
-    transition: margin-left .3s;
 }
 
 .navigator button svg {
@@ -16,9 +12,18 @@
     width: 16px;
     height: 16px;
     fill: #3a3b3c;
+    outline: none;
+    transition: transform .1s;
 }
 
-.navigator button:not(.off):hover svg {
-   fill: white
+.navigator button:not(:disabled):hover svg {
+    transform: scale(1.1);
+    fill: white
 }
+
+.navigator button:not(:disabled):active svg {
+    transform: scale(.9);
+}
+
+
 

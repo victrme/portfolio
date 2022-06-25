@@ -11,7 +11,7 @@
 
 </script>
 
-<img class="preview" src="https://bonjourr.fr/illu.webp" alt={title + " preview"} draggable="false">
+<img alt={title + " preview"} class="preview" draggable="false" src="https://bonjourr.fr/illu.webp">
 
 <div class="card-title">
 
@@ -37,8 +37,8 @@
     img.preview {
         width: 100%;
         min-width: 200px;
-		max-width: 300px;
-		margin: auto;
+        max-width: 300px;
+        margin: auto;
     }
 
     .card-title {
@@ -46,8 +46,8 @@
         gap: 2em;
         justify-content: space-between;
         align-items: center;
-		margin-top: 2em;
-		margin-bottom: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
     }
 
     h3 {
@@ -59,9 +59,9 @@
         margin: 0 10px;
     }
 
-	.card-title .tags {
-		display: flex;
-	}
+    .card-title .tags {
+        display: flex;
+    }
 
     .card-title .tags img {
         width: 1em;
@@ -72,35 +72,31 @@
     p {
         width: 300px;
         text-align: left;
-		margin: 1.5em 0;
+        margin: 1.5em 0;
     }
 
-	.links {
-		display: inline-flex;
-		flex-direction: column;
-	}
+    .links {
+        display: inline-flex;
+        flex-direction: column;
+    }
 
 
-	.links a {
-		margin: .2em 0 0 -1em;
-		padding: .2em 1em;
-		text-decoration: none;
-		border-radius: 10px;
-	}
+    .links a {
+        margin: .2em 0 0 -1em;
+        padding: .2em 1em;
+        text-decoration: none;
+        border-radius: 2em;
+    }
 
-	.links span {
-		font-size: 1.2em;
+    .links span {
+        font-size: 1.2em;
         margin-left: .3em;
-	}
+    }
 
-	.links a:hover {
-		background-color: #5399EC;
-		color: white;
-	}
-
-	.links a:hover span {
-		margin-left: 1em;
-	}
+    .links a:hover {
+        background-color: #5399EC;
+        color: white;
+    }
 </style>
 
 

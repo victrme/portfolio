@@ -11,7 +11,7 @@
 <main>
 
 	<div class="top">
-		<About />
+		<About/>
 		<Contacts links={[
 			{text: "Github", url: "https://github.com"},
 			{text: "Telegram", url: "https://t.me/@victrm"},
@@ -19,8 +19,7 @@
 		]}/>
 	</div>
 
-	<Projects />
-
+	<Projects/>
 
 
 </main>
@@ -33,8 +32,8 @@
         margin: 0;
         height: 100%;
         background-color: #F6FBFD;
-		overflow-x: hidden;
-		background-size: cover;
+        overflow-x: hidden;
+        background-size: cover;
     }
 
     * {
@@ -42,52 +41,32 @@
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
-	:global(a) {
-		text-decoration: none;
-		color: inherit;
-	}
+    :global(a) {
+        text-decoration: none;
+        color: inherit;
+    }
 
-	.top {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 4em;
-		padding-bottom: 10vh;
-	}
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4em;
+        padding-bottom: 10vh;
+    }
 
     main {
-        padding: 20vh 4em;
+        padding: 15vh 0;
         margin: 0 auto;
-		font-size: 20px;
+        font-size: 20px;
         font-weight: 500;
         color: #3a3b3c;
         line-height: 1.4em;
-		max-width: 1200px;
-    }
-
-    img {
-        height: 16rem;
-        width: 16rem;
-    }
-
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 100;
-        line-height: 1.1;
-        margin: 2rem auto;
-        max-width: 14rem;
+        max-width: 1200px;
+        overflow-x: hidden;
     }
 
     @media (min-width: 480px) {
-        h1 {
-            max-width: none;
-        }
 
-        p {
-            max-width: none;
-        }
     }
 </style>
