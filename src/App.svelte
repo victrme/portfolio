@@ -53,16 +53,17 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 4em;
-		padding: 20vh 0 10vh 0;
+		padding-bottom: 10vh;
 	}
 
     main {
-        padding-bottom: 20vh;
+        padding: 20vh 4em;
         margin: 0 auto;
 		font-size: 20px;
         font-weight: 500;
         color: #3a3b3c;
         line-height: 1.4em;
+		max-width: 1200px;
     }
 
     img {

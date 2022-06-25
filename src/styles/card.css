@@ -4,9 +4,19 @@
     box-shadow: 10px 10px 80px #4D709922;
     background-color: #fffd;
     padding: 3em;
-    max-width: 400px;
+    transition: transform 1s;
 }
 
 .links span {
     transition: margin-left .3s;
 }
+
+.navigator button svg {
+    width: 1em;
+    height: 1em;
+}
+
+.navigator button:hover svg {
+   fill: white
+}
+

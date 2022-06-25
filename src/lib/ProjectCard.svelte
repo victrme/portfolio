@@ -6,6 +6,7 @@
     export let title = ''
     export let desc = ''
     export let homepage = ''
+    export let source = ''
     export let tags = [gulptag, jstag, sasstag]
 
 </script>
@@ -27,7 +28,7 @@
 
 <div class="links">
 	<a href={homepage}>homepage <span>→</span></a>
-	<a href="https://github.com">source code <span>→</span></a>
+	<a href={source}>source code <span>→</span></a>
 </div>
 
 
@@ -36,6 +37,8 @@
     img.preview {
         width: 100%;
         min-width: 200px;
+		max-width: 300px;
+		margin: auto;
     }
 
     .card-title {
@@ -76,6 +79,7 @@
 		display: inline-flex;
 		flex-direction: column;
 	}
+
 
 	.links a {
 		margin: .2em 0 0 -1em;
