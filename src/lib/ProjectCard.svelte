@@ -27,8 +27,12 @@
 <p>{desc}</p>
 
 <div class="links">
-	<a href={homepage}>homepage <span>→</span></a>
-	<a href={source}>source code <span>→</span></a>
+	{#if homepage}
+		<a href={homepage}>homepage <span>→</span></a>
+	{/if}
+	{#if source}
+		<a href={source}>source code <span>→</span></a>
+	{/if}
 </div>
 
 
@@ -94,8 +98,8 @@
     }
 
     .links a:hover {
-        background-color: #5399EC;
         color: white;
+        background-color: var(--color-accent);
     }
 </style>
 

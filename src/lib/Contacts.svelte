@@ -3,11 +3,9 @@
 </script>
 
 <div class="contact">
-	{#each links as {url, text}}
-		<a href={url}>
-			{text}
-		</a>
-	{/each}
+	<a href=https://github.com/victrme>Github</a>
+	<a href=https://t.me/@victrm>Telegram</a>
+	<a href=mailto:victor.azevedo@mail.com>Email</a>
 </div>
 
 
@@ -19,16 +17,15 @@
     }
 
     a {
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: 500;
         padding: 12px 80px;
-        text-align: center;
         border-radius: 10px;
     }
 
     a:hover {
         color: white;
-        background-color: #5399EC;
+        background-color: var(--color-accent);
         box-shadow: 10px 10px 20px #6662;
     }
 

@@ -1,14 +1,16 @@
 <script>
-    import '../styles/card.css'
+    import '../style.css'
     import Moi from '../assets/moi.jpg'
 </script>
 
 <div class="card">
 	<img alt="Image de moi a la montagne" draggable="false" src={Moi}>
 	<div class="intro">
-		<p>Hi 👋</p>
-		<h1>This is <span>victor.azevedo,</span></h1>
-		<p>a new dev in town !</p>
+		<h1>
+			<span>Hi 👋</span>
+			<span>This is <strong>victor.azevedo,</strong></span>
+			<span>a new dev in town !</span>
+		</h1>
 	</div>
 </div>
 
@@ -40,6 +42,10 @@
     }
 
     span {
-        color: #5399EC;
+        display: block;
+    }
+
+    strong {
+        color: var(--color-accent);
     }
 </style>

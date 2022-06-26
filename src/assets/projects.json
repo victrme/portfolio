@@ -1,29 +1,54 @@
 [
   {
     "title": "Bonjourr",
-    "tools": ["js", "sass", "gulp"],
+    "tools": [
+      "js",
+      "sass",
+      "gulp"
+    ],
     "homepage": "https://bonjourr.fr",
     "source": "https://github.com/victrme/bonjourr",
     "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
   },
   {
     "title": "Polytronome",
-    "tools": ["ts", "sass", "react"],
+    "tools": [
+      "ts",
+      "sass",
+      "react"
+    ],
     "homepage": "https://polytronome.com",
     "source": "https://github.com/victrme/polytronome",
     "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
   },
   {
     "title": "La Curieuse",
-    "tools": ["next", "css", "html"],
+    "tools": [
+      "next",
+      "css",
+      "html"
+    ],
     "homepage": "https://savonnerielacurieuse.com",
     "source": "https://github.com/victrme/nextjs-test",
     "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
   },
   {
     "title": "Ce portfolio",
-    "tools": ["next", "css", "html"],
+    "tools": [
+      "next",
+      "css",
+      "html"
+    ],
     "source": "https://github.com/victrme/portfolio",
+    "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
+  },
+  {
+    "title": "D'autres petits trucs",
+    "tools": [
+      "js",
+      "css",
+      "html"
+    ],
     "desc": "Ceci est la description du projet a l'interieur de cette carte et j'aime bien la vie pour rendre le texte plus long"
   }
 ]

@@ -1,7 +1,8 @@
 <script>
     import Contacts from "./lib/Contacts.svelte";
     import Projects from "./lib/Projects.svelte";
-    import About from "./lib/About.svelte"
+    import About from "./lib/About.svelte";
+    import './style.css'
 </script>
 
 <svelte:head>
@@ -12,39 +13,14 @@
 
 	<div class="top">
 		<About/>
-		<Contacts links={[
-			{text: "Github", url: "https://github.com"},
-			{text: "Telegram", url: "https://t.me/@victrm"},
-			{text: "Email", url: "mailto:victor.azevedo@mail.com"}
-		]}/>
+		<Contacts/>
 	</div>
 
 	<Projects/>
 
-
 </main>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
-    :global(html),
-    :global(body) {
-        margin: 0;
-        height: 100%;
-        background-color: #F6FBFD;
-        overflow-x: hidden;
-        background-size: cover;
-    }
-
-    * {
-        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    :global(a) {
-        text-decoration: none;
-        color: inherit;
-    }
 
     .top {
         display: flex;
@@ -60,7 +36,7 @@
         margin: 0 auto;
         font-size: 20px;
         font-weight: 500;
-        color: #3a3b3c;
+        color: var(--color-text);
         line-height: 1.4em;
         max-width: 1200px;
         overflow-x: hidden;
