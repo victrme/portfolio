@@ -1,4 +1,5 @@
 <script>
+    import Controls from "./lib/Controls.svelte";
     import Contacts from "./lib/Contacts.svelte";
     import Projects from "./lib/Projects.svelte";
     import About from "./lib/About.svelte";
@@ -7,6 +8,8 @@
 
 <svelte:head>
 </svelte:head>
+
+<Controls />
 
 <main>
 

@@ -1,17 +1,13 @@
 <script>
-    import gulptag from '../assets/icons/gulp.png'
-    import jstag from '../assets/icons/javascript.svg'
-    import sasstag from '../assets/icons/sass.svg'
-
     export let title = ''
-    export let desc = ''
     export let homepage = ''
     export let source = ''
-    export let tags = [gulptag, jstag, sasstag]
-
+    export let image = ''
+    export let tags = []
+    export let desc = {fr: '', en: ''}
 </script>
 
-<img alt={title + " preview"} class="preview" draggable="false" src="https://bonjourr.fr/illu.webp">
+<img alt={title + " preview"} class="preview" draggable="false" src="/previews/{image}">
 
 <div class="card-title">
 
@@ -19,12 +15,12 @@
 
 	<div class="tags">
 		{#each tags as tag}
-			<img src={tag} alt="tools used" draggable="false"/>
+			<img src="/icons/{tag}.svg" alt="{tag} icon" draggable="false"/>
 		{/each}
 	</div>
 </div>
 
-<p>{desc}</p>
+<p>{desc.en}</p>
 
 <div class="links">
 	{#if homepage}
@@ -43,6 +39,7 @@
         min-width: 200px;
         max-width: 300px;
         margin: auto;
+        border-radius: .5em;
     }
 
     .card-title {
