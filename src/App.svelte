@@ -9,7 +9,7 @@
 <svelte:head>
 </svelte:head>
 
-<Controls />
+<!-- <Controls /> -->
 
 <main>
 

@@ -15,7 +15,7 @@
 
 	<div class="tags">
 		{#each tags as tag}
-			<img src="/icons/{tag}.svg" alt="{tag} icon" draggable="false"/>
+			<img src="/icons/{tag}.svg" alt="{tag} icon" draggable="false" />
 		{/each}
 	</div>
 </div>
@@ -35,11 +35,12 @@
 <style>
 
     img.preview {
-        width: 100%;
-        min-width: 200px;
-        max-width: 300px;
         margin: auto;
+        width: 100%;
+        height: 10em;
+        object-fit: cover;
         border-radius: .5em;
+        background-color: var(--color-background);
     }
 
     .card-title {
