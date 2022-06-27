@@ -59,10 +59,6 @@
         margin: 0;
     }
 
-    .card-title span {
-        margin: 0 10px;
-    }
-
     .card-title .tags {
         display: flex;
     }
@@ -100,6 +96,17 @@
     .links a:hover {
         color: white;
         background-color: var(--color-accent);
+    }
+
+     @media (max-width: 500px) {
+        p {
+            width: 250px;
+        }
+
+        img {
+            min-width: auto;
+            max-width: auto;
+        }
     }
 </style>
 

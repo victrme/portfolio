@@ -6,17 +6,16 @@
 </script>
 
 <svelte:head>
-	<title>victor.azevedo</title>
 </svelte:head>
 
 <main>
 
 	<div class="top">
-		<About/>
-		<Contacts/>
+		<About />
+		<Contacts />
 	</div>
 
-	<Projects/>
+	<Projects />
 
 </main>
 
@@ -26,9 +25,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 4em;
         padding-bottom: 10vh;
+        gap: 4em;
     }
 
     main {
@@ -38,11 +36,35 @@
         font-weight: 500;
         color: var(--color-text);
         line-height: 1.4em;
-        max-width: 1200px;
+        max-width: 60em;
         overflow-x: hidden;
     }
 
-    @media (min-width: 480px) {
-
+    @media (max-width: 1200px) {
+        main {
+            font-size: 18px;
+            max-width: 100%;
+        }
     }
+
+    @media (max-width: 950px) {
+         main {
+            padding: 10vh 0;
+        }
+
+        .top {
+            flex-direction: column;
+        }
+    }
+
+     @media (max-width: 500px) {
+        main {
+            padding: 5vh 0 10vh 0;
+            font-size: 16px;
+        }
+
+        .top {
+            gap: 2em;
+        }
+     }
 </style>

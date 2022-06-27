@@ -1,6 +1,3 @@
-<script>
-    export let links
-</script>
 
 <div class="contact">
 	<a href=https://github.com/victrme>Github</a>
@@ -19,17 +16,30 @@
     a {
         font-size: 1.2em;
         font-weight: 500;
-        padding: 12px 80px;
-        border-radius: 10px;
+        padding: .5em 2.5em;
+        border-radius: .5em;
     }
 
     a:hover {
         color: white;
         background-color: var(--color-accent);
-        box-shadow: 10px 10px 20px #6662;
+        box-shadow: .5em .5em 1em #6662;
     }
 
     a:active {
         opacity: .8;
+    }
+
+    @media (max-width: 950px) {
+        .contact {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 740px) {
+        .contact {
+            flex-direction: column;
+        }
     }
 </style>

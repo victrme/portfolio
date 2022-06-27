@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import InlineSvg from 'svelte-inline-svg'
 
     import ProjectCard from "./ProjectCard.svelte";
@@ -8,19 +9,25 @@
 
     let cardWidth = 0
     let listWidth = 0
+    let gap = 0
+    let list
 
     let counter = 0
     let counterMax
-    let offset // en px
-    let toMove // en px
+    let toMove
+
+    const handleSizeChanges = () => {
+        gap = parseInt(window.getComputedStyle(list, null).gap)
+        counterMax = projectList.length - Math.floor(listWidth / (cardWidth + gap)) 
+    }
+
+    onMount(() => {
+        handleSizeChanges()
+        window.addEventListener('resize', handleSizeChanges)
+    })
 
     $: {
-        offset = (listWidth % (cardWidth + 81)) + 60 // le reste de la carte qui depasse de la liste (en px)
-        counterMax = projectList.length - Math.floor(listWidth / (cardWidth + 81)) // le max de deplacements pour tout afficher
-
-        if (counter === 0) toMove = 0
-        if (counter === 1) toMove = offset
-        if (counter > 1) toMove = offset + (cardWidth + 81) * (counter - 1)
+       toMove = counter === 0 ? 0 : (cardWidth + gap) * counter
     }
 
 </script>
@@ -41,7 +48,7 @@
 	</div>
 
 
-	<div bind:offsetWidth={listWidth} class="list">
+	<div bind:this={list}  bind:offsetWidth={listWidth} class="list">
 		{#each projectList as project}
 			<div class="card"
 				 bind:offsetWidth={cardWidth}
@@ -61,10 +68,12 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 3em;
+        gap: 2em;
     }
 
     h2 {
         font-size: 2em;
+        line-height: 1.1em;
         margin-bottom: .5em;
     }
 
@@ -100,5 +109,18 @@
         cursor: default;
     }
 
+    @media (max-width: 500px) {
+        .projects-header {
+            padding: 0 1em 0 2em;
+        }
 
+        .navigator button {
+            padding: .5em 1em;
+        }
+
+        .list {
+            padding: 3em 2em;
+            gap: 3em;
+        }
+    }
 </style>
