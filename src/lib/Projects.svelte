@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { onMount } from 'svelte';
     import InlineSvg from 'svelte-inline-svg'
 
@@ -26,8 +28,11 @@
         window.addEventListener('resize', handleSizeChanges)
     })
 
-    $: {
-       toMove = counter === 0 ? 0 : (cardWidth + gap) * counter
+    function moveCarousel(dir) {
+        counter += 1 * dir
+        toMove = counter === 0 ? 0 : (cardWidth + gap) * counter
+
+        list.scrollTo(toMove, 0)
     }
 
 </script>
@@ -37,11 +42,11 @@
 		<h2>Things I worked on</h2>
 
 		<div class="navigator">
-			<button disabled="{counter === 0}" name="scroll left" on:click={() => counter--} tabindex="0">
+			<button disabled="{counter === 0}" name="scroll left" on:click={() => moveCarousel(-1)} tabindex="0">
 				<InlineSvg alt="" src={arrowLeft}/>
 			</button>
 
-			<button disabled="{counter === counterMax}" name="scroll right" on:click={() => counter++} tabindex="0">
+			<button disabled="{counter === counterMax}" name="scroll right" on:click={() => moveCarousel(1)} tabindex="0">
 				<InlineSvg alt="" src={arrowRight}/>
 			</button>
 		</div>
@@ -50,9 +55,7 @@
 
 	<div bind:this={list}  bind:offsetWidth={listWidth} class="list">
 		{#each projectList as project}
-			<div class="card"
-				 bind:offsetWidth={cardWidth}
-				 style={'transform: translateX(' + -toMove + 'px)'}>
+			<div class="card" bind:offsetWidth={cardWidth} >
 				<ProjectCard {...project}/>
 			</div>
 		{/each}
@@ -79,7 +82,8 @@
 
     .list {
         display: flex;
-        overflow-x: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
         padding: 3em;
         width: 100%;
         gap: 4em;
