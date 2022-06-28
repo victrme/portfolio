@@ -33,7 +33,7 @@
 		}
 	},
 	{
-		"title": "Ce portfolio",
+		"title": "Portfolio",
 		"tags": ["svelte"],
 		"source": "https://github.com/victrme/portfolio",
 		"image": "portfolio.png",

@@ -1,130 +1,138 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
+	import { onMount } from 'svelte'
+	import InlineSvg from 'svelte-inline-svg'
 
-    import { onMount } from 'svelte';
-    import InlineSvg from 'svelte-inline-svg'
+	import ProjectCard from './ProjectCard.svelte'
+	import projectList from '../../src/assets/projects.json'
+	import arrowLeft from '../assets/arrows/left.svg'
+	import arrowRight from '../assets/arrows/right.svg'
 
-    import ProjectCard from "./ProjectCard.svelte";
-    import projectList from '../../src/assets/projects.json'
-    import arrowLeft from '../assets/arrows/left.svg'
-    import arrowRight from '../assets/arrows/right.svg'
+	let carousel
+	let cw = 0
+	let lw = 0
+	let max = 0
+	let gap = 0
+	let toMove = 0
 
-    let cardWidth = 0
-    let listWidth = 0
-    let gap = 0
-    let list
+	const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
-    let counter = 0
-    let counterMax
-    let toMove
+	onMount(() => {
+		const handleSizeChanges = () => {
+			if (carousel) {
+				gap = parseInt(window.getComputedStyle(carousel, null).gap)
+				max = carousel.scrollWidth - lw
+			}
+		}
 
-    const handleSizeChanges = () => {
-        gap = parseInt(window.getComputedStyle(list, null).gap)
-        counterMax = projectList.length - Math.floor(listWidth / (cardWidth + gap)) 
-    }
+		handleSizeChanges()
+		window.addEventListener('resize', handleSizeChanges)
+	})
 
-    onMount(() => {
-        handleSizeChanges()
-        window.addEventListener('resize', handleSizeChanges)
-    })
+	function moveCarousel(dir) {
+		toMove += (cw + gap) * dir
+		clamp(toMove, 0, max)
+		carousel.scrollTo(toMove, 0)
+	}
 
-    function moveCarousel(dir) {
-        counter += 1 * dir
-        toMove = counter === 0 ? 0 : (cardWidth + gap) * counter
-
-        list.scrollTo(toMove, 0)
-    }
-
+	function updateCarouselPos() {
+		toMove = carousel.scrollLeft
+	}
 </script>
 
 <div id="projects">
 	<div class="projects-header">
 		<h2>Things I worked on</h2>
 
-		<div class="navigator">
-			<button disabled="{counter === 0}" name="scroll left" on:click={() => moveCarousel(-1)} tabindex="0">
-				<InlineSvg alt="" src={arrowLeft}/>
+		<nav aria-label="Scroll through projects">
+			<button disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>
+				<InlineSvg alt="Arrow left" src={arrowLeft} />
 			</button>
 
-			<button disabled="{counter === counterMax}" name="scroll right" on:click={() => moveCarousel(1)} tabindex="0">
-				<InlineSvg alt="" src={arrowRight}/>
+			<button disabled={toMove + gap > max} aria-label="Scroll right" on:click={() => moveCarousel(1)}>
+				<InlineSvg alt="Arrow right" src={arrowRight} />
 			</button>
-		</div>
+		</nav>
 	</div>
 
-
-	<div bind:this={list}  bind:offsetWidth={listWidth} class="list">
+	<ul bind:this={carousel} bind:offsetWidth={lw} on:scroll={updateCarouselPos} class="carousel">
 		{#each projectList as project}
-			<div class="card" bind:offsetWidth={cardWidth} >
-				<ProjectCard {...project}/>
-			</div>
+			<li class="card" bind:offsetWidth={cw}>
+				<ProjectCard {...project} />
+			</li>
 		{/each}
-	</div>
-
-
+	</ul>
 </div>
 
 <style>
+	.projects-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 3em;
+		gap: 2em;
+	}
 
-    .projects-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 3em;
-        gap: 2em;
-    }
+	h2 {
+		font-size: 2em;
+		line-height: 1.1em;
+		margin-bottom: 0.5em;
+	}
 
-    h2 {
-        font-size: 2em;
-        line-height: 1.1em;
-        margin-bottom: .5em;
-    }
+	nav {
+		text-align: center;
+	}
 
-    .list {
-        display: flex;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        padding: 3em;
-        width: 100%;
-        gap: 4em;
-    }
+	nav button {
+		border: none;
+		border-radius: 2em;
+		background-color: transparent;
+		color: var(--text);
+		cursor: pointer;
+		padding: 0.5em 2em;
+	}
 
-    .navigator {
-        text-align: center;
-    }
+	nav button:not(:disabled):hover {
+		color: white;
+		background-color: var(--color-accent);
+		box-shadow: 0.1em 0.1em 1em var(--color-shadow);
+	}
 
-    .navigator button {
-        border: none;
-        border-radius: 2em;
-        background-color: transparent;
-        color: var(--text);
-        cursor: pointer;
-        padding: .5em 2em;
-    }
+	nav button:disabled {
+		opacity: 0.4;
+		cursor: default;
+	}
 
-    .navigator button:not(:disabled):hover {
-        color: white;
-        background-color: var(--color-accent);
-        box-shadow: .1em .1em 1em var(--color-shadow);
-    }
+	ul.carousel {
+		display: flex;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		width: calc(100% - 6em);
+		padding: 3em;
+		padding-bottom: 4em;
+		margin: 0%;
+		gap: 4em;
+		list-style: none;
+	}
 
-    .navigator button:disabled {
-        opacity: .4;
-        cursor: default;
-    }
+	@media (max-width: 500px) {
+		.projects-header {
+			padding: 0 1em 0 2em;
+		}
 
-    @media (max-width: 500px) {
-        .projects-header {
-            padding: 0 1em 0 2em;
-        }
+		nav button {
+			padding: 0.5em 1em;
+		}
 
-        .navigator button {
-            padding: .5em 1em;
-        }
+		h2 {
+			margin: 0;
+		}
 
-        .list {
-            padding: 3em 2em;
-            gap: 3em;
-        }
-    }
+		ul.carousel {
+			width: calc(100% - 3em);
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+			gap: 2em;
+		}
+	}
 </style>
