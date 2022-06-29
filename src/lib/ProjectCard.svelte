@@ -7,14 +7,14 @@
 	export let desc = { fr: '', en: '' }
 </script>
 
-<img alt={title + ' preview'} class="preview" draggable="false" src="/previews/{image}" />
+<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{image}" />
 
 <div class="card-title">
 	<h3>{title}</h3>
 
 	<div class="tags" aria-label="Made with">
 		{#each tags as tag}
-			<img src="/icons/{tag}.svg" alt={tag} draggable="false" />
+			<img src="./icons/{tag}.svg" alt={tag} draggable="false" />
 		{/each}
 	</div>
 </div>
@@ -23,10 +23,10 @@
 
 <div class="links">
 	{#if homepage}
-		<a href={homepage} aria-label="{title} homepage" draggable="false">homepage <span>→</span></a>
+		<a href={homepage} aria-label="{title} homepage" draggable="false">homepage <span>🡥</span></a>
 	{/if}
 	{#if source}
-		<a href={source} aria-label="{title} source code on Github" draggable="false">source code <span>→</span></a>
+		<a href={source} aria-label="{title} source code on Github" draggable="false">source code <span>🡥</span></a>
 	{/if}
 </div>
 
@@ -76,25 +76,30 @@
 	}
 
 	.links a {
-		margin: 0.2em 0 0 -1em;
-		padding: 0.2em 1em;
-		text-decoration: none;
-		border-radius: 2em;
+		width: fit-content;
+		margin-top: 0.4em;
+		border-bottom: 0.14em solid transparent;
 	}
 
 	.links span {
-		font-size: 1.2em;
-		margin-left: 0.3em;
+		opacity: 0;
+		font-size: 0.6em;
+		font-weight: 700;
+		vertical-align: super;
 	}
 
 	.links a:hover {
-		color: white;
-		background-color: var(--color-accent);
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+
+	.links a:hover span {
+		opacity: 1;
 	}
 
 	@media (max-width: 500px) {
 		p {
-			width: calc(100vw - 7em);
+			width: calc(100vw - 8em);
 		}
 
 		img {

@@ -23,13 +23,13 @@
 	},
 	{
 		"title": "La Curieuse",
-		"tags": ["nextjs"],
+		"tags": ["nextjs", "html"],
 		"homepage": "https://savonnerielacurieuse.com",
 		"source": "https://github.com/victrme/nextjs-test",
 		"image": "lacurieuse.png",
 		"desc": {
-			"fr": "Une page vitrine pour la savonnerie La Curieuse. bref.",
-			"en": "A showcase website for the savonnerie La Curieuse. bref."
+			"fr": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
+			"en": "A single page showcase website for the savonnerie La Curieuse. My first responsive website ! 😊"
 		}
 	},
 	{
@@ -38,17 +38,18 @@
 		"source": "https://github.com/victrme/portfolio",
 		"image": "portfolio.png",
 		"desc": {
-			"fr": "Cette version de mon portfolio a ete fait pour tester Svelte. Rien d'extravagant, va droit au but.",
-			"en": "This version of my portfolio was made to test out Svelte. Nothing fancy, straight to the point."
+			"fr": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
+			"en": "This version of my portfolio was made to test out Svelte. Lightweight, improved a11y from previous versions."
 		}
 	},
 	{
-		"title": "D'autres petits trucs",
+		"title": "Paste, reward, attestation, & more",
 		"tags": ["javascript", "html"],
 		"image": "portfolio.png",
+		"source": "https://github.com/victrme?tab=repositories",
 		"desc": {
-			"fr": "D'autres plus petits projets.",
-			"en": "Other smaller projects."
+			"fr": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos.",
+			"en": "Other mini web apps. You can get the codes and descriptions on their repos."
 		}
 	}
 ]
