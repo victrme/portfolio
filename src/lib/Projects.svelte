@@ -1,12 +1,10 @@
 <script>
-	// @ts-nocheck
 	import { onMount } from 'svelte'
-	import InlineSvg from 'svelte-inline-svg'
 
 	import ProjectCard from './ProjectCard.svelte'
 	import projectList from '../../src/assets/projects.json'
-	import arrowLeft from '../assets/arrows/left.svg'
-	import arrowRight from '../assets/arrows/right.svg'
+	import Left from './arrows/Left.svelte'
+	import Right from './arrows/Right.svelte'
 
 	let carousel
 	let cw = 0
@@ -46,11 +44,11 @@
 
 		<nav aria-label="Scroll through projects">
 			<button disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>
-				<InlineSvg alt="Arrow left" src={arrowLeft} />
+				<Left />
 			</button>
 
 			<button disabled={toMove + gap > max} aria-label="Scroll right" on:click={() => moveCarousel(1)}>
-				<InlineSvg alt="Arrow right" src={arrowRight} />
+				<Right />
 			</button>
 		</nav>
 	</div>
@@ -109,9 +107,9 @@
 		scroll-behavior: smooth;
 		width: calc(100% - 6em);
 		padding: 3em;
-		padding-bottom: 4em;
+		padding-bottom: 3em;
 		margin: 0%;
-		gap: 4em;
+		gap: 3em;
 		list-style: none;
 	}
 

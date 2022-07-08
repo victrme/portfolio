@@ -1,4 +1,6 @@
 <script>
+	import Right from './arrows/Right.svelte'
+
 	export let title = ''
 	export let homepage = ''
 	export let source = ''
@@ -23,10 +25,10 @@
 
 <div class="links">
 	{#if homepage}
-		<a href={homepage} aria-label="{title} homepage" draggable="false">homepage <span>🡥</span></a>
+		<a href={homepage} aria-label="{title} homepage" draggable="false">homepage <span><Right /></span></a>
 	{/if}
 	{#if source}
-		<a href={source} aria-label="{title} source code on Github" draggable="false">source code <span>🡥</span></a>
+		<a href={source} aria-label="{title} source code on Github" draggable="false">source code <span><Right /></span></a>
 	{/if}
 </div>
 
@@ -78,14 +80,14 @@
 	.links a {
 		width: fit-content;
 		margin-top: 0.4em;
-		border-bottom: 0.14em solid transparent;
+		border-bottom: 0.14em solid var(--color-shadow);
 	}
 
 	.links span {
-		opacity: 0;
+		display: none;
 		font-size: 0.6em;
 		font-weight: 700;
-		vertical-align: super;
+		vertical-align: sub;
 	}
 
 	.links a:hover {
@@ -94,7 +96,8 @@
 	}
 
 	.links a:hover span {
-		opacity: 1;
+		display: inline-block;
+		margin-left: 0.5em;
 	}
 
 	@media (max-width: 500px) {

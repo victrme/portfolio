@@ -30,12 +30,12 @@ a {
 	padding: 3em;
 	border-radius: 20px;
 	border: 2px solid #fff;
-	box-shadow: 0.5em 0.5em 4em var(--color-shadow);
+	box-shadow: 0.5em 0.5em 3em var(--color-shadow);
 	background-color: #fffc;
 	transition: transform 0.6s;
 }
 
-nav button svg {
+svg {
 	display: block;
 	width: 16px;
 	height: 16px;
@@ -49,6 +49,10 @@ nav button:not(:disabled):hover svg {
 
 nav button:not(:disabled):active svg {
 	transform: scale(0.8);
+}
+
+.links span svg {
+	fill: var(--color-accent);
 }
 
 @media (max-width: 500px) {

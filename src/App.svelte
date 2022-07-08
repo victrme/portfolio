@@ -39,16 +39,16 @@
 		overflow-x: hidden;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1200px) or (max-height: 901px) {
 		main {
-			font-size: 18px;
-			max-width: 100%;
+			font-size: 17px;
 		}
 	}
 
 	@media (max-width: 950px) {
 		main {
 			padding: 10vh 0;
+			width: 100%;
 		}
 
 		.top {

@@ -43,9 +43,9 @@
 		}
 	},
 	{
-		"title": "Paste, reward, attestation, & more",
+		"title": "Paste, reward & more",
 		"tags": ["javascript", "html"],
-		"image": "portfolio.png",
+		"image": "others.png",
 		"source": "https://github.com/victrme?tab=repositories",
 		"desc": {
 			"fr": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos.",

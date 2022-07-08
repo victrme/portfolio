@@ -1,10 +1,10 @@
 <script>
 	import '../style.css'
-	import profil from '../assets/moi.jpg'
+	import selfie from '../assets/selfie.jpg'
 </script>
 
 <div class="card">
-	<img src={profil} alt="Moi a la montagne" draggable="false" />
+	<img src={selfie} alt="A la montagne" draggable="false" />
 	<h1>
 		<span>Hi 👋</span>
 		<span>This is <strong>victor.azevedo,</strong></span>
