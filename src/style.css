@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+
+* {
+	font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+}
+
+:root {
+	--color-text: #3a3b3c;
+	--color-accent: #458ee8;
+	--color-shadow: #4d709922;
+	--color-background: #f6fbfd;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+	background-color: var(--color-background);
+	overflow-x: hidden;
+	background-size: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.card {
+	padding: 3em;
+	border-radius: 20px;
+	border: 2px solid #fff;
+	box-shadow: 0.5em 0.5em 3em var(--color-shadow);
+	background-color: #fffc;
+	transition: transform 0.6s;
+}
+
+svg {
+	display: block;
+	width: 16px;
+	height: 16px;
+	fill: var(--text);
+	outline: none;
+}
+
+nav button:not(:disabled):hover svg {
+	fill: white;
+}
+
+nav button:not(:disabled):active svg {
+	transform: scale(0.8);
+}
+
+.links span svg {
+	fill: var(--color-accent);
+}
+
+@media (max-width: 500px) {
+	.card {
+		padding: 2em;
+	}
+}
