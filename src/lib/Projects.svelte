@@ -107,8 +107,8 @@
 		scroll-behavior: smooth;
 		width: calc(100% - 6em);
 		padding: 3em;
-		padding-bottom: 3em;
 		margin: 0%;
+		margin-bottom: 3em;
 		gap: 3em;
 		list-style: none;
 	}

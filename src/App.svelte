@@ -6,7 +6,9 @@
 	import './style.css'
 </script>
 
-<svelte:head />
+<svelte:head>
+	<title>Hi 👋 this is victor !</title>
+</svelte:head>
 
 <!-- <Controls /> -->
 
@@ -29,7 +31,7 @@
 	}
 
 	main {
-		padding: 15vh 0;
+		padding-top: 15vh;
 		margin: 0 auto;
 		font-size: 20px;
 		font-weight: 500;
@@ -47,7 +49,7 @@
 
 	@media (max-width: 950px) {
 		main {
-			padding: 10vh 0;
+			padding-top: 10vh;
 			width: 100%;
 		}
 
@@ -58,7 +60,7 @@
 
 	@media (max-width: 500px) {
 		main {
-			padding: 5vh 0 10vh 0;
+			padding-top: 5vh;
 			font-size: 16px;
 		}
 	}
