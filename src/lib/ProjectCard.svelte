@@ -9,7 +9,7 @@
 	export let desc = { fr: '', en: '' }
 </script>
 
-<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{image}" />
+<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{image}.webp" />
 
 <div class="card-title">
 	<h3>{title}</h3>

@@ -1,6 +1,6 @@
 <script>
 	import '../style.css'
-	import selfie from '../assets/selfie.jpg'
+	import selfie from '../assets/selfie.webp'
 </script>
 
 <div class="card">

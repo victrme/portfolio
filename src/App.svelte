@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Hi 👋 this is victor !</title>
+	<title>Hi ! This is victor 👋</title>
 </svelte:head>
 
 <!-- <Controls /> -->
