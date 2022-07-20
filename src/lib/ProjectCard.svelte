@@ -80,7 +80,7 @@
 	.links a {
 		width: fit-content;
 		margin-top: 0.4em;
-		border-bottom: 0.14em solid var(--color-shadow);
+		border-bottom: 0.14em solid var(--color-underline);
 	}
 
 	.links span {

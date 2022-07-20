@@ -13,6 +13,8 @@
 <!-- <Controls /> -->
 
 <main>
+	<Controls />
+
 	<div class="top">
 		<About />
 		<Contacts />
@@ -31,6 +33,7 @@
 	}
 
 	main {
+		position: relative;
 		padding-top: 15vh;
 		margin: 0 auto;
 		font-size: 20px;
