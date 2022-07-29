@@ -1,20 +1,26 @@
 <script>
+	import { _, getLocaleFromNavigator } from 'svelte-i18n'
+	import { setupI18n } from './services/i18n'
+
 	import Controls from './lib/Controls.svelte'
 	import Contacts from './lib/Contacts.svelte'
-	import Projects from './lib/Projects.svelte'
+	import Projects from './lib/Projects/Projects.svelte'
 	import About from './lib/About.svelte'
 	import './style.css'
+
+	setupI18n({ withLocale: getLocaleFromNavigator().includes('fr') ? 'fr' : 'en' })
 </script>
 
 <svelte:head>
-	<title>Hi ! This is victor 👋</title>
+	<title>{$_('page.title')}</title>
+	<meta name="description" content={$_('page.desc')} />
 </svelte:head>
 
-<!-- <Controls /> -->
+<header>
+	<Controls />
+</header>
 
 <main>
-	<Controls />
-
 	<div class="top">
 		<About />
 		<Contacts />
@@ -34,7 +40,7 @@
 
 	main {
 		position: relative;
-		padding-top: 15vh;
+		padding-top: 13vh;
 		margin: 0 auto;
 		font-size: 20px;
 		font-weight: 500;
@@ -63,7 +69,6 @@
 
 	@media (max-width: 500px) {
 		main {
-			padding-top: 5vh;
 			font-size: 16px;
 		}
 	}

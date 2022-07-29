@@ -1,0 +1,30 @@
+{
+	"page": {
+		"title": "Hi ! This is victor 👋",
+		"desc": "I'm a new front-end dev looking to join the ranks ! Here are the projects I worked on the last 3-4 years"
+	},
+
+	"header": {
+		"lang": "Text in ",
+		"theme": "and theme is ",
+		"dark": "dark",
+		"light": "light"
+	},
+
+	"about": {
+		"greetings": "Hi 👋",
+		"this": "This is ",
+		"new": "a new dev in town !"
+	},
+
+	"projects": {
+		"title": "Projects I worked on",
+		"home": "homepage",
+		"code": "source code",
+		"bonjourr": "Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.",
+		"polytronome": "A webapp where you can add multiple metronomes with different rythms to see what it sounds like.",
+		"lacurieuse": "A single page showcase website for the savonnerie La Curieuse. My first responsive website ! 😊",
+		"portfolio": "This version of my portfolio was made to test out Svelte. Lightweight, improved a11y from previous versions.",
+		"others": "Other mini web apps. You can get the codes and descriptions on their repos."
+	}
+}

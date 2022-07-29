@@ -1,14 +1,15 @@
 <script>
-	import '../style.css'
+	import { _ } from 'svelte-i18n'
 	import selfie from '../assets/selfie.webp'
+	import '../style.css'
 </script>
 
 <div class="card">
 	<img src={selfie} alt="A la montagne" draggable="false" />
 	<h1>
-		<span>Hi 👋</span>
-		<span>This is <strong>victor.azevedo,</strong></span>
-		<span>a new dev in town !</span>
+		<span>{$_('about.greetings')}</span>
+		<span>{$_('about.this')} <strong>victor.azevedo,</strong></span>
+		<span>{$_('about.new')}</span>
 	</h1>
 </div>
 
