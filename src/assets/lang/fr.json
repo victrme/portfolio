@@ -1,0 +1,30 @@
+{
+	"page": {
+		"title": "Salut ! C'est victor 👋",
+		"desc": "Un nouveau dev front-end pret a rejoindre les rangs ! Voici les projets sur lequels j'ai travaille ces 3-4 dernieres annees."
+	},
+
+	"header": {
+		"lang": "Texte en ",
+		"theme": "avec un theme ",
+		"dark": "sombre",
+		"light": "clair"
+	},
+
+	"about": {
+		"greetings": "Salut 👋",
+		"this": "C'est ",
+		"new": "un nouveau dev en ville !"
+	},
+
+	"projects": {
+		"title": "Quelques projets",
+		"home": "vers l'app",
+		"code": "code source",
+		"bonjourr": "Bonjourr est une page d'accueil minimaliste pour naviguateur, pour firefox et chrome. En collaboration avec Tahoe Beetschen.",
+		"polytronome": "Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne.",
+		"lacurieuse": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
+		"portfolio": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
+		"others": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos."
+	}
+}

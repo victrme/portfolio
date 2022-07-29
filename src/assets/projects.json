@@ -1,55 +1,35 @@
 [
 	{
+		"_id": "bonjourr",
 		"title": "Bonjourr",
 		"tags": ["javascript", "sass", "gulp"],
 		"homepage": "https://bonjourr.fr",
-		"source": "https://github.com/victrme/bonjourr",
-		"image": "bonjourr",
-		"desc": {
-			"fr": "Bonjourr est une page d'accueil minimaliste pour naviguateur, pour firefox et chrome. En collaboration avec Tahoe Beetschen.",
-			"en": "Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen."
-		}
+		"source": "https://github.com/victrme/bonjourr"
 	},
 	{
+		"_id": "polytronome",
 		"title": "Polytronome",
 		"tags": ["typescript", "sass", "react"],
 		"homepage": "https://polytronome.com",
-		"source": "https://github.com/victrme/polytronome",
-		"image": "polytronome",
-		"desc": {
-			"fr": "Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne.",
-			"en": "A webapp where you can add multiple metronomes with different rythms to see what it sounds like."
-		}
+		"source": "https://github.com/victrme/polytronome"
 	},
 	{
+		"_id": "lacurieuse",
 		"title": "La Curieuse",
 		"tags": ["nextjs", "html"],
 		"homepage": "https://savonnerielacurieuse.com",
-		"source": "https://github.com/victrme/nextjs-test",
-		"image": "lacurieuse",
-		"desc": {
-			"fr": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
-			"en": "A single page showcase website for the savonnerie La Curieuse. My first responsive website ! 😊"
-		}
+		"source": "https://github.com/victrme/nextjs-test"
 	},
 	{
+		"_id": "portfolio",
 		"title": "Portfolio",
 		"tags": ["svelte"],
-		"source": "https://github.com/victrme/portfolio",
-		"image": "portfolio",
-		"desc": {
-			"fr": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
-			"en": "This version of my portfolio was made to test out Svelte. Lightweight, improved a11y from previous versions."
-		}
+		"source": "https://github.com/victrme/portfolio"
 	},
 	{
+		"_id": "others",
 		"title": "Paste, reward & more",
 		"tags": ["javascript", "html"],
-		"image": "others",
-		"source": "https://github.com/victrme?tab=repositories",
-		"desc": {
-			"fr": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos.",
-			"en": "Other mini web apps. You can get the codes and descriptions on their repos."
-		}
+		"source": "https://github.com/victrme?tab=repositories"
 	}
 ]

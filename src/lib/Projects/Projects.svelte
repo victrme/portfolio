@@ -1,10 +1,11 @@
 <script>
+	import { _ } from 'svelte-i18n'
 	import { onMount } from 'svelte'
 
-	import ProjectCard from './ProjectCard.svelte'
-	import projectList from '../../src/assets/projects.json'
-	import Left from './arrows/Left.svelte'
-	import Right from './arrows/Right.svelte'
+	import projectList from '../../assets/projects.json'
+	import ProjectCard from './Card.svelte'
+	import Left from '../Arrows/Left.svelte'
+	import Right from '../Arrows/Right.svelte'
 
 	let carousel
 	let cw = 0
@@ -13,7 +14,7 @@
 	let gap = 0
 	let toMove = 0
 
-	const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+	const clamp = (num = 0, min = 0, max = 1) => Math.min(Math.max(num, min), max)
 
 	onMount(() => {
 		const handleSizeChanges = () => {
@@ -27,7 +28,7 @@
 		window.addEventListener('resize', handleSizeChanges)
 	})
 
-	function moveCarousel(dir) {
+	function moveCarousel(dir = 1) {
 		toMove += (cw + gap) * dir
 		clamp(toMove, 0, max)
 		carousel.scrollTo(toMove, 0)
@@ -40,7 +41,7 @@
 
 <div id="projects">
 	<div class="projects-header">
-		<h2>Things I worked on</h2>
+		<h2>{$_('projects.title')}</h2>
 
 		<nav aria-label="Scroll through projects">
 			<button disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>

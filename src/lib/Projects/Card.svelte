@@ -1,15 +1,15 @@
 <script>
-	import Right from './arrows/Right.svelte'
+	import { _ } from 'svelte-i18n'
+	import Right from '../Arrows/Right.svelte'
 
+	export let _id = ''
 	export let title = ''
 	export let homepage = ''
 	export let source = ''
-	export let image = ''
 	export let tags = []
-	export let desc = { fr: '', en: '' }
 </script>
 
-<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{image}.webp" />
+<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{_id}.webp" />
 
 <div class="card-title">
 	<h3>{title}</h3>
@@ -21,14 +21,16 @@
 	</div>
 </div>
 
-<p>{desc.en}</p>
+<p>{$_('projects.' + _id)}</p>
 
 <div class="links">
 	{#if homepage}
-		<a href={homepage} aria-label="{title} homepage" draggable="false">homepage <span><Right /></span></a>
+		<a href={homepage} aria-label="{title} homepage" draggable="false">{$_('projects.home')}<span><Right /></span></a>
 	{/if}
 	{#if source}
-		<a href={source} aria-label="{title} source code on Github" draggable="false">source code <span><Right /></span></a>
+		<a href={source} aria-label="{title} source code on Github" draggable="false"
+			>{$_('projects.code')}<span><Right /></span></a
+		>
 	{/if}
 </div>
 
@@ -80,7 +82,7 @@
 	.links a {
 		width: fit-content;
 		margin-top: 0.4em;
-		border-bottom: 0.14em solid var(--color-shadow);
+		border-bottom: 0.14em solid var(--color-underline);
 	}
 
 	.links span {

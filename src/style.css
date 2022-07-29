@@ -7,7 +7,20 @@
 	--color-text: #3a3b3c;
 	--color-accent: #458ee8;
 	--color-shadow: #4d709922;
+	--color-underline: #4d709922;
 	--color-background: #f6fbfd;
+	--color-card-background: #fffc;
+	--color-card-border: #fff;
+}
+
+[data-theme='dark'] {
+	--color-text: #eee;
+	--color-accent: #458ee8;
+	--color-shadow: #16181a;
+	--color-underline: #666;
+	--color-background: #222;
+	--color-card-background: #444c;
+	--color-card-border: #444;
 }
 
 html,
@@ -27,9 +40,9 @@ a {
 .card {
 	padding: 3em;
 	border-radius: 20px;
-	border: 2px solid #fff;
+	border: 2px solid var(--color-card-border);
 	box-shadow: 0.5em 0.5em 3em var(--color-shadow);
-	background-color: #fffc;
+	background-color: var(--color-card-background);
 	transition: transform 0.6s;
 }
 
@@ -37,7 +50,7 @@ svg {
 	display: block;
 	width: 16px;
 	height: 16px;
-	fill: var(--text);
+	fill: var(--color-text);
 	outline: none;
 }
 
