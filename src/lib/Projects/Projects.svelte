@@ -39,29 +39,27 @@
 	}
 </script>
 
-<div id="projects">
-	<div class="projects-header">
-		<h2>{$_('projects.title')}</h2>
+<div class="projects-header">
+	<h2>{$_('projects.title')}</h2>
 
-		<nav aria-label="Scroll through projects">
-			<button disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>
-				<Left />
-			</button>
+	<nav aria-label="Scroll through projects">
+		<button disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>
+			<Left />
+		</button>
 
-			<button disabled={toMove + gap > max} aria-label="Scroll right" on:click={() => moveCarousel(1)}>
-				<Right />
-			</button>
-		</nav>
-	</div>
-
-	<ul bind:this={carousel} bind:offsetWidth={lw} on:scroll={updateCarouselPos} class="carousel">
-		{#each projectList as project}
-			<li class="card" bind:offsetWidth={cw}>
-				<ProjectCard {...project} />
-			</li>
-		{/each}
-	</ul>
+		<button disabled={toMove + gap > max} aria-label="Scroll right" on:click={() => moveCarousel(1)}>
+			<Right />
+		</button>
+	</nav>
 </div>
+
+<ul bind:this={carousel} bind:offsetWidth={lw} on:scroll={updateCarouselPos} class="carousel">
+	{#each projectList as project}
+		<li class="card" bind:offsetWidth={cw}>
+			<ProjectCard {...project} />
+		</li>
+	{/each}
+</ul>
 
 <style>
 	.projects-header {
@@ -70,12 +68,6 @@
 		justify-content: space-between;
 		padding: 0 3em;
 		gap: 2em;
-	}
-
-	h2 {
-		font-size: 2em;
-		line-height: 1.1em;
-		margin-bottom: 0.5em;
 	}
 
 	nav {
