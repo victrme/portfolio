@@ -2,30 +2,39 @@
 	import { setupI18n } from '../services/i18n'
 	import { _, getLocaleFromNavigator } from 'svelte-i18n'
 
-	let dark = false
-	let lang = getLocaleFromNavigator().includes('fr') ? 'fr' : 'en'
+	let theme = 'light'
+	let lang = 'en'
 	let langStr = { en: 'english', fr: 'francais' }
 
-	const setTheme = (/** @type {boolean} */ d) => {
-		localStorage.theme = d ? 'dark' : 'light'
-		document.documentElement.setAttribute('data-theme', localStorage.theme)
+	const setTheme = () => {
+		localStorage.theme = theme
+		document.documentElement.setAttribute('data-theme', theme)
+	}
+
+	const setLang = () => {
+		localStorage.lang = lang
+		setupI18n({ withLocale: lang })
 	}
 
 	const toggleTheme = () => {
-		dark = !dark
-		setTheme(dark)
+		theme = theme === 'light' ? 'dark' : 'light'
+		setTheme()
 	}
 
 	const toggleLang = () => {
 		lang = lang === 'en' ? 'fr' : 'en'
-		setupI18n({ withLocale: lang })
+		setLang()
 	}
 
 	$: {
 		const scheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-		dark = localStorage.theme ? localStorage.theme === 'dark' : scheme
+		const navLang = getLocaleFromNavigator().includes('fr') ? 'fr' : 'en'
 
-		setTheme(dark)
+		theme = localStorage.theme ? localStorage.theme : scheme
+		lang = localStorage.lang ? localStorage.lang : navLang
+
+		setTheme()
+		setLang()
 	}
 </script>
 
@@ -36,7 +45,7 @@
 
 		<span>{$_('header.theme')}</span>
 
-		<button on:click={toggleTheme}>{dark ? $_('header.dark') : $_('header.light')}</button>
+		<button on:click={toggleTheme}>{theme === 'dark' ? $_('header.dark') : $_('header.light')}</button>
 
 		{#if lang === 'en'}
 			<span>{$_('header.themeend')}</span>
