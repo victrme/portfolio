@@ -5,7 +5,6 @@
 	import Header from './lib/Header.svelte'
 	import Contacts from './lib/Contacts.svelte'
 	import Projects from './lib/Projects/Projects.svelte'
-	import Skills from './lib/Skills.svelte'
 	import Intro from './lib/Intro.svelte'
 	import './style.css'
 
@@ -26,8 +25,6 @@
 	</div>
 
 	<Projects />
-
-	<!-- <Skills /> -->
 </main>
 
 <style>

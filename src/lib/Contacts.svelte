@@ -1,4 +1,4 @@
-<div class="card contact">
+<div class="contact">
 	<a rel="noopener noreferrer" draggable="false" href="https://github.com/victrme">Github</a>
 	<a rel="noopener noreferrer" draggable="false" href="https://t.me/victrm">Telegram</a>
 	<a rel="noopener noreferrer" draggable="false" href="mailto:victor.azevedo@mail.com">Email</a>

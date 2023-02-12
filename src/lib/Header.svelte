@@ -39,7 +39,7 @@
 </script>
 
 <header>
-	<nav class="card">
+	<nav>
 		<span>{$_('header.lang')}</span>
 		<button on:click={toggleLang}>{langStr[lang]}</button>
 
@@ -77,9 +77,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		padding: 0.5em 1em;
-		color: var(--color-text);
-		border-radius: 1em;
-		box-shadow: 0.2em 0.2em 3em var(--color-shadow);
+		line-height: 1em;
 	}
 
 	.tiny a,
