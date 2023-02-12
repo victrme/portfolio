@@ -1,15 +1,16 @@
 <script>
 	import { _ } from 'svelte-i18n'
 	import selfie from '../assets/selfie.webp'
+	import Waving from './Waving.svelte'
 	import '../style.css'
 </script>
 
 <div>
 	<img src={selfie} alt="A la montagne" draggable="false" />
 	<h1>
-		<span>{$_('about.greetings')}</span>
-		<span>{$_('about.this')} <strong>victor.azevedo,</strong></span>
-		<span>{$_('about.new')}</span>
+		<p>{$_('about.greetings')} <Waving /></p>
+		<p>{$_('about.this')} <strong>victor.azevedo,</strong></p>
+		<p>{$_('about.new')}</p>
 	</h1>
 </div>
 
@@ -36,8 +37,8 @@
 		max-width: 12em;
 	}
 
-	span {
-		display: block;
+	p {
+		margin: 0;
 	}
 
 	strong {
@@ -45,22 +46,12 @@
 	}
 
 	@media (max-width: 740px) {
-		.card {
-			flex-wrap: wrap;
-			width: min-content;
-		}
-
 		h1 {
 			text-align: center;
 		}
 	}
 
 	@media (max-width: 500px) {
-		.card {
-			width: calc(100% - 8em);
-			overflow: hidden;
-		}
-
 		h1 {
 			font-size: 1.4em;
 			line-height: 1.1em;

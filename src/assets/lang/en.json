@@ -10,11 +10,11 @@
 		"themeend": " theme",
 		"dark": "dark",
 		"light": "light",
-		"tiny": "tiny version"
+		"tiny": "even smaller portfolio"
 	},
 
 	"about": {
-		"greetings": "Hi 👋",
+		"greetings": "Hi",
 		"this": "This is ",
 		"new": "a new dev in town !"
 	},
@@ -28,7 +28,5 @@
 		"lacurieuse": "A single page showcase website for the savonnerie La Curieuse. My first responsive website ! 😊",
 		"portfolio": "This version of my portfolio was made to test out Svelte. Lightweight, improved a11y from previous versions.",
 		"others": "Other mini web apps. You can get the codes and descriptions on their repos."
-	},
-
-	"skills": "Skills in hours"
+	}
 }

@@ -9,13 +9,13 @@
 		"theme": "avec un theme ",
 		"dark": "sombre",
 		"light": "clair",
-		"tiny": "petite version"
+		"tiny": "portfolio encore plus petit"
 	},
 
 	"about": {
-		"greetings": "Salut 👋",
+		"greetings": "Salut",
 		"this": "C'est ",
-		"new": "un nouveau dev en ville !"
+		"new": "nouveau dev en ville !"
 	},
 
 	"projects": {
@@ -27,7 +27,5 @@
 		"lacurieuse": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
 		"portfolio": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
 		"others": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos."
-	},
-
-	"skills": "Competences en heures"
+	}
 }
