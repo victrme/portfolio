@@ -48,6 +48,8 @@
 		background-color: var(--color-background);
 		overflow-x: hidden;
 		background-size: cover;
+		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+			'Helvetica Neue', sans-serif;
 	}
 
 	:global(a) {
@@ -77,8 +79,6 @@
 
 	main {
 		max-width: 60em;
-		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-			'Helvetica Neue', sans-serif;
 	}
 
 	main {
