@@ -4,9 +4,8 @@
 
 	import Header from './lib/Header.svelte'
 	import Contacts from './lib/Contacts.svelte'
-	import Projects from './lib/Projects/Projects.svelte'
+	import Projects from './lib/Projects.svelte'
 	import Intro from './lib/Intro.svelte'
-	import './style.css'
 
 	setupI18n({ withLocale: getLocaleFromNavigator().includes('fr') ? 'fr' : 'en' })
 </script>
@@ -18,37 +17,78 @@
 
 <main>
 	<Header />
-
-	<div class="top">
-		<Intro />
-		<Contacts />
-	</div>
-
+	<Intro />
+	<Contacts />
 	<Projects />
 </main>
 
 <style>
+	:root {
+		--color-text: #3a3b3c;
+		--color-accent: #458ee8;
+		--color-shadow: #4d709922;
+		--color-underline: #4d709922;
+		--color-background: #f6fbfd;
+		--color-card-background: #fffc;
+	}
+
+	:global([data-theme='dark']) {
+		--color-text: #ddd;
+		--color-accent: #458ee8;
+		--color-shadow: #000;
+		--color-underline: #666;
+		--color-background: #000;
+		--color-card-background: #222;
+	}
+
+	:global(html),
+	:global(body) {
+		margin: 0;
+		height: 100%;
+		background-color: var(--color-background);
+		overflow-x: hidden;
+		background-size: cover;
+	}
+
+	:global(a) {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	:global(a),
+	:global(button) {
+		font-weight: inherit;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	:global(button:focus-visible),
+	:global(a:focus-visible) {
+		outline: 3px solid var(--color-accent);
+	}
+
+	:global(svg) {
+		display: block;
+		width: 16px;
+		height: 16px;
+		fill: var(--color-text);
+		outline: none;
+	}
+
 	main {
 		max-width: 60em;
+		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+			'Helvetica Neue', sans-serif;
 	}
 
 	main {
 		position: relative;
-		margin: 0 auto;
+		margin: 0 auto 12vh auto;
 		font-size: 20px;
 		font-weight: 500;
 		color: var(--color-text);
 		line-height: 1.4em;
 		overflow-x: hidden;
-	}
-
-	.top {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding-top: 13vh;
-		padding-bottom: 10vh;
-		gap: 4em;
 	}
 
 	@media (max-width: 1200px) or (max-height: 901px) {
@@ -60,11 +100,6 @@
 	@media (max-width: 950px) {
 		main {
 			width: 100%;
-		}
-
-		.top {
-			padding-top: 10vh;
-			flex-direction: column;
 		}
 	}
 

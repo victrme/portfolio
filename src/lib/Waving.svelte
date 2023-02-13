@@ -9,15 +9,6 @@
 </span>
 
 <style>
-	@keyframes Waving {
-		from {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotate(8deg);
-		}
-	}
-
 	#wave {
 		padding-left: 1.25em;
 		display: inline-block;
@@ -28,7 +19,7 @@
 		display: inline-block;
 		cursor: default;
 		margin-bottom: -0.2em;
-		animation: Waving 0.15s ease-in-out 0.2s 6 alternate;
+		animation: Waving 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s 1 forwards;
 	}
 
 	#wave span::after {
@@ -36,5 +27,35 @@
 		position: absolute;
 		bottom: -0em;
 		right: 0;
+	}
+
+	@keyframes Waving {
+		0% {
+			transform: rotate(0);
+		}
+		13% {
+			transform: rotate(8deg);
+		}
+		26% {
+			transform: rotate(0);
+		}
+		39% {
+			transform: rotate(10deg);
+		}
+		52% {
+			transform: rotate(0);
+		}
+		65% {
+			transform: rotate(8deg);
+		}
+		76% {
+			transform: rotate(-2deg);
+		}
+		90% {
+			transform: rotate(8deg);
+		}
+		100% {
+			transform: rotate(-1deg);
+		}
 	}
 </style>

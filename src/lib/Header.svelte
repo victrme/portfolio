@@ -40,17 +40,13 @@
 
 <header>
 	<nav>
-		<span>
-			{$_('header.lang')}
-		</span>
+		<span>{$_('header.lang')}</span>
 
 		<button on:click={toggleLang}>
 			{langStr[lang]}
 		</button>
 
-		<span>
-			{$_('header.theme')}
-		</span>
+		<span>{$_('header.theme')}</span>
 
 		<button on:click={toggleTheme}>
 			{theme === 'dark' ? $_('header.dark') : $_('header.light')}
@@ -62,7 +58,7 @@
 	</nav>
 
 	<div>
-		<span><a href="https://victr.me/tiny">{$_('header.tiny')}</a></span>
+		<a href="https://victr.me/tiny">>1kb portfolio</a>
 	</div>
 </header>
 
@@ -73,12 +69,9 @@
 		font-size: 15px;
 	}
 
-	a,
 	button {
 		border: none;
 		padding: 0;
-		font-weight: inherit;
-		font-size: inherit;
 		color: var(--color-accent);
 		background-color: transparent;
 		cursor: pointer;
@@ -90,8 +83,13 @@
 		border-bottom: 0.15em solid transparent;
 	}
 
+	a {
+		border-color: var(--color-underline);
+	}
+
 	a:hover,
 	button:hover {
+		color: var(--color-accent);
 		border-bottom: 0.15em solid var(--color-accent);
 	}
 

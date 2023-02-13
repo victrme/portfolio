@@ -6,10 +6,9 @@
 
 	"header": {
 		"lang": "Texte en ",
-		"theme": "avec un theme ",
+		"theme": "avec un thème ",
 		"dark": "sombre",
-		"light": "clair",
-		"tiny": "portfolio encore plus petit"
+		"light": "clair"
 	},
 
 	"about": {

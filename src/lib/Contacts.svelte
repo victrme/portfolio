@@ -6,17 +6,12 @@
 
 <style>
 	.contact {
-		display: inline-flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 0.5em;
-		padding: 2em;
+		text-align: center;
 	}
 
 	a {
 		font-size: 1.2em;
-		font-weight: 500;
-		padding: 0.5em 2.5em;
+		padding: 0.4em 2em;
 		border-radius: 0.5em;
 	}
 
@@ -30,22 +25,10 @@
 		opacity: 0.8;
 	}
 
-	@media (max-width: 950px) {
-		.contact {
-			padding: 1em 2em;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-	}
-
 	@media (max-width: 740px) {
-		.contact {
-			gap: 0;
-		}
-
 		a {
-			font-size: 1.2em;
-			padding: 0.5em 1em;
+			font-size: 1em;
+			padding: 0.4em 1em;
 		}
 	}
 
@@ -53,7 +36,6 @@
 		.contact {
 			gap: 0.6em;
 			text-align: center;
-			width: calc(100% - 8em);
 			flex-direction: column;
 		}
 	}
