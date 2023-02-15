@@ -5,10 +5,12 @@
 </script>
 
 <div>
-	<img src={selfie} alt="A la montagne" draggable="false" />
+	<picture>
+		<img src={selfie} alt="A la montagne" draggable="false" />
+	</picture>
 	<h1>
 		<p>{$_('about.greetings')} <Waving /></p>
-		<p>{$_('about.this')} <strong>victor.azevedo,</strong></p>
+		<p>{$_('about.this')} <span>victor.azevedo,</span></p>
 		<p>{$_('about.new')}</p>
 	</h1>
 </div>
@@ -24,17 +26,29 @@
 	}
 
 	img {
-		border-radius: 0.5em;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		image-rendering: optimizeQuality;
+		color: transparent;
+	}
+
+	picture {
 		width: 10em;
 		height: 10em;
 		box-shadow: 0.2em 0.2em 1em var(--color-shadow);
+		border-radius: 0.5em;
+		overflow: hidden;
+		image-rendering: pixelated;
+		background-size: cover;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAdElEQVQI1wFpAJb/AXep8f/4+vwA+vz9AAH+AQAAAAAAAhgVCgAbGA0AJ8qAALaVYwAcHA8AAuHUzgDhr3kAX1RSADAcEADpq3cAAvPSsgDg5vUA3OLbAMHFxADV5+oAAjQsJQDNxr0AR2+BABcVFgBBNjEAcDIngZ4UD8IAAAAASUVORK5CYII=');
 	}
 
 	h1 {
 		margin: 0;
 		font-size: 2.2em;
 		line-height: 1.2em;
-		font-weight: bold;
+		font-weight: 700;
 		max-width: 12em;
 	}
 
@@ -42,7 +56,7 @@
 		margin: 0;
 	}
 
-	strong {
+	span {
 		color: var(--color-accent);
 	}
 

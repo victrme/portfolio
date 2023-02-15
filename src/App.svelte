@@ -45,6 +45,7 @@
 	:global(body) {
 		margin: 0;
 		height: 100%;
+		font-weight: 500;
 		background-color: var(--color-background);
 		overflow-x: hidden;
 		background-size: cover;
@@ -85,7 +86,6 @@
 		position: relative;
 		margin: 0 auto 12vh auto;
 		font-size: 20px;
-		font-weight: 500;
 		color: var(--color-text);
 		line-height: 1.4em;
 		overflow-x: hidden;
