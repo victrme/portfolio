@@ -6,7 +6,9 @@
 
 	"header": {
 		"lang": "Texte en ",
+		"langval": "français",
 		"theme": "avec un thème ",
+		"themeend": "",
 		"dark": "sombre",
 		"light": "clair"
 	},

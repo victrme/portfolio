@@ -1,60 +1,31 @@
 <script>
-	import { setupI18n } from '../services/i18n'
-	import { _, getLocaleFromNavigator } from 'svelte-i18n'
-
-	let theme = 'light'
-	let lang = 'en'
-	let langStr = { en: 'english', fr: 'francais' }
-
-	const setTheme = () => {
-		localStorage.theme = theme
-		document.documentElement.setAttribute('data-theme', theme)
-	}
-
-	const setLang = () => {
-		localStorage.lang = lang
-		setupI18n({ withLocale: lang })
-	}
+	import { theme } from '../stores/theme'
+	import { t, lang } from '../stores/lang'
 
 	const toggleTheme = () => {
-		theme = theme === 'light' ? 'dark' : 'light'
-		setTheme()
+		theme.update((val) => (val === 'light' ? 'dark' : 'light'))
 	}
 
 	const toggleLang = () => {
-		lang = lang === 'en' ? 'fr' : 'en'
-		setLang()
-	}
-
-	$: {
-		const scheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-		const navLang = getLocaleFromNavigator().includes('fr') ? 'fr' : 'en'
-
-		theme = localStorage.theme ? localStorage.theme : scheme
-		lang = localStorage.lang ? localStorage.lang : navLang
-
-		setTheme()
-		setLang()
+		lang.update((val) => (val === 'en' ? 'fr' : 'en'))
 	}
 </script>
 
 <header>
 	<nav>
-		<span>{$_('header.lang')}</span>
+		<span>{$t.header.lang}</span>
 
 		<button on:click={toggleLang}>
-			{langStr[lang]}
+			{$t.header.langval}
 		</button>
 
-		<span>{$_('header.theme')}</span>
+		<span>{$t.header.theme}</span>
 
 		<button on:click={toggleTheme}>
-			{theme === 'dark' ? $_('header.dark') : $_('header.light')}
+			{$theme === 'dark' ? $t.header.dark : $t.header.light}
 		</button>
 
-		{#if lang === 'en'}
-			<span>{$_('header.themeend')}</span>
-		{/if}
+		<span>{$t.header.themeend}</span>
 	</nav>
 
 	<div>

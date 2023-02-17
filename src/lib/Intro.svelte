@@ -1,7 +1,7 @@
 <script>
-	import { _ } from 'svelte-i18n'
-	import selfie from '../assets/selfie.webp'
 	import Waving from './Waving.svelte'
+	import selfie from '../assets/selfie.webp'
+	import { t } from '../stores/lang'
 </script>
 
 <div>
@@ -9,9 +9,9 @@
 		<img src={selfie} alt="A la montagne" draggable="false" />
 	</picture>
 	<h1>
-		<p>{$_('about.greetings')} <Waving /></p>
-		<p>{$_('about.this')} <span>victor.azevedo,</span></p>
-		<p>{$_('about.new')}</p>
+		<p>{$t.about.greetings} <Waving /></p>
+		<p>{$t.about.this} <span>victor.azevedo,</span></p>
+		<p>{$t.about.new}</p>
 	</h1>
 </div>
 
@@ -29,7 +29,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
-		image-rendering: optimizeQuality;
+		image-rendering: auto;
 		color: transparent;
 	}
 
@@ -41,7 +41,8 @@
 		overflow: hidden;
 		image-rendering: pixelated;
 		background-size: cover;
-		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAdElEQVQI1wFpAJb/AXep8f/4+vwA+vz9AAH+AQAAAAAAAhgVCgAbGA0AJ8qAALaVYwAcHA8AAuHUzgDhr3kAX1RSADAcEADpq3cAAvPSsgDg5vUA3OLbAMHFxADV5+oAAjQsJQDNxr0AR2+BABcVFgBBNjEAcDIngZ4UD8IAAAAASUVORK5CYII=');
+		background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
+		/* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAdElEQVQI1wFpAJb/AXep8f/4+vwA+vz9AAH+AQAAAAAAAhgVCgAbGA0AJ8qAALaVYwAcHA8AAuHUzgDhr3kAX1RSADAcEADpq3cAAvPSsgDg5vUA3OLbAMHFxADV5+oAAjQsJQDNxr0AR2+BABcVFgBBNjEAcDIngZ4UD8IAAAAASUVORK5CYII='); */
 	}
 
 	h1 {
@@ -61,7 +62,7 @@
 	}
 
 	@media (max-width: 740px) {
-		img {
+		picture {
 			width: 7.8em;
 			height: 7.8em;
 		}

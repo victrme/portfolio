@@ -1,18 +1,14 @@
 <script>
-	import { _, getLocaleFromNavigator } from 'svelte-i18n'
-	import { setupI18n } from './services/i18n'
-
 	import Header from './lib/Header.svelte'
 	import Contacts from './lib/Contacts.svelte'
 	import Projects from './lib/Projects.svelte'
 	import Intro from './lib/Intro.svelte'
-
-	setupI18n({ withLocale: getLocaleFromNavigator().includes('fr') ? 'fr' : 'en' })
+	import { t } from './stores/lang'
 </script>
 
 <svelte:head>
-	<title>{$_('page.title')}</title>
-	<meta name="description" content={$_('page.desc')} />
+	<title>{$t.page.title}</title>
+	<meta name="description" content={$t.page.desc} />
 </svelte:head>
 
 <main>

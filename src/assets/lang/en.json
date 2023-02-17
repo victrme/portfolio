@@ -6,6 +6,7 @@
 
 	"header": {
 		"lang": "Text in ",
+		"langval": "english",
 		"theme": "with a ",
 		"themeend": " theme",
 		"dark": "dark",

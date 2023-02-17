@@ -11,7 +11,8 @@
 		"title": "Polytronome",
 		"tags": ["typescript", "sass", "react"],
 		"homepage": "https://polytronome.com",
-		"source": "https://github.com/victrme/polytronome"
+		"source": "https://github.com/victrme/polytronome",
+		"themed": true
 	},
 	{
 		"_id": "lacurieuse",
@@ -24,12 +25,14 @@
 		"_id": "portfolio",
 		"title": "Portfolio",
 		"tags": ["svelte"],
-		"source": "https://github.com/victrme/portfolio"
+		"source": "https://github.com/victrme/portfolio",
+		"themed": true
 	},
 	{
 		"_id": "others",
 		"title": "Paste, reward & more",
 		"tags": ["javascript", "html"],
-		"source": "https://github.com/victrme?tab=repositories"
+		"source": "https://github.com/victrme?tab=repositories",
+		"themed": true
 	}
 ]

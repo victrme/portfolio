@@ -1,5 +1,4 @@
 <script>
-	import { _ } from 'svelte-i18n'
 	import { onMount } from 'svelte'
 	import projectList from '../assets/projects.json'
 	import ProjectCard from './ProjectCard.svelte'
@@ -112,6 +111,17 @@
 		list-style: none;
 	}
 
+	ul::-webkit-scrollbar {
+		height: 0.3em;
+	}
+
+	ul::-webkit-scrollbar-thumb {
+		background-color: var(--color-underline);
+		background-clip: padding-box;
+		border-left: 3em solid transparent;
+		border-right: 3em solid transparent;
+	}
+
 	.card {
 		padding: 3em;
 		border-radius: 20px;
@@ -121,6 +131,10 @@
 	}
 
 	@media (max-width: 500px) {
+		nav {
+			margin-left: 2em;
+		}
+
 		nav button {
 			padding: 0.5em 1em;
 		}

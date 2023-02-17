@@ -1,14 +1,22 @@
 <script>
-	import { _ } from 'svelte-i18n'
+	import { t } from '../stores/lang'
+	import { theme } from '../stores/theme'
 
 	export let _id = ''
 	export let title = ''
 	export let homepage = ''
 	export let source = ''
 	export let tags = []
+	export let themed = false
+
+	let imageURL = _id
+
+	$: {
+		if (themed) imageURL = _id + '-' + $theme
+	}
 </script>
 
-<img alt={title + ' preview'} class="preview" draggable="false" src="./previews/{_id}.webp" />
+<img class="preview" src="./previews/{imageURL}.webp" draggable="false" alt={title + ' preview'} />
 
 <div class="card-title">
 	<h3>{title}</h3>
@@ -20,12 +28,12 @@
 	</div>
 </div>
 
-<p>{$_('projects.' + _id)}</p>
+<p>{$t.projects[_id]}</p>
 
 <div class="links">
 	{#if homepage}
 		<a href={homepage} aria-label="{title} homepage" draggable="false">
-			{$_('projects.home')}
+			{$t.projects.home}
 			<span>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path
@@ -37,7 +45,7 @@
 	{/if}
 	{#if source}
 		<a href={source} aria-label="{title} source code on Github" draggable="false">
-			{$_('projects.code')}
+			{$t.projects.code}
 			<span>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path
