@@ -11,8 +11,9 @@
 	<meta name="description" content={$t.page.desc} />
 </svelte:head>
 
+<Header />
+
 <main>
-	<Header />
 	<Intro />
 	<Contacts />
 	<Projects />
@@ -41,12 +42,14 @@
 	:global(body) {
 		margin: 0;
 		height: 100%;
-		font-weight: 500;
-		background-color: var(--color-background);
 		overflow-x: hidden;
-		background-size: cover;
+		font-weight: 500;
 		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
 			'Helvetica Neue', sans-serif;
+		line-height: 1.4em;
+		color: var(--color-text);
+		background-color: var(--color-background);
+		background-size: cover;
 	}
 
 	:global(a) {
@@ -82,8 +85,6 @@
 		position: relative;
 		margin: 0 auto 12vh auto;
 		font-size: 20px;
-		color: var(--color-text);
-		line-height: 1.4em;
 		overflow-x: hidden;
 	}
 

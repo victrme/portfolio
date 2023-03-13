@@ -15,13 +15,13 @@
 	<nav>
 		<span>{$t.header.lang}</span>
 
-		<button on:click={toggleLang}>
+		<button type="button" on:click={toggleLang}>
 			{$t.header.langval}
 		</button>
 
 		<span>{$t.header.theme}</span>
 
-		<button on:click={toggleTheme}>
+		<button type="button" on:click={toggleTheme}>
 			{$theme === 'dark' ? $t.header.dark : $t.header.light}
 		</button>
 
@@ -38,6 +38,7 @@
 		text-align: center;
 		margin-top: 5vh;
 		font-size: 15px;
+		line-height: 1.75em;
 	}
 
 	button {

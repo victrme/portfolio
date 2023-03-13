@@ -9,9 +9,17 @@
 		<img src={selfie} alt="A la montagne" draggable="false" />
 	</picture>
 	<h1>
-		<p>{$t.about.greetings} <Waving /></p>
-		<p>{$t.about.this} <span>victor.azevedo,</span></p>
-		<p>{$t.about.new}</p>
+		<span>
+			{$t.about.greetings}
+			<Waving />
+		</span>
+		<span>
+			{$t.about.this}
+			<span id="name">victor.azevedo,</span>
+		</span>
+		<span>
+			{$t.about.new}
+		</span>
 	</h1>
 </div>
 
@@ -42,7 +50,6 @@
 		image-rendering: pixelated;
 		background-size: cover;
 		background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
-		/* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAdElEQVQI1wFpAJb/AXep8f/4+vwA+vz9AAH+AQAAAAAAAhgVCgAbGA0AJ8qAALaVYwAcHA8AAuHUzgDhr3kAX1RSADAcEADpq3cAAvPSsgDg5vUA3OLbAMHFxADV5+oAAjQsJQDNxr0AR2+BABcVFgBBNjEAcDIngZ4UD8IAAAAASUVORK5CYII='); */
 	}
 
 	h1 {
@@ -53,11 +60,12 @@
 		max-width: 12em;
 	}
 
-	p {
+	h1 span {
+		display: inline-block;
 		margin: 0;
 	}
 
-	span {
+	span#name {
 		color: var(--color-accent);
 	}
 
