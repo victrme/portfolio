@@ -17,14 +17,16 @@
 	}
 </script>
 
-<img class="preview" src="./previews/{imageURL}.webp" draggable="false" alt={title + ' preview'} />
+<picture>
+	<img src="./projects/previews/{imageURL}.webp" alt={title} draggable="false" />
+</picture>
 
 <div class="card-title">
 	<h2>{title}</h2>
 
 	<div class="tags" aria-label="Made with">
 		{#each tags as tag}
-			<img src="./icons/{tag}.svg" alt={tag} draggable="false" />
+			<img src="./projects/tags/{tag}.svg" alt={tag} draggable="false" />
 		{/each}
 	</div>
 </div>
@@ -51,13 +53,14 @@
 </div>
 
 <style>
-	img.preview {
-		margin: auto;
+	picture img {
+		display: block;
 		width: 100%;
 		height: 10em;
 		object-fit: cover;
 		border-radius: 0.5em;
-		background-color: var(--color-background);
+		line-height: 10em;
+		background: var(--color-image-background);
 	}
 
 	.card-title {

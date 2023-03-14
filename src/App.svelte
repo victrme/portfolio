@@ -27,6 +27,7 @@
 		--color-underline: #4d709922;
 		--color-background: #f6fbfd;
 		--color-card-background: #fffc;
+		--color-image-background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
 	}
 
 	:global([data-theme='dark']) {

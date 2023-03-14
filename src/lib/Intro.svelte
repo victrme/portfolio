@@ -1,13 +1,14 @@
 <script>
 	import Waving from './Waving.svelte'
-	import selfie from '../assets/selfie.webp'
 	import { t } from '../stores/lang'
 </script>
 
 <div>
 	<picture>
-		<img src={selfie} alt="A la montagne" draggable="false" />
+		<source type="image/avif" srcset="./intro/selfie.avif" />
+		<img src="./intro/selfie.jpg" alt="A la montagne" draggable="false" />
 	</picture>
+
 	<h1>
 		<span>
 			{$t.about.greetings}
@@ -29,14 +30,13 @@
 		align-items: center;
 		justify-content: center;
 		gap: 2em;
-		padding: 0 1em;
 		margin: 12vh auto 6vh auto;
 	}
 
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		object-fit: cover;
 		image-rendering: auto;
 		color: transparent;
 	}
@@ -49,7 +49,7 @@
 		overflow: hidden;
 		image-rendering: pixelated;
 		background-size: cover;
-		background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
+		background: var(--color-image-background);
 	}
 
 	h1 {

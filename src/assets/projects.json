@@ -2,13 +2,15 @@
 	{
 		"_id": "bonjourr",
 		"title": "Bonjourr",
-		"tags": ["javascript", "sass", "gulp"],
+		"type": "webext",
+		"tags": ["typescript", "sass", "gulp"],
 		"homepage": "https://bonjourr.fr",
 		"source": "https://github.com/victrme/bonjourr"
 	},
 	{
 		"_id": "polytronome",
 		"title": "Polytronome",
+		"type": "webapp",
 		"tags": ["typescript", "sass", "react"],
 		"homepage": "https://polytronome.com",
 		"source": "https://github.com/victrme/polytronome",
@@ -18,19 +20,27 @@
 		"_id": "lacurieuse",
 		"title": "La Curieuse",
 		"tags": ["nextjs", "html"],
-		"homepage": "https://savonnerielacurieuse.com",
-		"source": "https://github.com/victrme/nextjs-test"
+		"type": "website",
+		"homepage": "https://savonnerielacurieuse.com"
 	},
 	{
 		"_id": "portfolio",
 		"title": "Portfolio",
-		"tags": ["svelte"],
+		"tags": ["vite", "svelte"],
 		"source": "https://github.com/victrme/portfolio",
 		"themed": true
 	},
 	{
+		"_id": "bombparty",
+		"title": "Bombparty Genius",
+		"type": "webapp",
+		"tags": ["parcel", "typescript"],
+		"homepage": "https://victr.me/bombparty",
+		"source": "https://github.com/victrme/bombparty"
+	},
+	{
 		"_id": "others",
-		"title": "Paste, reward & more",
+		"title": "i18n quotes, reward & more",
 		"tags": ["javascript", "html"],
 		"source": "https://github.com/victrme?tab=repositories",
 		"themed": true

@@ -27,6 +27,7 @@
 		"polytronome": "Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne.",
 		"lacurieuse": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
 		"portfolio": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
+		"bombparty": "Petite page faite pour gagner au jeu bombparty de jklm.fun, ou juste lister des mots !",
 		"others": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos."
 	}
 }
