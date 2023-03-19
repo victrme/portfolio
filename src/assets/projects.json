@@ -12,7 +12,7 @@
 		"title": "Polytronome",
 		"type": "webapp",
 		"tags": ["typescript", "sass", "react"],
-		"homepage": "https://polytronome.com",
+		"homepage": "https://victr.me/polytronome",
 		"source": "https://github.com/victrme/polytronome",
 		"themed": true
 	},
