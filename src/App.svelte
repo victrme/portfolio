@@ -36,7 +36,7 @@
 		--color-shadow: #000;
 		--color-underline: #666;
 		--color-background: #000;
-		--color-card-background: #222;
+		--color-card-background: #111;
 	}
 
 	:global(html),
