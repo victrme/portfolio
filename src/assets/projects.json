@@ -2,16 +2,33 @@
 	{
 		"_id": "bonjourr",
 		"title": "Bonjourr",
-		"category": "extension",
-		"tags": ["typescript", "sass", "gulp"],
+		"category": "Extension",
+		"tags": ["sass", "gulp", "typescript"],
 		"homepage": "https://bonjourr.fr",
 		"source": "https://github.com/victrme/bonjourr"
 	},
 	{
+		"_id": "pocketeditor",
+		"title": "Pocket editor",
+		"category": "Npm package",
+		"tags": ["npm", "typescript"],
+		"homepage": "https://pocketeditor.vercel.app",
+		"source": "https://github.com/victrme/pocket-editor",
+		"themed": true
+	},
+	{
+		"_id": "faviconfetcher",
+		"title": "Favicon Fetcher",
+		"category": "API",
+		"tags": ["netlify", "deno", "typescript"],
+		"source": "https://github.com/victrme/favicon-fetcher",
+		"themed": true
+	},
+	{
 		"_id": "polytronome",
 		"title": "Polytronome",
-		"category": "webapp",
-		"tags": ["typescript", "sass", "react"],
+		"category": "Webapp",
+		"tags": ["react", "sass", "typescript"],
 		"homepage": "https://victr.me/polytronome",
 		"source": "https://github.com/victrme/polytronome",
 		"themed": true
@@ -19,14 +36,14 @@
 	{
 		"_id": "lacurieuse",
 		"title": "La Curieuse",
-		"category": "website",
+		"category": "Website",
 		"tags": ["nextjs", "html"],
 		"homepage": "https://savonnerielacurieuse.com"
 	},
 	{
 		"_id": "portfolio",
 		"title": "Portfolio",
-		"category": "website",
+		"category": "Website",
 		"tags": ["vite", "svelte"],
 		"source": "https://github.com/victrme/portfolio",
 		"themed": true
@@ -34,13 +51,14 @@
 	{
 		"_id": "bombparty",
 		"title": "Bombparty Genius",
-		"category": "webapp",
+		"category": "Webapp",
 		"tags": ["parcel", "typescript"],
 		"homepage": "https://victr.me/bombparty",
 		"source": "https://github.com/victrme/bombparty"
 	},
 	{
 		"_id": "others",
+		"category": "other",
 		"title": "i18n quotes, reward & more",
 		"tags": ["javascript", "html"],
 		"source": "https://github.com/victrme?tab=repositories",

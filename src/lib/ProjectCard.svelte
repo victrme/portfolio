@@ -14,8 +14,9 @@
 	let imageURL = _id
 
 	$: {
-		if (themed) imageURL = _id + '-' + $theme
-		console.log(category)
+		if (themed) {
+			imageURL = _id + '-' + $theme
+		}
 	}
 </script>
 
@@ -29,10 +30,12 @@
 
 		<div class="tags" aria-label="Made with">
 			{#each tags as tag}
-				<img src="./projects/tags/{tag}.svg" alt={tag} draggable="false" />
+				<img src="./projects/tags/{tag}.svg" title={tag} alt={tag} draggable="false" />
 			{/each}
 		</div>
 	</div>
+
+	<p class="category">{category}</p>
 
 	<p>{$t.projects[_id]}</p>
 </div>
@@ -73,7 +76,6 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-top: 2em;
-		margin-bottom: 1.5em;
 	}
 
 	h2 {
@@ -89,11 +91,19 @@
 	.card-title .tags img {
 		width: 1em;
 		height: 1em;
+		border-radius: 2px;
+	}
+
+	.category {
+		margin: 0;
+		margin-top: 0.3em;
+		font-size: 0.8em;
+		opacity: 0.7;
 	}
 
 	p {
 		text-align: left;
-		margin: 1.5em 0;
+		margin: 1em 0 1.5em 0;
 	}
 
 	.links {

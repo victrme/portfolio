@@ -24,10 +24,12 @@
 		"home": "homepage",
 		"code": "source code",
 		"bonjourr": "Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.",
+		"pocketeditor": "Notion-styled text editor that returns markdown. Created with the goal of loading as fast as pure html.",
+		"faviconfetcher": "Netlify edge function to fetch the best favicon from any websites. Replacement for the defunct favicon grabber.",
 		"polytronome": "A webapp where you can add multiple metronomes with different rythms to see what it sounds like.",
 		"lacurieuse": "A single page showcase website for the savonnerie La Curieuse. My first responsive website ! 😊",
 		"portfolio": "This version of my portfolio was made to test out Svelte. Lightweight, improved a11y from previous versions.",
-		"bombparty": "Small page created to win at jklm.fun's bombparty, or just cycle through words !",
+		"bombparty": "Page created to win at jklm.fun's bombparty, or just cycle through words !",
 		"others": "Other mini web apps. You can get the codes and descriptions on their repos."
 	}
 }
