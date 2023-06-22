@@ -1,12 +1,25 @@
-<div class="contact">
-	<a rel="noopener noreferrer" draggable="false" href="https://github.com/victrme">Github</a>
-	<a rel="noopener noreferrer" draggable="false" href="https://t.me/victrm">Telegram</a>
-	<a rel="noopener noreferrer" draggable="false" href="mailto:victor.azevedo@mail.com">Email</a>
-</div>
+<ul>
+	<li>
+		<a rel="noopener noreferrer" draggable="false" href="https://github.com/victrme">Github</a>
+	</li>
+	<li>
+		<a rel="noopener noreferrer" draggable="false" href="https://t.me/victrm">Telegram</a>
+	</li>
+	<li>
+		<a rel="noopener noreferrer" draggable="false" href="mailto:victor.azevedo@mail.com">Email</a>
+	</li>
+</ul>
 
 <style>
-	.contact {
+	ul {
 		text-align: center;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		display: inline-block;
 	}
 
 	a {
@@ -45,7 +58,7 @@
 	}
 
 	@media (max-width: 500px) {
-		.contact {
+		ul {
 			gap: 0.6em;
 			text-align: center;
 			flex-direction: column;

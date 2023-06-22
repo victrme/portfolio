@@ -12,7 +12,7 @@
 </script>
 
 <header>
-	<nav>
+	<div>
 		<span>{$t.header.lang}</span>
 
 		<button type="button" on:click={toggleLang}>
@@ -26,7 +26,7 @@
 		</button>
 
 		<span>{$t.header.themeend}</span>
-	</nav>
+	</div>
 
 	<div>
 		<a href="https://victr.me/tiny">>1kb portfolio</a>

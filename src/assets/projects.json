@@ -2,7 +2,7 @@
 	{
 		"_id": "bonjourr",
 		"title": "Bonjourr",
-		"type": "webext",
+		"category": "extension",
 		"tags": ["typescript", "sass", "gulp"],
 		"homepage": "https://bonjourr.fr",
 		"source": "https://github.com/victrme/bonjourr"
@@ -10,7 +10,7 @@
 	{
 		"_id": "polytronome",
 		"title": "Polytronome",
-		"type": "webapp",
+		"category": "webapp",
 		"tags": ["typescript", "sass", "react"],
 		"homepage": "https://victr.me/polytronome",
 		"source": "https://github.com/victrme/polytronome",
@@ -19,13 +19,14 @@
 	{
 		"_id": "lacurieuse",
 		"title": "La Curieuse",
+		"category": "website",
 		"tags": ["nextjs", "html"],
-		"type": "website",
 		"homepage": "https://savonnerielacurieuse.com"
 	},
 	{
 		"_id": "portfolio",
 		"title": "Portfolio",
+		"category": "website",
 		"tags": ["vite", "svelte"],
 		"source": "https://github.com/victrme/portfolio",
 		"themed": true
@@ -33,7 +34,7 @@
 	{
 		"_id": "bombparty",
 		"title": "Bombparty Genius",
-		"type": "webapp",
+		"category": "webapp",
 		"tags": ["parcel", "typescript"],
 		"homepage": "https://victr.me/bombparty",
 		"source": "https://github.com/victrme/bombparty"

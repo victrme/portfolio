@@ -38,7 +38,7 @@
 </script>
 
 <div id="projects">
-	<nav aria-label="Scroll through projects">
+	<div class="carousel-nav">
 		<button type="button" disabled={toMove === 0} aria-label="Scroll left" on:click={() => moveCarousel(-1)}>
 			<ArrowLeft />
 		</button>
@@ -46,7 +46,7 @@
 		<button type="button" disabled={toMove + gap > max} aria-label="Scroll right" on:click={() => moveCarousel(1)}>
 			<ArrowRight />
 		</button>
-	</nav>
+	</div>
 
 	<ul bind:this={carousel} bind:offsetWidth={lw} on:scroll={updateCarouselPos} class="carousel">
 		{#each projectList as project}
@@ -62,11 +62,11 @@
 		margin-top: 10vh;
 	}
 
-	nav {
+	.carousel-nav {
 		margin-left: 3em;
 	}
 
-	nav button {
+	.carousel-nav button {
 		border: none;
 		border-radius: 2em;
 		background-color: transparent;
@@ -75,22 +75,22 @@
 		padding: 0.5em 2em;
 	}
 
-	nav button:not(:disabled):hover {
+	.carousel-nav button:not(:disabled):hover {
 		color: white;
 		background-color: var(--color-accent);
 		box-shadow: 0.1em 0.1em 1em var(--color-shadow);
 	}
 
-	nav button:disabled {
+	.carousel-nav button:disabled {
 		opacity: 0.4;
 		cursor: default;
 	}
 
-	:global(nav button:not(:disabled):hover svg) {
+	:global(.carousel-nav button:not(:disabled):hover svg) {
 		fill: white;
 	}
 
-	:global(nav button:not(:disabled):active svg) {
+	:global(.carousel-nav button:not(:disabled):active svg) {
 		transform: scale(0.8);
 	}
 
@@ -98,7 +98,7 @@
 		display: flex;
 		overflow-x: scroll;
 		scroll-behavior: smooth;
-		width: calc(100% - 6em);
+		width: 100%;
 		padding: 3em;
 		margin: 0;
 		gap: 3em;
@@ -117,6 +117,10 @@
 	}
 
 	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-width: 24em;
 		padding: 3em;
 		border-radius: 20px;
 		box-shadow: 0.5em 0.5em 3em var(--color-shadow);
@@ -125,11 +129,11 @@
 	}
 
 	@media (max-width: 500px) {
-		nav {
+		.carousel-nav {
 			margin-left: 2em;
 		}
 
-		nav button {
+		.carousel-nav button {
 			padding: 0.5em 1em;
 		}
 
@@ -138,12 +142,12 @@
 		}
 
 		ul.carousel {
-			width: calc(100% - 3em);
-			padding: 2em 1.5em 3em 1.5em;
+			padding: 2em 1.5em;
 			gap: 2em;
 		}
 
 		.card {
+			min-width: 100%;
 			padding: 2em;
 		}
 	}

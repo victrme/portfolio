@@ -6,6 +6,7 @@
 	export let _id = ''
 	export let title = ''
 	export let homepage = ''
+	export let category = ''
 	export let source = ''
 	export let tags = []
 	export let themed = false
@@ -14,24 +15,27 @@
 
 	$: {
 		if (themed) imageURL = _id + '-' + $theme
+		console.log(category)
 	}
 </script>
 
-<picture>
-	<img src="./projects/previews/{imageURL}.webp" alt={title} draggable="false" />
-</picture>
+<div>
+	<picture>
+		<img src="./projects/previews/{imageURL}.webp" alt={'preview of ' + title} draggable="false" />
+	</picture>
 
-<div class="card-title">
-	<h2>{title}</h2>
+	<div class="card-title">
+		<h2>{title}</h2>
 
-	<div class="tags" aria-label="Made with">
-		{#each tags as tag}
-			<img src="./projects/tags/{tag}.svg" alt={tag} draggable="false" />
-		{/each}
+		<div class="tags" aria-label="Made with">
+			{#each tags as tag}
+				<img src="./projects/tags/{tag}.svg" alt={tag} draggable="false" />
+			{/each}
+		</div>
 	</div>
-</div>
 
-<p>{$t.projects[_id]}</p>
+	<p>{$t.projects[_id]}</p>
+</div>
 
 <div class="links">
 	{#if homepage}
@@ -79,16 +83,15 @@
 
 	.card-title .tags {
 		display: flex;
+		gap: 0.6em;
 	}
 
 	.card-title .tags img {
 		width: 1em;
 		height: 1em;
-		margin-left: 0.6em;
 	}
 
 	p {
-		width: 300px;
 		text-align: left;
 		margin: 1.5em 0;
 	}
@@ -96,11 +99,11 @@
 	.links {
 		display: inline-flex;
 		flex-direction: column;
+		row-gap: 0.4em;
 	}
 
 	.links a {
 		width: fit-content;
-		margin-top: 0.4em;
 		border-bottom: 0.14em solid var(--color-underline);
 	}
 
@@ -126,10 +129,6 @@
 	}
 
 	@media (max-width: 500px) {
-		p {
-			width: calc(100vw - 8em);
-		}
-
 		img {
 			min-width: auto;
 			max-width: auto;
