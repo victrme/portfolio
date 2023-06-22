@@ -22,7 +22,7 @@
 
 <div>
 	<picture>
-		<img src="./projects/previews/{imageURL}.webp" alt={'preview of ' + title} draggable="false" />
+		<img src="./images/previews/{imageURL}.webp" alt={'preview of ' + title} draggable="false" />
 	</picture>
 
 	<div class="card-title">
@@ -30,7 +30,7 @@
 
 		<div class="tags" aria-label="Made with">
 			{#each tags as tag}
-				<img src="./projects/tags/{tag}.svg" title={tag} alt={tag} draggable="false" />
+				<img src="./images/tags/{tag}.svg" title={tag} alt={tag} draggable="false" />
 			{/each}
 		</div>
 	</div>

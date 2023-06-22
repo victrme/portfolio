@@ -5,8 +5,8 @@
 
 <div>
 	<picture>
-		<source type="image/avif" srcset="./intro/selfie.avif" />
-		<img src="./intro/selfie.jpg" alt="A la montagne" draggable="false" />
+		<source type="image/avif" srcset="./images/intro/selfie.avif" />
+		<img src="./images/intro/selfie.jpg" alt="A la montagne" draggable="false" />
 	</picture>
 
 	<h1>
