@@ -20,7 +20,14 @@
 	},
 
 	"projects": {
-		"title": "Projects I worked on",
+		"category": {
+			"Npm package": "Npm package",
+			"Extension": "Extension",
+			"Website": "Website",
+			"Webapp": "Webapp",
+			"Other": "Other",
+			"API": "API"
+		},
 		"home": "homepage",
 		"code": "source code",
 		"bonjourr": "Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.",

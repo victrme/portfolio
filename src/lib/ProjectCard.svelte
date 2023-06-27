@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<p class="category">{category}</p>
+	<p class="category">{$t.projects.category[category]}</p>
 
 	<p>{$t.projects[_id]}</p>
 </div>

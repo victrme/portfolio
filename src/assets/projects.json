@@ -58,7 +58,7 @@
 	},
 	{
 		"_id": "others",
-		"category": "other",
+		"category": "Other",
 		"title": "i18n quotes, reward & more",
 		"tags": ["javascript", "html"],
 		"source": "https://github.com/victrme?tab=repositories",
