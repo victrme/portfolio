@@ -37,7 +37,7 @@
 		"_id": "lacurieuse",
 		"title": "La Curieuse",
 		"category": "Website",
-		"tags": ["nextjs", "html"],
+		"tags": ["tailwindcss", "astro"],
 		"homepage": "https://savonnerielacurieuse.com"
 	},
 	{

@@ -27,7 +27,7 @@
 		"pocketeditor": "Éditeur de texte style Notion qui renvoie du markdown. Créé dans le but de charger aussi vite que du HTML pur.",
 		"faviconfetcher": "Fonction edge Netlify pour récupérer la meilleure favicon de n'importe quel site. Sert de remplacement pour le défunt favicon grabber.",
 		"polytronome": "Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne.",
-		"lacurieuse": "Une page vitrine pour la savonnerie La Curieuse. Mon premier site responsive ! 😊",
+		"lacurieuse": "Une page vitrine pour la savonnerie La Curieuse. Mis à jour avec Tailwind & Astro. Score parfait sur lighthouse !",
 		"portfolio": "Cette version de mon portfolio a ete fait pour tester Svelte. Accessibilité amelioré depuis les dernieres version.",
 		"bombparty": "Petite page faite pour gagner au jeu bombparty de jklm.fun, ou juste lister des mots !",
 		"others": "D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos."
