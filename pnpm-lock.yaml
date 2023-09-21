@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@fontsource-variable/dm-sans':
+    specifier: ^5.0.3
+    version: 5.0.3
   '@sveltejs/vite-plugin-svelte':
     specifier: ^2.4.6
     version: 2.4.6(svelte@4.2.1)(vite@4.4.9)
@@ -222,6 +225,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource-variable/dm-sans@5.0.3:
+    resolution: {integrity: sha512-MrdN9qZ95gVqcSuOXMnbCuYS2TtL1mOiUqTaslP05rkZUi9LzrvbXsEGBCODVjJi9MH27HuKKJjOdWK0OeuIlw==}
+    dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}

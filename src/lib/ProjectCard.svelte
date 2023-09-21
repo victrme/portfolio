@@ -22,7 +22,7 @@
 
 <div>
 	<picture>
-		<img src="./images/previews/{imageURL}.webp" alt={'preview of ' + title} draggable="false" />
+		<img src="./images/previews/{imageURL}.webp" alt="{'preview of ' + title}" draggable="false" />
 	</picture>
 
 	<div class="card-title">
@@ -30,7 +30,7 @@
 
 		<div class="tags" aria-label="Made with">
 			{#each tags as tag}
-				<img src="./images/tags/{tag}.svg" title={tag} alt={tag} draggable="false" />
+				<img src="./images/tags/{tag}.svg" title="{tag}" alt="{tag}" draggable="false" />
 			{/each}
 		</div>
 	</div>
@@ -42,7 +42,7 @@
 
 <div class="links">
 	{#if homepage}
-		<a href={homepage} aria-label="{title} homepage" draggable="false">
+		<a href="{homepage}" aria-label="{title} homepage" draggable="false">
 			{$t.projects.home}
 			<span>
 				<ArrowRight />
@@ -50,7 +50,7 @@
 		</a>
 	{/if}
 	{#if source}
-		<a href={source} aria-label="{title} source code on Github" draggable="false">
+		<a href="{source}" aria-label="{title} source code on Github" draggable="false">
 			{$t.projects.code}
 			<span>
 				<ArrowRight />
@@ -80,6 +80,7 @@
 
 	h2 {
 		font-size: 1.4em;
+		line-height: 1em;
 		margin: 0;
 	}
 

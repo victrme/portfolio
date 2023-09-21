@@ -8,6 +8,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
+		"@fontsource-variable/dm-sans": "^5.0.3",
 		"@sveltejs/vite-plugin-svelte": "^2.4.6",
 		"svelte": "^4.2.1",
 		"vite": "^4.4.9"

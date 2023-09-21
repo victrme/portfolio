@@ -4,11 +4,13 @@
 	import Projects from './lib/Projects.svelte'
 	import Intro from './lib/Intro.svelte'
 	import { t } from './stores/lang'
+
+	import '@fontsource-variable/dm-sans'
 </script>
 
 <svelte:head>
 	<title>{$t.page.title}</title>
-	<meta name="description" content={$t.page.desc} />
+	<meta name="description" content="{$t.page.desc}" />
 </svelte:head>
 
 <Header />
@@ -49,9 +51,8 @@
 		height: 100%;
 		overflow-x: hidden;
 		font-weight: 500;
-		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-			'Helvetica Neue', sans-serif;
-		line-height: 1.4em;
+		font-family: 'DM Sans Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+			'Open Sans', 'Helvetica Neue', sans-serif;
 		color: var(--color-text);
 		background-color: var(--color-background);
 		background-size: cover;
@@ -83,13 +84,10 @@
 	}
 
 	main {
-		max-width: 60em;
-	}
-
-	main {
 		position: relative;
-		margin: 0 auto 12vh auto;
+		max-width: 60em;
 		font-size: 20px;
+		margin: 0 auto 12vh auto;
 		overflow-x: hidden;
 	}
 
