@@ -1,6 +1,5 @@
 {
 	"name": "svelte-portfolio",
-	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
@@ -9,9 +8,8 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@sveltejs/vite-plugin-svelte": "^2.4.2",
-		"prettier": "^2.8.8",
-		"svelte": "^4.0.0",
-		"vite": "^4.3.9"
+		"@sveltejs/vite-plugin-svelte": "^2.4.6",
+		"svelte": "^4.2.1",
+		"vite": "^4.4.9"
 	}
 }
