@@ -1,8 +1,12 @@
-import { writable } from 'svelte/store'
+let themestore: string = 'light'
 
-export const theme = writable(localStorage.theme ? localStorage.theme : 'light')
+export const init = () => {
+	themestore = localStorage.theme ? localStorage.theme : 'light'
+	document.documentElement.dataset.theme = themestore
+}
 
-theme.subscribe((val) => {
-	localStorage.theme = val
-	document.documentElement.dataset.theme = val
-})
+export const update = (val: string) => {
+	themestore = val
+}
+
+export const theme = (() => themestore)()

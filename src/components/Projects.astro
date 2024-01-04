@@ -1,0 +1,53 @@
+---
+import projectList from '../assets/projects.json'
+import Card from './Card.astro'
+---
+
+<ul id='projects'>
+	{
+		projectList.map((project) => (
+			<li class='card'>
+				<Card {...project} />
+			</li>
+		))
+	}
+</ul>
+
+<style>
+	ul {
+		display: flex;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		width: 100%;
+		padding: 3em;
+		margin: 0;
+		margin-top: 10vh;
+		gap: 3em;
+		list-style: none;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-width: 24em;
+		padding: 3em;
+		border-radius: 20px;
+		box-shadow: 0.5em 0.5em 3em var(--color-shadow);
+		background-color: var(--color-card-background);
+		transition: transform 0.6s;
+	}
+
+	@media (max-width: 500px) {
+		ul {
+			padding: 2em 1.5em;
+			margin-top: 8vh;
+			gap: 2em;
+		}
+
+		.card {
+			min-width: 100%;
+			padding: 2em;
+		}
+	}
+</style>

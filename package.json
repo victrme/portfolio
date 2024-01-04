@@ -1,16 +1,14 @@
 {
-	"name": "svelte-portfolio",
-	"version": "0.0.0",
+	"name": "portfolio",
 	"type": "module",
+	"private": "true",
 	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
 	},
 	"devDependencies": {
 		"@fontsource-variable/dm-sans": "^5.0.3",
-		"@sveltejs/vite-plugin-svelte": "^2.4.6",
-		"svelte": "^4.2.1",
-		"vite": "^4.4.12"
+		"astro": "^4.1.0"
 	}
 }

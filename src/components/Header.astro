@@ -1,0 +1,50 @@
+<header>
+	<div>
+		<span>Text in</span>
+		<button type='button'> english</button>
+		<span>with a light theme</span>
+	</div>
+
+	<div>
+		<a href='https://victr.me/tiny'>>1kb portfolio</a>
+	</div>
+</header>
+
+<style>
+	header {
+		text-align: center;
+		margin-top: 5vh;
+		font-size: 15px;
+		line-height: 1.75em;
+	}
+
+	button {
+		border: none;
+		padding: 0;
+		color: var(--color-accent);
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	a,
+	span,
+	button {
+		border-bottom: 0.15em solid transparent;
+	}
+
+	a {
+		border-color: var(--color-underline);
+	}
+
+	a:hover,
+	button:hover {
+		color: var(--color-accent);
+		border-bottom: 0.15em solid var(--color-accent);
+	}
+
+	@media (max-width: 500px) {
+		header {
+			font-size: 12.5px;
+		}
+	}
+</style>

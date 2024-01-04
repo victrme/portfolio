@@ -1,26 +1,24 @@
-<script>
-	import Waving from './Waving.svelte'
-	import { t } from '../stores/lang'
-</script>
+---
+import Waving from './Waving.astro'
+import { t } from '../stores/lang'
+---
 
 <div>
 	<picture>
-		<source type="image/avif" srcset="./images/intro/selfie.avif" />
-		<img src="./images/intro/selfie.jpg" alt="A la montagne" draggable="false" />
+		<source type='image/avif' srcset='./images/intro/selfie.avif' />
+		<img src='./images/intro/selfie.jpg' alt='A la montagne' draggable='false' />
 	</picture>
 
 	<h1>
 		<span>
-			{$t.about.greetings}
+			<span>Hi</span>
 			<Waving />
 		</span>
 		<span>
-			{$t.about.this}
-			<span id="name">victor.azevedo,</span>
+			<span>This is</span>
+			<span id='name'>victor.azevedo,</span>
 		</span>
-		<span>
-			{$t.about.new}
-		</span>
+		<span>a new dev in town !</span>
 	</h1>
 </div>
 
