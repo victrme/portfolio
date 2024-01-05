@@ -1,14 +1,33 @@
+---
+const props = Astro.props
+---
+
 <header>
 	<div>
-		<span>Text in</span>
-		<button type='button'> english</button>
-		<span>with a light theme</span>
+		<slot name='text' />
+		<a href={props.lang === 'en' ? '/fr' : '/'}>
+			<slot name='lang' />
+		</a>
+		<slot name='with' />
+		<button type='button' id='theme-btn'> light</button>
+		<slot name='theme' />
 	</div>
 
-	<div>
+	<!-- <div>
 		<a href='https://victr.me/tiny'>>1kb portfolio</a>
-	</div>
+	</div> -->
 </header>
+
+<script is:inline>
+	function setTheme(theme) {
+		localStorage.theme = theme
+		document.documentElement.dataset.theme = theme
+		document.getElementById('theme-btn').textContent = theme
+	}
+
+	setTheme(localStorage.theme ?? 'light')
+	document.getElementById('theme-btn').onclick = () => setTheme(localStorage.theme === 'light' ? 'dark' : 'light')
+</script>
 
 <style>
 	header {

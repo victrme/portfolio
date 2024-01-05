@@ -1,14 +1,22 @@
 <ul>
 	<li>
-		<a rel="noopener noreferrer" draggable="false" href="https://github.com/victrme">Github</a>
+		<a rel='noopener noreferrer' draggable='false' href='https://github.com/victrme'>Github</a>
 	</li>
 	<li>
-		<a rel="noopener noreferrer" draggable="false" href="https://t.me/victrm">Telegram</a>
+		<a rel='noopener noreferrer' draggable='false' href='https://t.me/victrm'>Telegram</a>
 	</li>
 	<li>
-		<a rel="noopener noreferrer" draggable="false" href="mailto:victor.azevedo@mail.com">Email</a>
+		<a rel='noopener noreferrer' draggable='false' id='email' href='mailto:'>
+			<slot />
+		</a>
 	</li>
 </ul>
+
+<script is:inline>
+	document.getElementById('email').addEventListener('pointerdown', function () {
+		email.href += atob('dmljdG9yLmF6ZXZlZG9AbWFpbC5jb20')
+	})
+</script>
 
 <style>
 	ul {

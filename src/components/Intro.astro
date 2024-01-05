@@ -1,8 +1,3 @@
----
-import Waving from './Waving.astro'
-import { t } from '../stores/lang'
----
-
 <div>
 	<picture>
 		<source type='image/avif' srcset='./images/intro/selfie.avif' />
@@ -10,15 +5,20 @@ import { t } from '../stores/lang'
 	</picture>
 
 	<h1>
-		<span>
-			<span>Hi</span>
-			<Waving />
+		<slot name='greet' />
+
+		<span id='wave'>
+			<span></span>
 		</span>
-		<span>
-			<span>This is</span>
-			<span id='name'>victor.azevedo,</span>
-		</span>
-		<span>a new dev in town !</span>
+
+		<br />
+
+		<slot name='who' />
+		<span id='name'>victor.azevedo,</span>
+
+		<br />
+
+		<slot name='what' />
 	</h1>
 </div>
 

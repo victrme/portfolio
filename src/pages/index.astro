@@ -3,122 +3,42 @@ import Header from '../components/Header.astro'
 import Intro from '../components/Intro.astro'
 import Contacts from '../components/Contacts.astro'
 import Projects from '../components/Projects.astro'
-
+import Card from '../components/Card.astro'
+import Layout from '../layouts/layout.astro'
 import '@fontsource-variable/dm-sans'
 ---
 
-<head>
-	<title>Hi ! This is victor 👋</title>
-	<meta name='description' content='Here are the projects I worked on for the last few years' />
-	<meta charset='UTF-8' />
-	<meta content='width=device-width, initial-scale=1.0' name='viewport' />
-	<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-	<link href='/favicon-16x16.png' rel='icon' />
-</head>
+<Layout lang='en' title='Hi ! This is victor 👋' desc='Here are the projects I worked on for the last few years'>
+	<Header lang='en'>
+		<span slot='text'>Text in</span>
+		<span slot='lang'>english</span>
+		<span slot='with'> with a</span>
+		<span slot='theme'> theme</span>
+	</Header>
 
-<Header />
+	<main>
+		<Intro>
+			<span slot='greet'>Hi</span>
+			<span slot='who'>This is</span>
+			<span slot='what'>a new dev in town !</span>
+		</Intro>
 
-<main>
-	<Intro />
-	<Contacts />
-	<Projects />
-</main>
+		<Contacts>
+			<span>Email</span>
+		</Contacts>
 
-<style>
-	:root {
-		--color-text: #3a3b3c;
-		--color-accent: #458ee8;
-		--color-shadow: #4d709922;
-		--color-underline: #4d709922;
-		--color-background: #f6fbfd;
-		--color-card-background: #fffc;
-		--color-image-background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
-	}
+		<Projects>
+			<Card lang='en' homepage='https://bonjourr.fr' source='https://github.com/victrme/bonjourr'>
+				<span slot='title'>Bonjourr</span>
+				<span slot='category'>Extension</span>
+				<span slot='description'>
+					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+				</span>
 
-	:global([data-theme='dark']) {
-		--color-text: #ddd;
-		--color-accent: #458ee8;
-		--color-shadow: #000;
-		--color-underline: #666;
-		--color-background: #000;
-		--color-card-background: #111;
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-	}
-
-	:global(html),
-	:global(body) {
-		margin: 0;
-		height: 100%;
-		overflow-x: hidden;
-		font-weight: 500;
-		font-family:
-			'DM Sans Variable',
-			-apple-system,
-			BlinkMacSystemFont,
-			'Segoe UI',
-			Roboto,
-			Oxygen,
-			Ubuntu,
-			Cantarell,
-			'Open Sans',
-			'Helvetica Neue',
-			sans-serif;
-		color: var(--color-text);
-		background-color: var(--color-background);
-		background-size: cover;
-	}
-
-	:global(a) {
-		text-decoration: none;
-		color: inherit;
-	}
-
-	:global(a),
-	:global(button) {
-		font-weight: inherit;
-		font-size: inherit;
-		font-family: inherit;
-	}
-
-	:global(button:focus-visible),
-	:global(a:focus-visible) {
-		outline: 3px solid var(--color-accent);
-	}
-
-	:global(svg) {
-		display: block;
-		width: 16px;
-		height: 16px;
-		fill: var(--color-text);
-		outline: none;
-	}
-
-	main {
-		position: relative;
-		max-width: 60em;
-		font-size: 20px;
-		margin: 0 auto 12vh auto;
-		overflow-x: hidden;
-	}
-
-	@media (max-width: 1200px) or (max-height: 901px) {
-		main {
-			font-size: 17px;
-		}
-	}
-
-	@media (max-width: 950px) {
-		main {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 500px) {
-		main {
-			font-size: 16px;
-		}
-	}
-</style>
+				<img slot='tag' src='./images/tags/sass.svg' title='sass' alt='sass' draggable='false' />
+				<img slot='tag' src='./images/tags/gulp.svg' title='gulp' alt='gulp' draggable='false' />
+				<img slot='tag' src='./images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			</Card>
+		</Projects>
+	</main>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Header from '../../components/Header.astro'
+import Intro from '../../components/Intro.astro'
+import Contacts from '../../components/Contacts.astro'
+import Projects from '../../components/Projects.astro'
+import Layout from '../../layouts/layout.astro'
+import '@fontsource-variable/dm-sans'
+---
+
+<Layout lang='fr' title="Salut ! C'est victor 👋" desc="Voici les projets sur lequels j'ai travaillé ces dernières années">
+	<Header lang='fr'>
+		<span slot='text'>Texte en</span>
+		<span slot='lang'> français</span>
+		<span slot='with'> avec un thème</span>
+	</Header>
+
+	<Intro>
+		<span slot='greet'>Salut</span>
+		<span slot='who'>C'est</span>
+		<span slot='what'>un nouveau dev en ville !</span>
+	</Intro>
+
+	<Contacts>
+		<span>Mail</span>
+	</Contacts>
+
+	<Projects />
+</Layout>
