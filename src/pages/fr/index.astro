@@ -1,8 +1,8 @@
 ---
 import Header from '../../components/Header.astro'
 import Intro from '../../components/Intro.astro'
-import Contacts from '../../components/Contacts.astro'
-import Projects from '../../components/Projects.astro'
+import Contact from '../../components/Contact.astro'
+import Card from '../../components/Card.astro'
 import Layout from '../../layouts/layout.astro'
 import '@fontsource-variable/dm-sans'
 ---
@@ -12,6 +12,8 @@ import '@fontsource-variable/dm-sans'
 		<span slot='text'>Texte en</span>
 		<span slot='lang'> français</span>
 		<span slot='with'> avec un thème</span>
+		<span slot='light'> clair</span>
+		<span slot='dark'> sombre</span>
 	</Header>
 
 	<Intro>
@@ -20,9 +22,22 @@ import '@fontsource-variable/dm-sans'
 		<span slot='what'>un nouveau dev en ville !</span>
 	</Intro>
 
-	<Contacts>
+	<Contact>
 		<span>Mail</span>
-	</Contacts>
+	</Contact>
 
-	<Projects />
+	<ul id='projects'>
+		<Card lang='en' homepage='https://bonjourr.fr' source='https://github.com/victrme/bonjourr'>
+			<img slot='picture' src='./images/previews/bonjourr.webp' alt='preview of bonjourr' draggable='false' />
+			<span slot='title'>Bonjourr</span>
+			<span slot='category'>Extension</span>
+			<span slot='description'>
+				Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+			</span>
+
+			<img slot='tag' src='./images/tags/sass.svg' title='sass' alt='sass' draggable='false' />
+			<img slot='tag' src='./images/tags/gulp.svg' title='gulp' alt='gulp' draggable='false' />
+			<img slot='tag' src='./images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+		</Card>
+	</ul>
 </Layout>

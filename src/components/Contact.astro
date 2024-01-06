@@ -1,0 +1,19 @@
+<ul id='contact'>
+	<li>
+		<a rel='noopener noreferrer' draggable='false' href='https://github.com/victrme'>Github</a>
+	</li>
+	<li>
+		<a rel='noopener noreferrer' draggable='false' href='https://t.me/victrm'>Telegram</a>
+	</li>
+	<li>
+		<a rel='noopener noreferrer' draggable='false' id='email' href='mailto:'>
+			<slot />
+		</a>
+	</li>
+</ul>
+
+<script>
+	document.getElementById('email')?.addEventListener('pointerdown', function () {
+		this.setAttribute('href', 'mailto:' + atob('dmljdG9yLmF6ZXZlZG9AbWFpbC5jb20'))
+	})
+</script>

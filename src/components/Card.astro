@@ -1,12 +1,12 @@
 ---
-import ArrowRight from './arrows/Right.astro'
+import ArrowRight from './ArrowRight.astro'
 
 const props = Astro.props
 ---
 
 <li class='card'>
 	<picture>
-		<img src='./images/previews/bonjourr.webp' alt='preview of bonjourr' draggable='false' />
+		<slot name='picture' />
 	</picture>
 
 	<div class='card-title'>
@@ -14,12 +14,12 @@ const props = Astro.props
 			<slot name='title' />
 		</h2>
 
-		<div class='tags'>
+		<div class='card-tags'>
 			<slot name='tag' />
 		</div>
 	</div>
 
-	<p class='category'>
+	<p class='card-category'>
 		<slot name='category' />
 	</p>
 
@@ -27,130 +27,19 @@ const props = Astro.props
 		<slot name='description' />
 	</p>
 
-	<div class='links'>
-		{
-			props.homepage && (
-				<a href={props.homepage} draggable='false'>
-					<span>{props.lang === 'fr' ? 'page web' : 'homepage'}</span>
-					<span class='arrow'>
-						<ArrowRight />
-					</span>
-				</a>
-			)
-		}
-		{
-			props.source && (
-				<a href={props.source} draggable='false'>
-					<span>{props.lang === 'fr' ? 'code source' : 'source code'}</span>
-					<span class='arrow'>
-						<ArrowRight />
-					</span>
-				</a>
-			)
-		}
+	<div class='card-links'>
+		<a href={props.homepage ? props.homepage : undefined} draggable='false'>
+			<span>{props.lang === 'fr' ? 'page web' : 'homepage'}</span>
+			<span class='arrow'>
+				<ArrowRight />
+			</span>
+		</a>
+
+		<a href={props.source ? props.source : undefined} draggable='false'>
+			<span>{props.lang === 'fr' ? 'code source' : 'source code'}</span>
+			<span class='arrow'>
+				<ArrowRight />
+			</span>
+		</a>
 	</div>
 </li>
-
-<style>
-	.card {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 24em;
-		padding: 3em;
-		border-radius: 20px;
-		box-shadow: 0.5em 0.5em 3em var(--color-shadow);
-		background-color: var(--color-card-background);
-		transition: transform 0.6s;
-	}
-
-	picture img {
-		display: block;
-		width: 100%;
-		height: 10em;
-		object-fit: cover;
-		border-radius: 0.5em;
-		line-height: 10em;
-		background: var(--color-image-background);
-	}
-
-	.card-title {
-		display: flex;
-		gap: 2em;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 2em;
-	}
-
-	h2 {
-		font-size: 1.4em;
-		line-height: 1em;
-		margin: 0;
-	}
-
-	.card-title .tags {
-		display: flex;
-		gap: 0.6em;
-	}
-
-	:global(.card-title .tags img) {
-		width: 1em;
-		height: 1em;
-		border-radius: 2px;
-	}
-
-	.category {
-		margin: 0;
-		margin-top: 0.3em;
-		font-size: 0.8em;
-		opacity: 0.7;
-	}
-
-	p {
-		text-align: left;
-		margin: 1em 0 1.5em 0;
-	}
-
-	.links {
-		flex-direction: column;
-	}
-
-	.links a {
-		display: flex;
-		align-items: center;
-		width: fit-content;
-		column-gap: 0.4em;
-		margin-top: 0.4em;
-		border-bottom: 0.14em solid var(--color-underline);
-	}
-
-	.links a .arrow {
-		display: none;
-		font-weight: 700;
-	}
-
-	.links a:hover {
-		color: var(--color-accent);
-		border-color: var(--color-accent);
-	}
-
-	.links a:hover .arrow {
-		display: inline-block;
-	}
-
-	:global(.links span svg) {
-		fill: var(--color-accent);
-	}
-
-	@media (max-width: 500px) {
-		.card {
-			min-width: 100%;
-			padding: 2em;
-		}
-
-		img {
-			min-width: auto;
-			max-width: auto;
-		}
-	}
-</style>

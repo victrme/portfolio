@@ -1,0 +1,27 @@
+header {
+	text-align: center;
+	margin-top: 5vh;
+	font-size: 15px;
+	line-height: 1.75em;
+}
+
+header a {
+	border-color: var(--color-underline);
+}
+
+header a:hover,
+header button:hover {
+	color: var(--color-accent);
+	border-bottom: 0.15em solid var(--color-accent);
+}
+
+:root[data-theme='light'] #theme-btn-dark,
+:root[data-theme='dark'] #theme-btn-light {
+	display: none;
+}
+
+@media (max-width: 500px) {
+	header {
+		font-size: 12.5px;
+	}
+}

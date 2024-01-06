@@ -1,69 +1,53 @@
 ---
 const props = Astro.props
+
+const en = props.lang === 'en'
+const href = en ? '/fr' : '/'
+const lang = en ? 'fr' : 'en'
 ---
 
 <header>
 	<div>
 		<slot name='text' />
-		<a href={props.lang === 'en' ? '/fr' : '/'}>
+
+		<a href={href} lang={lang}>
 			<slot name='lang' />
 		</a>
+
 		<slot name='with' />
-		<button type='button' id='theme-btn'> light</button>
+
+		<button id='theme-btn-light'>
+			<slot name='light' class='test' />
+		</button>
+
+		<button id='theme-btn-dark'>
+			<slot name='dark' />
+		</button>
+
 		<slot name='theme' />
 	</div>
-
-	<!-- <div>
-		<a href='https://victr.me/tiny'>>1kb portfolio</a>
-	</div> -->
 </header>
 
-<script is:inline>
-	function setTheme(theme) {
-		localStorage.theme = theme
-		document.documentElement.dataset.theme = theme
-		document.getElementById('theme-btn').textContent = theme
-	}
+<script>
+	function setTheme(dark?: boolean) {
+		if (dark === undefined) {
+			const preferedColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+			const storedColorScheme = localStorage.dark === 'true'
 
-	setTheme(localStorage.theme ?? 'light')
-	document.getElementById('theme-btn').onclick = () => setTheme(localStorage.theme === 'light' ? 'dark' : 'light')
-</script>
-
-<style>
-	header {
-		text-align: center;
-		margin-top: 5vh;
-		font-size: 15px;
-		line-height: 1.75em;
-	}
-
-	button {
-		border: none;
-		padding: 0;
-		color: var(--color-accent);
-		background-color: transparent;
-		cursor: pointer;
-	}
-
-	a,
-	span,
-	button {
-		border-bottom: 0.15em solid transparent;
-	}
-
-	a {
-		border-color: var(--color-underline);
-	}
-
-	a:hover,
-	button:hover {
-		color: var(--color-accent);
-		border-bottom: 0.15em solid var(--color-accent);
-	}
-
-	@media (max-width: 500px) {
-		header {
-			font-size: 12.5px;
+			dark = localStorage.dark === undefined ? !preferedColorScheme : !storedColorScheme
+			localStorage.dark = dark
 		}
+
+		document.documentElement.dataset.theme = dark ? 'dark' : 'light'
 	}
-</style>
+
+	setTheme(
+		localStorage.dark === undefined
+			? window.matchMedia('(prefers-color-scheme: dark)').matches
+			: localStorage.dark === 'true'
+	)
+
+	document.getElementById('theme-btn-light')?.addEventListener('click', () => setTheme())
+	document.getElementById('theme-btn-dark')?.addEventListener('click', () => setTheme())
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => setTheme(e.matches))
+</script>

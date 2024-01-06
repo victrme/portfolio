@@ -1,0 +1,116 @@
+#intro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	margin: 12vh auto 6vh auto;
+}
+
+#intro picture {
+	width: 10em;
+	height: 10em;
+	box-shadow: 0.2em 0.2em 1em var(--color-shadow);
+	background: var(--color-image-background);
+	border-radius: 0.5em;
+	overflow: hidden;
+}
+
+#intro picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	margin: 0;
+	max-width: 12em;
+	font-size: 2.2em;
+	line-height: 1.2em;
+}
+
+h1 span {
+	display: inline-block;
+}
+
+h1 strong {
+	color: var(--color-accent);
+}
+
+#wave {
+	padding-left: 1.25em;
+	display: inline-block;
+}
+
+#wave span {
+	position: relative;
+	cursor: default;
+	margin-bottom: -0.2em;
+	animation: Waving 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s 1 forwards;
+}
+
+#wave span::after {
+	content: '👋';
+	position: absolute;
+	bottom: -0em;
+	right: 0;
+	cursor: grab;
+}
+
+#wave:active span::after {
+	cursor: grabbing;
+}
+
+@media (max-width: 740px) {
+	picture {
+		width: 7.8em;
+		height: 7.8em;
+	}
+
+	h1 {
+		font-size: 1.6em;
+	}
+}
+
+@media (max-width: 500px) {
+	div {
+		flex-direction: column;
+		margin-top: 8vh;
+		margin-bottom: 4vh;
+	}
+
+	h1 {
+		font-size: 1.4em;
+		line-height: 1.1em;
+		text-align: center;
+	}
+}
+
+@keyframes Waving {
+	0% {
+		transform: rotate(0);
+	}
+	13% {
+		transform: rotate(8deg);
+	}
+	26% {
+		transform: rotate(0);
+	}
+	39% {
+		transform: rotate(10deg);
+	}
+	52% {
+		transform: rotate(0);
+	}
+	65% {
+		transform: rotate(8deg);
+	}
+	76% {
+		transform: rotate(-2deg);
+	}
+	90% {
+		transform: rotate(8deg);
+	}
+	100% {
+		transform: rotate(-1deg);
+	}
+}

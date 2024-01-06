@@ -1,0 +1,52 @@
+#contact {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#contact li {
+	display: inline-block;
+}
+
+#contact a {
+	font-size: 1.2em;
+	padding: 0.1em 0em;
+	margin: 0.3em 1.4em;
+	border-color: var(--color-underline);
+}
+
+#contact a:focus-visible,
+#contact a:hover {
+	padding: 0.4em 1.4em;
+	margin: 0;
+	color: white;
+	border: none;
+	border-radius: 0.5em;
+	background-color: var(--color-accent);
+	box-shadow: 0.5em 0.5em 1em var(--color-shadow);
+}
+
+#contact a:active {
+	opacity: 0.8;
+}
+
+@media (max-width: 740px) {
+	#contact a {
+		font-size: 1em;
+		margin: 0.3em 1em;
+	}
+
+	#contact a:focus-visible,
+	#contact a:hover {
+		padding: 0.4em 1em;
+	}
+}
+
+@media (max-width: 500px) {
+	#contact {
+		gap: 0.6em;
+		text-align: center;
+		flex-direction: column;
+	}
+}
