@@ -27,13 +27,19 @@ import Layout from '../../layouts/layout.astro'
 
 	<ul id='projects'>
 		<Card lang='fr' homepage='https://bonjourr.fr' source='https://github.com/victrme/bonjourr'>
-			<img slot='picture' src='/images/previews/bonjourr.webp' alt='preview of bonjourr' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/bonjourr.webp'
+				alt='preview of bonjourr'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>Bonjourr</span>
 			<span slot='category'>Extension</span>
 
-			<img slot='tag' src='/images/tags/sass.svg' title='sass' alt='sass' draggable='false' />
-			<img slot='tag' src='/images/tags/gulp.svg' title='gulp' alt='gulp' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/sass.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/gulp.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
 
 			<span slot='description'>
 				Bonjourr est une page d'accueil minimaliste pour naviguateur, pour firefox, chrome et safari. En collaboration
@@ -44,12 +50,18 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' homepage='https://pocketeditor.victr.me' source='https://github.com/victrme/pocket-editor'>
-			<img slot='picture' src='/images/previews/pocketeditor-light.webp' alt='preview of bonjourr' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/pocketeditor-light.webp'
+				alt='preview of bonjourr'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>Pocket editor</span>
 			<span slot='category'>Npm package</span>
 
-			<img slot='tag' src='/images/tags/npm.svg' title='npm' alt='npm' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/npm.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
 
 			<span slot='description'>
 				Éditeur de texte style Notion qui renvoie du markdown. Créé dans le but de charger aussi vite que du HTML pur.
@@ -59,12 +71,18 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' source='https://github.com/victrme/favicon-fetcher'>
-			<img slot='picture' src='/images/previews/faviconfetcher-light.webp' alt='illustration' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/faviconfetcher-light.webp'
+				alt='illustration'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>Favicon Fetcher</span>
 			<span slot='category'>API</span>
 
-			<img slot='tag' src='/images/tags/npm.svg' title='npm' alt='npm' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/npm.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
 
 			<span slot='description'>
 				Fonction edge pour récupérer la meilleure favicon de n'importe quel site. Sert de remplacement pour le défunt
@@ -73,12 +91,18 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' homepage='https://savonnerielacurieuse.com'>
-			<img slot='picture' src='/images/previews/lacurieuse.webp' alt='preview of la curieuse' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/lacurieuse.webp'
+				alt='preview of la curieuse'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>La Curieuse</span>
 			<span slot='category'>Website</span>
 
-			<img slot='tag' src='/images/tags/tailwindcss.svg' title='tailwindcss' alt='tailwindcss' draggable='false' />
-			<img slot='tag' src='/images/tags/astro.svg' title='astro' alt='astro' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/tailwindcss.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/astro.svg' />
 
 			<span slot='description'>
 				Une page vitrine pour La Curieuse. Mis à jour avec Tailwind & Astro, pour un score parfait sur lighthouse !
@@ -88,13 +112,19 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' homepage='https://polytronome.victr.me' source='https://github.com/victrme/polytronome'>
-			<img slot='picture' src='/images/previews/polytronome-light.webp' alt='preview of polytronome' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/polytronome-light.webp'
+				alt='preview of polytronome'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>Polytronome</span>
 			<span slot='category'>Webapp</span>
 
-			<img slot='tag' src='/images/tags/react.svg' title='react' alt='react' draggable='false' />
-			<img slot='tag' src='/images/tags/sass.svg' title='sass' alt='sass' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/react.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/sass.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
 
 			<span slot='description'>
 				Une page web où on peut ajouter plusieurs métronomes avec differents rythmes et voir ce que ça donne.
@@ -104,11 +134,17 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' source='https://github.com/victrme/portfolio'>
-			<img slot='picture' src='/images/previews/portfolio-light.webp' alt='sketch of this portfolio' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/portfolio-light.webp'
+				alt='sketch of this portfolio'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>Portfolio</span>
 			<span slot='category'>Website</span>
 
-			<img slot='tag' src='/images/tags/astro.svg' title='astro' alt='astro' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/astro.svg' />
 
 			<span slot='description'>
 				Cette version de mon portfolio avec la config Astro la plus petite possible. Accessibilité ameliorée depuis les
@@ -116,13 +152,13 @@ import Layout from '../../layouts/layout.astro'
 			</span>
 		</Card>
 
-		<Card lang='fr' homepage='https://bombparty.victr.me' source='https://github.com/victrme/bombparty'>
-			<img slot='picture' src='/images/previews/bombparty.webp' alt='illustration' draggable='false' />
+		<Card lang='fr' homepage='https://bombparty.victr.me' source='https://github.com/victrme/bombparty-genius'>
+			<img slot='picture' src='/images/previews/bombparty.webp' alt='illustration' draggable='false' loading='lazy' />
 			<span slot='title'>Bombparty Genius</span>
 			<span slot='category'>Webapp</span>
 
-			<img slot='tag' src='/images/tags/parcel.svg' title='parcel' alt='parcel' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/parcel.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
 
 			<span slot='description'>
 				Petite page faite pour gagner au jeu bombparty de jklm.fun, ou juste lister des mots !
@@ -132,13 +168,19 @@ import Layout from '../../layouts/layout.astro'
 		</Card>
 
 		<Card lang='fr' source='https://github.com/victrme?tab=repositories'>
-			<img slot='picture' src='/images/previews/others-light.webp' alt='list of repos' draggable='false' />
+			<img
+				slot='picture'
+				src='/images/previews/others-light.webp'
+				alt='list of repos'
+				draggable='false'
+				loading='lazy'
+			/>
 			<span slot='title'>i18n quotes, reward & more</span>
 			<span slot='category'>Various</span>
 
-			<img slot='tag' src='/images/tags/javascript.svg' title='javascript' alt='javascript' draggable='false' />
-			<img slot='tag' src='/images/tags/typescript.svg' title='typescript' alt='typescript' draggable='false' />
-			<img slot='tag' src='/images/tags/html.svg' title='html' alt='html' draggable='false' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/javascript.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
+			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/html.svg' />
 
 			<span slot='description'>
 				D'autres mini web apps. Le code source et leur descriptions sont disponible sur leur repos.
