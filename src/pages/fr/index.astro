@@ -4,7 +4,6 @@ import Intro from '../../components/Intro.astro'
 import Contact from '../../components/Contact.astro'
 import Card from '../../components/Card.astro'
 import Layout from '../../layouts/layout.astro'
-import '@fontsource-variable/dm-sans'
 ---
 
 <Layout lang='fr' title="Salut ! C'est victor 👋" desc="Voici les projets sur lequels j'ai travaillé ces dernières années">
@@ -83,7 +82,12 @@ import '@fontsource-variable/dm-sans'
 		</Card>
 
 		<Card lang='fr' homepage='https://polytronome.victr.me' source='https://github.com/victrme/polytronome'>
-			<img slot='picture' src='./images/previews/polytronome-light.webp' alt='preview of polytronome' draggable='false' />
+			<img
+				slot='picture'
+				src='./images/previews/polytronome-light.webp'
+				alt='preview of polytronome'
+				draggable='false'
+			/>
 			<span slot='title'>Polytronome</span>
 			<span slot='category'>Webapp</span>
 
@@ -97,7 +101,12 @@ import '@fontsource-variable/dm-sans'
 		</Card>
 
 		<Card lang='fr' source='https://github.com/victrme/portfolio'>
-			<img slot='picture' src='./images/previews/portfolio-light.webp' alt='sketch of this portfolio' draggable='false' />
+			<img
+				slot='picture'
+				src='./images/previews/portfolio-light.webp'
+				alt='sketch of this portfolio'
+				draggable='false'
+			/>
 			<span slot='title'>Portfolio</span>
 			<span slot='category'>Website</span>
 

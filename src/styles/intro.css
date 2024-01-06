@@ -34,6 +34,7 @@ h1 span {
 
 h1 strong {
 	color: var(--color-accent);
+	font-weight: 700;
 }
 
 #wave {
@@ -61,7 +62,7 @@ h1 strong {
 }
 
 @media (max-width: 740px) {
-	picture {
+	#intro picture {
 		width: 7.8em;
 		height: 7.8em;
 	}
@@ -72,7 +73,7 @@ h1 strong {
 }
 
 @media (max-width: 500px) {
-	div {
+	#intro {
 		flex-direction: column;
 		margin-top: 8vh;
 		margin-bottom: 4vh;
