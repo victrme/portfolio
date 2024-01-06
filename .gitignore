@@ -1,7 +1,8 @@
-node_modules
-dist
 .DS_Store
-
+.astro
+dist
+node_modules
+env.d.ts
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
