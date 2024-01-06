@@ -39,6 +39,7 @@ html {
 body {
 	position: relative;
 	max-width: 60em;
+	min-width: 330px;
 	color: var(--color-text);
 	margin: auto;
 	font-weight: 500;
@@ -94,6 +95,7 @@ svg {
 }
 
 @media (max-width: 1200px) or (max-height: 901px) {
+	#projects,
 	body {
 		font-size: 17px;
 	}
@@ -106,6 +108,7 @@ svg {
 }
 
 @media (max-width: 500px) {
+	#projects,
 	body {
 		font-size: 16px;
 	}

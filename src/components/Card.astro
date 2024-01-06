@@ -1,6 +1,6 @@
 ---
 import ArrowRight from './ArrowRight.astro'
-const props = Astro.props
+const { homepage, source, lang } = Astro.props
 ---
 
 <li class='card'>
@@ -27,15 +27,15 @@ const props = Astro.props
 	</p>
 
 	<div class='card-links'>
-		<a href={props.homepage ? props.homepage : undefined} draggable='false'>
-			<span>{props.lang === 'fr' ? 'page web' : 'homepage'}</span>
+		<a href={homepage ? homepage : '#'} draggable='false'>
+			<slot name='homepage' />
 			<span class='arrow'>
 				<ArrowRight />
 			</span>
 		</a>
 
-		<a href={props.source ? props.source : undefined} draggable='false'>
-			<span>{props.lang === 'fr' ? 'code source' : 'source code'}</span>
+		<a href={source ? source : '#'} draggable='false'>
+			<span>{lang === 'fr' ? 'code source' : 'source code'}</span>
 			<span class='arrow'>
 				<ArrowRight />
 			</span>

@@ -74,15 +74,15 @@
 }
 
 .card-links a {
-	display: none;
+	display: flex;
 	align-items: center;
 	width: fit-content;
 	column-gap: 0.4em;
 	margin-top: 0.4em;
 }
 
-.card-links a[href] {
-	display: flex;
+.card-links a[href='#'] {
+	display: none;
 }
 
 .card-links a .arrow {
