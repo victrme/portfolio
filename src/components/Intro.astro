@@ -1,3 +1,7 @@
+---
+const lol = Astro.props?.lang === 'fr' ? 'tope là' : 'high five'
+---
+
 <div id='intro'>
 	<picture>
 		<source type='image/avif' srcset='/images/intro/selfie.avif' />
@@ -7,7 +11,7 @@
 	<h1>
 		<span>
 			<slot name='greet' />
-			<span id='wave' draggable='false' title='high five'>
+			<span id='wave' draggable='false' title={lol}>
 				<span></span>
 			</span>
 		</span>

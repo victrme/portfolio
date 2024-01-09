@@ -3,7 +3,8 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2em;
-	margin: 12vh auto 6vh auto;
+	margin-top: 12vh;
+	margin-bottom: 6vh;
 }
 
 #intro picture {
@@ -22,6 +23,7 @@
 }
 
 h1 {
+	width: min-content;
 	margin: 0;
 	max-width: 12em;
 	font-size: 2.2em;
@@ -30,6 +32,7 @@ h1 {
 
 h1 span {
 	display: inline-block;
+	white-space: nowrap;
 }
 
 h1 strong {
@@ -55,10 +58,12 @@ h1 strong {
 	bottom: -0em;
 	right: 0;
 	cursor: grab;
+	transition: transform 0.05s;
 }
 
 #wave:active span::after {
 	cursor: grabbing;
+	transform: scale(0.9);
 }
 
 @media (max-width: 740px) {
