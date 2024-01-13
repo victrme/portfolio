@@ -27,9 +27,9 @@ import Card from '../components/Card.astro'
 	</Contact>
 
 	<div id='projects'>
-		<div id='main-project'>
+		<ul id='main-project'>
 			<Card>
-				<span slot='title'>Bonjourr</span>
+				<h2 slot='title'>Bonjourr</h2>
 				<span slot='category'>Extension</span>
 
 				<span slot='description'>
@@ -53,10 +53,8 @@ import Card from '../components/Card.astro'
 				/>
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Bonjourr API</span>
+				<h3 slot='title'>Bonjourr API</h3>
 				<span slot='category'>Cloudflare Worker</span>
 
 				<span slot='description'>
@@ -73,10 +71,8 @@ import Card from '../components/Card.astro'
 				<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' alt='' />
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>bonjourr.fr</span>
+				<h3 slot='title'>bonjourr.fr</h3>
 				<span slot='category'>Static site</span>
 
 				<span slot='description'>
@@ -92,13 +88,13 @@ import Card from '../components/Card.astro'
 				<img slot='tag' src='/images/tags/astro.svg' loading='lazy' alt='' />
 				<img slot='tag' src='/images/tags/html.svg' loading='lazy' alt='' />
 			</Card>
-		</div>
+		</ul>
 
-		<div>
-			<h2>APIs and modules</h2>
+		<h2>APIs and modules</h2>
 
+		<ul class='projects'>
 			<Card>
-				<span slot='title'>Pocket editor</span>
+				<h3 slot='title'>Pocket editor</h3>
 				<span slot='category'>Node modules</span>
 
 				<span slot='description'>
@@ -112,10 +108,8 @@ import Card from '../components/Card.astro'
 				<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' alt='' />
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Favicon Fetcher</span>
+				<h3 slot='title'>Favicon Fetcher</h3>
 				<span slot='category'>API</span>
 
 				<span slot='description'>
@@ -127,10 +121,8 @@ import Card from '../components/Card.astro'
 				<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' alt='' />
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Search Suggestions</span>
+				<h3 slot='title'>Search Suggestions</h3>
 				<span slot='category'>API</span>
 
 				<span slot='description'>
@@ -143,12 +135,13 @@ import Card from '../components/Card.astro'
 
 				<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' alt='' />
 			</Card>
-		</div>
+		</ul>
 
-		<div>
-			<h2>Sites and Webapps</h2>
+		<h2>Sites and Webapps</h2>
+
+		<ul class='projects'>
 			<Card>
-				<span slot='title'>La Curieuse</span>
+				<h3 slot='title'>La Curieuse</h3>
 				<span slot='category'>Website</span>
 
 				<span slot='description'>
@@ -171,10 +164,8 @@ import Card from '../components/Card.astro'
 				/>
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Polytronome</span>
+				<h3 slot='title'>Polytronome</h3>
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
@@ -193,7 +184,7 @@ import Card from '../components/Card.astro'
 					class='light-preview'
 					srcset='/images/previews/polytronome-170w-light.webp 1x, /images/previews/polytronome-340w-light.webp 2x'
 					src='/images/previews/polytronome-170w-light.webp'
-					alt='polytronome'
+					alt='polytronome interface'
 					loading='lazy'
 				/>
 				<img
@@ -201,15 +192,13 @@ import Card from '../components/Card.astro'
 					class='dark-preview'
 					srcset='/images/previews/polytronome-170w-dark.webp 1x, /images/previews/polytronome-340w-dark.webp 2x'
 					src='/images/previews/polytronome-170w-dark.webp'
-					alt='polytronome'
+					alt='polytronome interface'
 					loading='lazy'
 				/>
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Portfolio</span>
+				<h3 slot='title'>Portfolio</h3>
 				<span slot='category'>Website</span>
 
 				<span slot='description'>
@@ -240,10 +229,8 @@ import Card from '../components/Card.astro'
 				/>
 			</Card>
 
-			<hr />
-
 			<Card>
-				<span slot='title'>Bombparty Genius</span>
+				<h3 slot='title'>Bombparty Genius</h3>
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
@@ -255,11 +242,11 @@ import Card from '../components/Card.astro'
 
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/vite.svg' />
 			</Card>
-		</div>
+		</ul>
 
-		<div>
-			<h2>Various forks, pages & other works</h2>
+		<h2>Various forks, pages & other works</h2>
 
+		<ul class='projects'>
 			<Card>
 				<img
 					slot='picture'
@@ -269,7 +256,7 @@ import Card from '../components/Card.astro'
 					alt='list of repos'
 					draggable='false'
 				/>
-				<span slot='title'>i18n quotes, reward & more</span>
+				<h3 slot='title'>i18n quotes, reward & more</h3>
 				<span slot='category'>Various</span>
 
 				<a slot='link' href='https://github.com/victrme?tab=repositories'>all repositories</a>
@@ -282,6 +269,6 @@ import Card from '../components/Card.astro'
 					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
 				</span>
 			</Card>
-		</div>
+		</ul>
 	</div>
 </Layout>

@@ -1,42 +1,20 @@
 #projects {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	padding: 3em;
-	margin: auto;
 	margin-top: 10vh;
-	gap: 3em;
-	font-size: 17px;
-}
-
-#projects > div {
 	padding: 3em;
-}
-
-#projects hr {
-	height: 1px;
-	width: 50%;
-	margin: 2.5em auto;
-	border: none;
-	opacity: 0.2;
-	background-color: var(--color-text);
 }
 
 #projects h2 {
-	margin-bottom: 2em;
+	margin-top: 4em;
+}
+
+#projects ul {
+	padding: 3em;
 }
 
 #main-project {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
-	width: 100%;
 	border-radius: 20px;
 	box-shadow: 0.5em 0.5em 3em var(--color-shadow);
 	background-color: var(--color-card-background);
-	transition: transform 0.6s;
 }
 
 .card {
@@ -46,7 +24,8 @@
 	grid-template-areas:
 		'title desc'
 		'links desc'
-		'more more';
+		'more more'
+		'hr hr';
 }
 
 .card:has(picture img) {
@@ -54,7 +33,12 @@
 		'image title'
 		'image desc'
 		'links desc'
-		'more more';
+		'more more'
+		'hr hr';
+}
+
+.card hr {
+	grid-area: hr;
 }
 
 .card-image {
@@ -103,25 +87,29 @@
 	background: var(--color-image-background);
 }
 
+.card-title {
+	display: grid;
+	column-gap: 0.5em;
+	grid-template-columns: 1fr min-content;
+	grid-template-rows: min-content;
+}
+
+#main-project h2,
 .card h3 {
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
 	font-size: 1.4em;
 	line-height: 1em;
 	margin: 0;
-	width: 100%;
-	gap: 0.4em;
 }
 
 .card-tags {
-	display: flex;
-	gap: 0.4em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
 }
 
 .card-tags img {
-	width: 0.75em;
-	height: 0.75em;
+	width: 1em;
+	height: 1em;
 	border-radius: 2px;
 }
 
@@ -175,26 +163,44 @@
 	content: '';
 }
 
+#projects hr {
+	height: 1px;
+	width: 50%;
+	margin: 2.5em auto;
+	border: none;
+	opacity: 0.2;
+	background-color: var(--color-text);
+}
+
+#projects ul li:last-child hr {
+	display: none;
+}
+
 @media (max-width: 700px) {
-	#projects {
-		gap: 2em;
-		padding: 1em;
+	#projects > h2 {
+		text-align: center;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+
+	#projects ul {
+		padding: 2em;
 		margin: 8vh auto 8vh auto;
 		max-width: 30em;
 	}
 
-	#projects > div {
-		padding: 2em;
+	#projects {
+		padding: 1em;
 	}
 
 	.card {
 		row-gap: 1em;
 		grid-template-columns: 1fr;
-		grid-template-areas: 'title' 'desc' 'more' 'links';
+		grid-template-areas: 'title' 'desc' 'more' 'links' 'hr';
 	}
 
 	.card:has(picture img) {
-		grid-template-areas: 'image' 'title' 'desc' 'more' 'links';
+		grid-template-areas: 'image' 'title' 'desc' 'more' 'links' 'hr';
 	}
 
 	.card picture img {

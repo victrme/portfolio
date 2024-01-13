@@ -4,13 +4,11 @@
 	</picture>
 
 	<div class='card-title'>
-		<h3>
-			<slot name='title' />
+		<slot name='title' />
 
-			<span class='card-tags'>
-				<slot name='tag' />
-			</span>
-		</h3>
+		<span class='card-tags'>
+			<slot name='tag' />
+		</span>
 
 		<p class='card-category'>
 			<slot name='category' />
@@ -32,4 +30,6 @@
 	<div class='card-more'>
 		<slot name='more' />
 	</div>
+
+	<hr />
 </li>
