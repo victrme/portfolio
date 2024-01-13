@@ -27,6 +27,11 @@
 	--color-card-background: #fffc;
 }
 
+:root[data-theme='dark'] img.light-preview,
+:root[data-theme='light'] img.dark-preview {
+	display: none;
+}
+
 html {
 	background-color: var(--color-background);
 }

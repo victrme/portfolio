@@ -41,10 +41,16 @@ import Card from '../components/Card.astro'
 				<a slot='link' href='https://bonjourr.fr'>bonjourr.fr</a>
 				<a slot='link' href='https://github.com/victrme/bonjourr'>source code</a>
 
-				<img slot='tag' src='/images/tags/sass.svg' loading='lazy' alt='' />
-				<img slot='tag' src='/images/tags/gulp.svg' loading='lazy' alt='' />
-				<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' alt='' />
-				<img slot='image' src='/images/previews/bonjourr.webp' loading='lazy' alt='preview of bonjourr startpage' />
+				<img slot='tag' src='/images/tags/sass.svg' alt='' />
+				<img slot='tag' src='/images/tags/gulp.svg' alt='' />
+				<img slot='tag' src='/images/tags/typescript.svg' alt='' />
+
+				<img
+					slot='image'
+					srcset='/images/previews/bonjourr-170w.webp 1x, /images/previews/bonjourr-340w.webp 2x'
+					src='/images/previews/bonjourr-170w.webp'
+					alt='preview of bonjourr startpage'
+				/>
 			</Card>
 
 			<hr />
@@ -155,7 +161,14 @@ import Card from '../components/Card.astro'
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/tailwindcss.svg' />
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/svelte.svg' />
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/astro.svg' />
-				<img slot='image' src='/images/previews/lacurieuse.webp' alt='lacurieuse landing page' loading='lazy' />
+
+				<img
+					slot='image'
+					srcset='/images/previews/savonnerie-170w.webp 1x, /images/previews/savonnerie-340w.webp 2x'
+					src='/images/previews/savonnerie-170w.webp'
+					alt='savonnerielacurieuse landing page'
+					loading='lazy'
+				/>
 			</Card>
 
 			<hr />
@@ -174,7 +187,23 @@ import Card from '../components/Card.astro'
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/react.svg' />
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/sass.svg' />
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/typescript.svg' />
-				<img slot='image' src='/images/previews/polytronome-light.webp' alt='polytronome' loading='lazy' />
+
+				<img
+					slot='image'
+					class='light-preview'
+					srcset='/images/previews/polytronome-170w-light.webp 1x, /images/previews/polytronome-340w-light.webp 2x'
+					src='/images/previews/polytronome-170w-light.webp'
+					alt='polytronome'
+					loading='lazy'
+				/>
+				<img
+					slot='image'
+					class='dark-preview'
+					srcset='/images/previews/polytronome-170w-dark.webp 1x, /images/previews/polytronome-340w-dark.webp 2x'
+					src='/images/previews/polytronome-170w-dark.webp'
+					alt='polytronome'
+					loading='lazy'
+				/>
 			</Card>
 
 			<hr />
@@ -192,7 +221,23 @@ import Card from '../components/Card.astro'
 
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/astro.svg' />
 				<img slot='tag' loading='lazy' alt='' src='/images/tags/html.svg' />
-				<img slot='image' src='/images/previews/portfolio-light.webp' alt='portfolio sketch' loading='lazy' />
+
+				<img
+					slot='image'
+					class='light-preview'
+					srcset='/images/previews/portfolio-170w-light.webp 1x, /images/previews/portfolio-340w-light.webp 2x'
+					src='/images/previews/portfolio-170w-light.webp'
+					alt='sketch of this portfolio'
+					loading='lazy'
+				/>
+				<img
+					slot='image'
+					class='dark-preview'
+					srcset='/images/previews/portfolio-170w-dark.webp 1x, /images/previews/portfolio-340w-dark.webp 2x'
+					src='/images/previews/portfolio-170w-dark.webp'
+					alt='sketch of this portfolio'
+					loading='lazy'
+				/>
 			</Card>
 
 			<hr />
