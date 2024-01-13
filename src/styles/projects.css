@@ -58,7 +58,6 @@
 }
 
 .card-more {
-	display: none;
 	grid-area: more;
 }
 
@@ -161,6 +160,24 @@
 
 .card-links a:hover::after {
 	content: '';
+}
+
+label {
+	user-select: none;
+	cursor: pointer;
+}
+
+label:has(input:checked) {
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+label input {
+	display: none;
+}
+
+.card:not(:has(label input:checked)) .card-more {
+	display: none;
 }
 
 #projects hr {
