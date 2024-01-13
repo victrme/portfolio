@@ -4,8 +4,9 @@ const lol = Astro.props?.lang === 'fr' ? 'tope là' : 'high five'
 
 <div id='intro'>
 	<picture>
-		<source type='image/avif' srcset='/images/intro/selfie.avif' />
-		<img src='/images/intro/selfie.jpg' alt='A la montagne' draggable='false' />
+		<source type='image/avif' srcset='images/intro/selfie-170w.avif 1x, images/intro/selfie-340w.avif 2x' />
+		<source type='image/webp' srcset='images/intro/selfie-170w.webp 1x, images/intro/selfie-340w.webp 2x' />
+		<img src='images/intro/selfie-170w.avif' alt='me at the Sancy' draggable='false' />
 	</picture>
 
 	<h1>

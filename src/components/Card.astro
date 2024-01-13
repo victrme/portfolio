@@ -1,23 +1,7 @@
----
-import ArrowRight from './ArrowRight.astro'
-const { homepage, source, lang, image } = Astro.props
----
-
-<li class={'card' + (image ? ' with-image' : '')}>
-	{
-		image && (
-			<picture class='card-image'>
-				<img
-					slot='picture'
-					src={`/images/previews/${image}`}
-					loading='lazy'
-					draggable='false'
-					alt='preview of project'
-					draggable='false'
-				/>
-			</picture>
-		)
-	}
+<li class='card'>
+	<picture class='card-image'>
+		<slot name='image' />
+	</picture>
 
 	<div class='card-title'>
 		<h3>
@@ -34,19 +18,7 @@ const { homepage, source, lang, image } = Astro.props
 	</div>
 
 	<div class='card-links'>
-		<a href={homepage ? homepage : '#'} draggable='false'>
-			<slot name='homepage' />
-			<span class='arrow'>
-				<ArrowRight />
-			</span>
-		</a>
-
-		<a href={source ? source : '#'} draggable='false'>
-			<span>{lang === 'fr' ? 'code source' : 'source code'}</span>
-			<span class='arrow'>
-				<ArrowRight />
-			</span>
-		</a>
+		<slot name='link' />
 	</div>
 
 	<p class='card-desc'>
@@ -57,7 +29,7 @@ const { homepage, source, lang, image } = Astro.props
 		<button>more</button>
 	</p>
 
-	<p class='card-more'>
+	<div class='card-more'>
 		<slot name='more' />
-	</p>
+	</div>
 </li>

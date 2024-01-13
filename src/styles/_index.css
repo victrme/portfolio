@@ -97,12 +97,6 @@ svg {
 	}
 }
 
-@media (max-width: 950px) {
-	body {
-		width: 100%;
-	}
-}
-
 @media (max-width: 500px) {
 	#projects,
 	body {
