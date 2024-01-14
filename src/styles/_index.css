@@ -63,6 +63,7 @@ picture img {
 }
 
 a,
+label,
 button {
 	padding: 0;
 	color: inherit;
@@ -75,6 +76,7 @@ button {
 	cursor: pointer;
 }
 
+label:focus-visible,
 button:focus-visible,
 a:focus-visible {
 	border-color: transparent;

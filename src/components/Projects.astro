@@ -3,22 +3,13 @@
 </div>
 
 <script>
-	if (CSS.supports('selector(:has(p))')) {
-		return
+	for (const button of document.querySelectorAll('.card button')) {
+		button.addEventListener('click', toggleMore)
 	}
 
 	function toggleMore(event: Event) {
-		const input = event.target as HTMLInputElement
-		const path = [...event.composedPath()] as Element[]
-		const card = path.find((node) => node?.className === 'card')
-		const more = card?.querySelector<HTMLElement>('.card-more')
-
-		if (more) {
-			more.style.display = input?.checked ? 'initial' : 'none'
-		}
-	}
-
-	for (const input of document.querySelectorAll('.card label input')) {
-		input.addEventListener('input', toggleMore)
+		const path = [...event.composedPath()] as HTMLElement[]
+		const card = path.find((node) => node?.classList.contains('card'))
+		card?.classList.toggle('with-more')
 	}
 </script>

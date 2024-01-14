@@ -162,22 +162,22 @@
 	content: '';
 }
 
-label {
-	user-select: none;
-	cursor: pointer;
+.card .card-more {
+	display: none;
 }
 
-label:has(input:checked) {
+.card.with-more .card-more {
+	display: initial;
+}
+
+.card button:hover,
+.card.with-more button {
 	color: var(--color-accent);
-	text-decoration: underline;
+	border-bottom-color: var(--color-accent);
 }
 
-label input {
-	display: none;
-}
-
-.card:not(:has(label input:checked)) .card-more {
-	display: none;
+.card button:active {
+	opacity: 0.7;
 }
 
 #projects hr {
