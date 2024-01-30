@@ -164,10 +164,18 @@
 
 .card .card-more {
 	display: none;
+	padding: 2em;
+	margin-top: 2em;
+	border-radius: 1em;
+	background-color: var(--color-more-background);
 }
 
 .card.with-more .card-more {
 	display: initial;
+}
+
+.card .card-more h4:first-child {
+	margin-top: 0;
 }
 
 .card button:hover,

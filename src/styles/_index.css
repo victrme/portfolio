@@ -15,6 +15,7 @@
 	--color-underline: #666;
 	--color-background: #000;
 	--color-card-background: #111;
+	--color-more-background: #222;
 }
 
 :root[data-theme='light'] {
@@ -25,6 +26,7 @@
 	--color-underline: #4d709922;
 	--color-background: #f6fbfd;
 	--color-card-background: #fffc;
+	--color-more-background: #f3f8fd;
 }
 
 :root[data-theme='dark'] img.light-preview,

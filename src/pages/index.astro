@@ -37,7 +37,15 @@ import Card from '../components/Card.astro'
 					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
 				</span>
 
-				<p slot='more'>hello</p>
+				<button slot='more-btn'>more</button>
+
+				<div slot='more'>
+					<h4>Outils utilisé</h4>
+					<p>
+						jQuery au début, mais rapidement enlevé pour des raisons de performances, pour tout faire en pure
+						javascript. Bundle avec esbuild & Gulp, test fonctionnels avec Playwright, aucune dépendences.
+					</p>
+				</div>
 
 				<a slot='link' href='https://bonjourr.fr'>bonjourr.fr</a>
 				<a slot='link' href='https://github.com/victrme/bonjourr'>source code</a>
@@ -77,16 +85,24 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Static site</span>
 
 				<span slot='description'>
-					Le site original a été fait par https://tahoe.be. Pour pouvoir corriger les problèmes de traductions que
-					Gatsby nous a créés, j’ai du rewrite en Astro pour en faire un site statique façon blog.
+					Le site original a été fait par <a href='https://tahoe.be'>tahoe.be</a>. Pour pouvoir corriger les
+					problèmes de traductions que Gatsby nous a créés, j’ai du rewrite en Astro pour en faire un site statique
+					façon blog.
 				</span>
 
-				<h4 slot='more'>Mon intervention</h4>
-				<p slot='more'>
-					On a eu des problèmes avec l'i18n pour la documentation. En plus de ça on ne pouvait pas mettre à jour les
-					dépendences à cause des conflits. Après une semaine dans le package.json, j'ai finalement cherché une
-					alternative à Gatsby. Astro venait de sortir et j'en suis très content !
-				</p>
+				<button slot='more-btn'>more</button>
+
+				<div slot='more'>
+					<h4>Mon intervention</h4>
+					<p>
+						On a eu des problèmes avec l'i18n pour la documentation. En plus de ça on ne pouvait pas mettre à jour
+						les dépendences à cause des conflits. Après une semaine dans le package.json, j'ai finalement cherché
+						une alternative à Gatsby. Astro venait de sortir et j'en suis très content !
+					</p>
+
+					<h4>Outils utilisé</h4>
+					<p>A la base créé avec Gatsby, réécrit avec Astro. Hosté sur Netlify, maintenant sur Cloudflare.</p>
+				</div>
 
 				<span slot='homepage'>bonjourr.fr</span>
 
@@ -256,14 +272,22 @@ import Card from '../components/Card.astro'
 
 		<ul class='projects'>
 			<Card>
-				<img
-					slot='picture'
-					src='/images/previews/others-light.webp'
-					loading='lazy'
-					draggable='false'
-					alt='list of repos'
-					draggable='false'
-				/>
+				<h3 slot='title'>@victr/deepmerge</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://github.com/victrme/deepmerge'>Github page</a>
+				<a slot='link' href='https://github.com/victrme/deepmerge'>Github page</a>
+
+				<img slot='tag' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+				<img slot='tag' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					This is a ESM port of @fastify/deepmerge. Fastify has the best deepmerge implementation, but it is commonjs
+					only. Types and benchmarks are working properly.
+				</span>
+			</Card>
+
+			<Card>
 				<h3 slot='title'>i18n quotes, reward & more</h3>
 				<span slot='category'>Various</span>
 
