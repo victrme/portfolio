@@ -1,32 +1,30 @@
 ---
-const lol = Astro.props?.lang === 'fr' ? 'tope là' : 'high five'
+const { wave, image } = Astro.props
 ---
 
-<div id='intro'>
+<section id='intro'>
 	<picture>
 		<img
 			srcset='images/intro/selfie-200w.webp 1x, images/intro/selfie-340w.webp 2x'
 			src='images/intro/selfie-200w.webp'
-			alt='me at the Sancy'
 			draggable='false'
+			alt={image}
 		/>
 	</picture>
 
 	<h1>
 		<span>
 			<slot name='greet' />
-			<span id='wave' draggable='false' title={lol}>
-				<span></span>
+			<span id='wave' draggable='false' title={wave} aria-hidden='true'>
+				<span> </span>
 			</span>
 		</span>
-
 		<span>
 			<slot name='who' />
 			<strong>victor.azevedo,</strong>
 		</span>
-
 		<span>
 			<slot name='what' />
 		</span>
 	</h1>
-</div>
+</section>

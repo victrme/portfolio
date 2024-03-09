@@ -6,26 +6,24 @@ const href = en ? '/fr' : '/'
 const lang = en ? 'fr' : 'en'
 ---
 
-<header>
-	<div>
-		<slot name='text' />
+<header aria-label={props.label}>
+	<slot name='text' />
 
-		<a href={href} lang={lang}>
-			<slot name='lang' />
-		</a>
+	<a href={href} lang={lang}>
+		<slot name='lang' />
+	</a>
 
-		<slot name='with' />
+	<slot name='with' />
 
-		<button id='theme-btn-light'>
-			<slot name='light' class='test' />
-		</button>
+	<button id='theme-btn-light'>
+		<slot name='light' class='test' />
+	</button>
 
-		<button id='theme-btn-dark'>
-			<slot name='dark' />
-		</button>
+	<button id='theme-btn-dark'>
+		<slot name='dark' />
+	</button>
 
-		<slot name='theme' />
-	</div>
+	<slot name='theme' />
 </header>
 
 <script>

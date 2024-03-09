@@ -1,32 +1,28 @@
-<li class='card'>
+<div class='card'>
 	<picture class='card-image'>
 		<slot name='image' />
 	</picture>
 
 	<div class='card-title'>
-		<slot name='title' />
+		<div class='card-heading'>
+			<slot name='title' />
 
-		<span class='card-tags'>
-			<slot name='tag' />
-		</span>
+			<span class='card-tags'>
+				<slot name='tag' />
+			</span>
+		</div>
 
-		<p class='card-category'>
-			<slot name='category' />
-		</p>
+		<slot name='category' />
 	</div>
 
-	<div class='card-links'>
+	<ul class='card-links'>
 		<slot name='link' />
-	</div>
+	</ul>
 
 	<p class='card-desc'>
 		<slot name='description' />
 		<slot name='more-btn' />
 	</p>
 
-	<div class='card-more'>
-		<slot name='more' />
-	</div>
-
 	<hr />
-</li>
+</div>

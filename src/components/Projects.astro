@@ -1,6 +1,10 @@
-<div id='projects'>
+---
+const { label } = Astro.props
+---
+
+<section id='projects' aria-label={label}>
 	<slot />
-</div>
+</section>
 
 <script>
 	for (const button of document.querySelectorAll('.card button')) {
