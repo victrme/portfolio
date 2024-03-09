@@ -99,6 +99,10 @@ svg {
 	outline: none;
 }
 
+#backtotop {
+	text-align: center;
+}
+
 @media (max-width: 1200px) or (max-height: 901px) {
 	#projects,
 	body {

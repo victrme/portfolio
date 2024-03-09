@@ -32,18 +32,12 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Extension</span>
 
 				<span slot='description'>
-					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+					A minimal chrome and firefox homepage addon. Even with the amount of customization available, it is still
+					extremely lightweight. Now with over 100k happy users! In collaboration with <a href='https://tahoe.be'
+						>tahoe.be</a
+					>.
+					<!-- <a>Read more about it</a>. -->
 				</span>
-
-				<a slot='more-btn' href='/blog/about-bonjourr'>more</a>
-
-				<div slot='more'>
-					<h4>Outils utilisé</h4>
-					<p>
-						jQuery au début, mais rapidement enlevé pour des raisons de performances, pour tout faire en pure
-						javascript. Bundle avec esbuild & Gulp, test fonctionnels avec Playwright, aucune dépendences.
-					</p>
-				</div>
 
 				<a slot='link' href='https://bonjourr.fr'>bonjourr.fr</a>
 				<a slot='link' href='https://github.com/victrme/bonjourr'>source code</a>
@@ -65,8 +59,9 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Cloudflare Worker</span>
 
 				<span slot='description'>
-					C'est un backend qui renvoit du JSON principalement. Il est extremement optimisé avec plein de procédés
-					utra moderne et compliqués.
+					This is Bonjourr's backend. It is a collection of small services bundled into one REST API, currently
+					serving millions of requests per month.
+					<!-- <a>More on the changes it went through</a>. -->
 				</span>
 
 				<a slot='link' href='https://api.bonjourr.fr' lang='en'>api.bonjourr.fr</a>
@@ -81,24 +76,12 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Static site</span>
 
 				<span slot='description'>
-					Le site original a été fait par <a href='https://tahoe.be'>tahoe.be</a>. Pour pouvoir corriger les
-					problèmes de traductions que Gatsby nous a créés, j’ai du rewrite en Astro pour en faire un site statique
-					façon blog.
+					A tiny showcase website and documentation for Bonjourr. Originaly made by
+					<a href='https://tahoe.be'>tahoe.be</a>, I then migrated the website from Gatsby to Astro.
+					<!-- <a>On why we had no choice but to migrate</a>. -->
 				</span>
 
 				<button slot='more-btn'>more</button>
-
-				<div slot='more'>
-					<h4>Mon intervention</h4>
-					<p>
-						On a eu des problèmes avec l'i18n pour la documentation. En plus de ça on ne pouvait pas mettre à jour
-						les dépendences à cause des conflits. Après une semaine dans le package.json, j'ai finalement cherché
-						une alternative à Gatsby. Astro venait de sortir et j'en suis très content !
-					</p>
-
-					<h4>Outils utilisé</h4>
-					<p>A la base créé avec Gatsby, réécrit avec Astro. Hosté sur Netlify, maintenant sur Cloudflare.</p>
-				</div>
 
 				<span slot='homepage'>bonjourr.fr</span>
 
@@ -115,10 +98,11 @@ import Card from '../components/Card.astro'
 		<div class='projects'>
 			<Card>
 				<h3 slot='title'>Pocket editor</h3>
-				<span slot='category'>Node modules</span>
+				<span slot='category'>Node module</span>
 
 				<span slot='description'>
 					Notion-styled text editor that returns markdown. Created with the goal of loading as fast as pure html.
+					<!-- <a>On my first npm package</a>. -->
 				</span>
 
 				<a slot='link' href='https://pocketeditor.victr.me' lang='en'>pocketeditor.victr.me</a>
@@ -134,6 +118,7 @@ import Card from '../components/Card.astro'
 
 				<span slot='description'>
 					Edge function to fetch the best favicon from any websites. Replacement for the defunct favicon grabber.
+					<!-- <a>About favicon APIs</a> -->
 				</span>
 
 				<a slot='link' href='https://github.com/victrme/favicon-fetcher'>source code</a>
@@ -146,8 +131,9 @@ import Card from '../components/Card.astro'
 				<span slot='category'>API</span>
 
 				<span slot='description'>
-					It is a bundle of different search suggestions providers with the same json output. Optimized for
-					Cloudflare Workers, but also work as a standalone module.
+					A bundle of different search suggestions providers with the same json output. Optimized for Cloudflare
+					Workers, but also work as a standalone module.
+					<!-- <a>More about this API</a> -->
 				</span>
 
 				<a slot='link' href='https://suggestions.victr.me' lang='en'>suggestions.victr.me</a>
@@ -189,7 +175,8 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
-					A webapp where you can add multiple metronomes with different rythms to see what it sounds like.
+					A webapp where you can add multiple metronomes with different rythms to see what it sounds like. I learned
+					that the sweet spot in React between not capable and completely overkill is very small.
 				</span>
 
 				<a slot='link' href='https://polytronome.victr.me' lang='en'>polytronome.victr.me</a>
@@ -222,8 +209,8 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Website</span>
 
 				<span slot='description'>
-					This version of my portfolio was made with Astro with the smallest config possible. Improved a11y from
-					previous versions.
+					This 6th version of my portfolio was made with Astro with the smallest config possible. Improved
+					accessibility from previous versions.
 				</span>
 
 				<a slot='link' href='https://github.com/victrme/portfolio'>source code</a>
@@ -254,7 +241,8 @@ import Card from '../components/Card.astro'
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
-					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+					This web app was created not to cheat at bombparty by quickly switching tab, writing the requested letters,
+					and write the output in your current game. Not sure if it even works in practice.
 				</span>
 
 				<a slot='link' href='https://bombparty.victr.me' lang='fr'>bombparty.victr.me</a>
@@ -271,14 +259,31 @@ import Card from '../components/Card.astro'
 				<h3 slot='title'>@victr/<wbr />deepmerge</h3>
 				<span slot='category'>Module fork</span>
 
+				<a slot='link' href='https://www.npmjs.com/package/@victr/deepmerge'>npmjs</a>
 				<a slot='link' href='https://github.com/victrme/deepmerge'>source code</a>
 
 				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
 				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
 
 				<span slot='description'>
-					This is a ESM port of @fastify/deepmerge. Fastify has the best deepmerge implementation, but it is commonjs
+					An ES module port of @fastify/deepmerge. Fastify has the best deepmerge implementation, but it is commonjs
 					only. Types and benchmarks are working properly.
+				</span>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>@victr/<br />prism-live</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://www.npmjs.com/package/@victr/prism-live'>npmjs</a>
+				<a slot='link' href='https://github.com/victrme/prism-live'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/javascript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					Prism-powered code editor. Getting ahead of PrismJS/live development by publishing a working package. Old
+					prototype Javascript is a very interesting coding style to work on.
 				</span>
 			</Card>
 
@@ -286,16 +291,16 @@ import Card from '../components/Card.astro'
 				<h3 slot='title'>i18n quotes, reward & more</h3>
 				<span slot='category'>Various</span>
 
-				<a slot='link' href='https://github.com/victrme?tab=repositories'>all repositories</a>
-
-				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/javascript.svg' />
-				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
-				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/html.svg' />
-
 				<span slot='description'>
-					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+					There is more stuff I could add in here but your scrolling finger will get tired. All my other works are in <a
+						href='https://github.com/victrme?tab=repositories'>my repositories</a
+					>.
 				</span>
 			</Card>
 		</div>
 	</Projects>
+
+	<div id='backtotop'>
+		<a href='#'>Back to top</a>
+	</div>
 </Layout>

@@ -20,12 +20,12 @@
 
 .card {
 	display: grid;
+	row-gap: 0.5em;
 	column-gap: 2em;
 	grid-template-columns: 240px 1fr;
 	grid-template-areas:
 		'title desc'
 		'links desc'
-		'more more'
 		'hr hr';
 }
 
@@ -34,7 +34,6 @@
 		'image title'
 		'image desc'
 		'links desc'
-		'more more'
 		'hr hr';
 }
 
@@ -56,10 +55,6 @@
 
 .card-desc {
 	grid-area: desc;
-}
-
-.card-more {
-	grid-area: more;
 }
 
 @supports not (selector(:has(p))) {
@@ -128,8 +123,8 @@
 	margin: 1em 0 1.5em 0;
 }
 
-.card-links {
-	margin-top: 0.5em;
+.card .card-links {
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.2em;
 }
@@ -161,28 +156,6 @@
 
 .card-links a:hover::after {
 	content: '';
-}
-
-.card .card-more {
-	display: none;
-	padding: 2em;
-	margin-top: 2em;
-	border-radius: 1em;
-	background-color: var(--color-more-background);
-}
-
-.card.with-more .card-more {
-	display: initial;
-}
-
-.card .card-more h4:first-child {
-	margin-top: 0;
-}
-
-.card button:hover,
-.card.with-more button {
-	color: var(--color-accent);
-	border-bottom-color: var(--color-accent);
 }
 
 .card button:active {
