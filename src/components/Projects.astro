@@ -1,0 +1,19 @@
+---
+const { label } = Astro.props
+---
+
+<section id='projects' aria-label={label}>
+	<slot />
+</section>
+
+<script>
+	for (const button of document.querySelectorAll('.card button')) {
+		button.addEventListener('click', toggleMore)
+	}
+
+	function toggleMore(event: Event) {
+		const path = [...event.composedPath()] as HTMLElement[]
+		const card = path.find((node) => node?.classList.contains('card'))
+		card?.classList.toggle('with-more')
+	}
+</script>

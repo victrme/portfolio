@@ -1,44 +1,27 @@
----
-import ArrowRight from './ArrowRight.astro'
-const { homepage, source, lang } = Astro.props
----
-
-<li class='card'>
-	<picture>
-		<slot name='picture' />
+<div class='card'>
+	<picture class='card-image'>
+		<slot name='image' />
 	</picture>
 
 	<div class='card-title'>
-		<h2>
+		<div class='card-heading'>
 			<slot name='title' />
-		</h2>
 
-		<div class='card-tags'>
-			<slot name='tag' />
+			<span class='card-tags'>
+				<slot name='tag' />
+			</span>
 		</div>
+
+		<slot name='category' />
 	</div>
 
-	<p class='card-category'>
-		<slot name='category' />
+	<p class='card-links'>
+		<slot name='link' />
 	</p>
 
-	<p>
+	<p class='card-desc'>
 		<slot name='description' />
 	</p>
 
-	<div class='card-links'>
-		<a href={homepage ? homepage : '#'} draggable='false'>
-			<slot name='homepage' />
-			<span class='arrow'>
-				<ArrowRight />
-			</span>
-		</a>
-
-		<a href={source ? source : '#'} draggable='false'>
-			<span>{lang === 'fr' ? 'code source' : 'source code'}</span>
-			<span class='arrow'>
-				<ArrowRight />
-			</span>
-		</a>
-	</div>
-</li>
+	<hr />
+</div>

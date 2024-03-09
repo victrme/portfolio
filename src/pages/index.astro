@@ -1,4 +1,5 @@
 ---
+import Projects from '../components/Projects.astro'
 import Contact from '../components/Contact.astro'
 import Header from '../components/Header.astro'
 import Layout from '../layouts/layout.astro'
@@ -7,7 +8,7 @@ import Card from '../components/Card.astro'
 ---
 
 <Layout lang='en' title='Hi ! This is victor 👋' desc='Here are the projects I worked on for the last few years'>
-	<Header lang='en'>
+	<Header lang='en' label='Page settings'>
 		<span slot='text'>Text in</span>
 		<span slot='lang'>english</span>
 		<span slot='with'> with a</span>
@@ -16,186 +17,289 @@ import Card from '../components/Card.astro'
 		<span slot='theme'> theme</span>
 	</Header>
 
-	<Intro>
+	<Intro wave='high five' image='Selfie at the Sancy'>
 		<span slot='greet'>Hi</span>
 		<span slot='who'>This is</span>
 		<span slot='what'>a new dev in town !</span>
 	</Intro>
 
-	<Contact>
-		<span>Email</span>
-	</Contact>
+	<Contact label='Contact me on'>Email</Contact>
 
-	<ul id='projects'>
-		<Card lang='en' homepage='https://bonjourr.fr' source='https://github.com/victrme/bonjourr'>
-			<img
-				slot='picture'
-				src='/images/previews/bonjourr.webp'
-				loading='lazy'
-				draggable='false'
-				alt='preview of bonjourr'
-				draggable='false'
-			/>
-			<span slot='title'>Bonjourr</span>
-			<span slot='category'>Extension</span>
+	<Projects label='About my projects'>
+		<div id='main-project'>
+			<Card>
+				<h2 slot='title'>Bonjourr</h2>
+				<span slot='category'>Extension</span>
 
-			<img slot='tag' src='/images/tags/sass.svg' loading='lazy' draggable='false' alt='' />
-			<img slot='tag' src='/images/tags/gulp.svg' loading='lazy' draggable='false' alt='' />
-			<img slot='tag' src='/images/tags/typescript.svg' loading='lazy' draggable='false' alt='' />
+				<span slot='description'>
+					A minimal chrome and firefox homepage addon. Even with the amount of customization available, it is still
+					extremely lightweight. Now with over 100k happy users! In collaboration with <a href='https://tahoe.be'
+						>tahoe.be</a
+					>.
+					<!-- <a>Read more about it</a>. -->
+				</span>
 
-			<span slot='description'>
-				Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
-			</span>
+				<a slot='link' href='https://bonjourr.fr'>bonjourr.fr</a>
+				<a slot='link' href='https://github.com/victrme/bonjourr'>source code</a>
 
-			<span slot='homepage'>bonjourr.fr</span>
-		</Card>
+				<img slot='tag' width='16' height='16' alt='' src='/images/tags/sass.svg' />
+				<img slot='tag' width='16' height='16' alt='' src='/images/tags/gulp.svg' />
+				<img slot='tag' width='16' height='16' alt='' src='/images/tags/typescript.svg' />
 
-		<Card lang='en' homepage='https://pocketeditor.victr.me' source='https://github.com/victrme/pocket-editor'>
-			<img
-				slot='picture'
-				src='/images/previews/pocketeditor-light.webp'
-				loading='lazy'
-				draggable='false'
-				alt='preview of pocket editor'
-			/>
-			<span slot='title'>Pocket editor</span>
-			<span slot='category'>Npm package</span>
+				<img
+					slot='image'
+					srcset='/images/previews/bonjourr-200w.webp 1x, /images/previews/bonjourr-340w.webp 2x'
+					src='/images/previews/bonjourr-200w.webp'
+					alt="preview of bonjourr's interface"
+				/>
+			</Card>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/npm.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
+			<Card>
+				<h3 slot='title'>Bonjourr API</h3>
+				<span slot='category'>Cloudflare Worker</span>
 
-			<span slot='description'>
-				Notion-styled text editor that returns markdown. Created with the goal of loading as fast as pure html.
-			</span>
+				<span slot='description'>
+					This is Bonjourr's backend. It is a collection of small services bundled into one REST API, currently
+					serving millions of requests per month.
+					<!-- <a>More on the changes it went through</a>. -->
+				</span>
 
-			<span slot='homepage'>/pocketeditor</span>
-		</Card>
+				<a slot='link' href='https://api.bonjourr.fr' lang='en'>api.bonjourr.fr</a>
+				<a slot='link' href='https://github.com/victrme/bonjourr-apis'>source code</a>
 
-		<Card lang='en' source='https://github.com/victrme/favicon-fetcher'>
-			<img
-				slot='picture'
-				src='/images/previews/faviconfetcher-light.webp'
-				loading='lazy'
-				draggable='false'
-				alt='illustration'
-				draggable='false'
-			/>
-			<span slot='title'>Favicon Fetcher</span>
-			<span slot='category'>API</span>
+				<img slot='tag' width='16' height='16' alt='' src='/images/tags/typescript.svg' />
+				<img slot='tag' width='16' height='16' alt='' src='/images/tags/worker.svg' />
+			</Card>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/npm.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
+			<Card>
+				<h3 slot='title'>bonjourr.fr</h3>
+				<span slot='category'>Static site</span>
 
-			<span slot='description'>
-				Edge function to fetch the best favicon from any websites. Replacement for the defunct favicon grabber.
-			</span>
-		</Card>
+				<span slot='description'>
+					A tiny showcase website and documentation for Bonjourr. Originaly made by
+					<a href='https://tahoe.be'>tahoe.be</a>, I then migrated the website from Gatsby to Astro.
+					<!-- <a>On why we had no choice but to migrate</a>. -->
+				</span>
 
-		<Card lang='en' homepage='https://savonnerielacurieuse.com'>
-			<img
-				slot='picture'
-				src='/images/previews/lacurieuse.webp'
-				loading='lazy'
-				draggable='false'
-				alt='preview of la curieuse'
-				draggable='false'
-			/>
-			<span slot='title'>La Curieuse</span>
-			<span slot='category'>Website</span>
+				<button slot='more-btn'>more</button>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/tailwindcss.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/astro.svg' />
+				<a slot='link' href='https://bonjourr.fr'>bonjourr.fr</a>
+				<a slot='link' href='https://github.com/morceaudebois/bonjourr.fr'>source code</a>
 
-			<span slot='description'>
-				A single page showcase website for the savonnerie La Curieuse. Updated with Tailwind & Astro. Perfect score on
-				lighthouse !
-			</span>
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/astro.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/html.svg' />
+			</Card>
+		</div>
 
-			<span slot='homepage'>savonnerielacurieuse.com</span>
-		</Card>
+		<h2>APIs and modules</h2>
 
-		<Card lang='en' homepage='https://polytronome.victr.me' source='https://github.com/victrme/polytronome'>
-			<img
-				slot='picture'
-				src='/images/previews/polytronome-light.webp'
-				loading='lazy'
-				draggable='false'
-				alt='preview of polytronome'
-				draggable='false'
-			/>
-			<span slot='title'>Polytronome</span>
-			<span slot='category'>Webapp</span>
+		<div class='projects'>
+			<Card>
+				<h3 slot='title'>Pocket editor</h3>
+				<span slot='category'>Node module</span>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/react.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/sass.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
+				<span slot='description'>
+					Notion-styled text editor that returns markdown. Created with the goal of loading as fast as pure html.
+					<!-- <a>On my first npm package</a>. -->
+				</span>
 
-			<span slot='description'>
-				A webapp where you can add multiple metronomes with different rythms to see what it sounds like.
-			</span>
-		</Card>
+				<a slot='link' href='https://pocketeditor.victr.me' lang='en'>pocketeditor.victr.me</a>
+				<a slot='link' href='https://github.com/victrme/pocket-editor'>source code</a>
 
-		<Card lang='en' source='https://github.com/victrme/portfolio'>
-			<img
-				slot='picture'
-				src='/images/previews/portfolio-light.webp'
-				loading='lazy'
-				draggable='false'
-				alt='sketch of this portfolio'
-				draggable='false'
-			/>
-			<span slot='title'>Portfolio</span>
-			<span slot='category'>Website</span>
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+			</Card>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/astro.svg' />
+			<Card>
+				<h3 slot='title'>Favicon Fetcher</h3>
+				<span slot='category'>API</span>
 
-			<span slot='description'>
-				This version of my portfolio was made with Astro with the smallest config possible. Improved a11y from previous
-				versions.
-			</span>
-		</Card>
+				<span slot='description'>
+					Edge function to fetch the best favicon from any websites. Replacement for the defunct favicon grabber.
+					<!-- <a>About favicon APIs</a> -->
+				</span>
 
-		<Card lang='en' homepage='https://bombparty.victr.me' source='https://github.com/victrme/bombparty-genius'>
-			<img
-				slot='picture'
-				src='/images/previews/bombparty.webp'
-				loading='lazy'
-				draggable='false'
-				alt='illustration'
-				draggable='false'
-			/>
-			<span slot='title'>Bombparty Genius</span>
-			<span slot='category'>Webapp</span>
+				<a slot='link' href='https://favicon.victr.me'>favicon.victr.me</a>
+				<a slot='link' href='https://github.com/victrme/favicon-fetcher'>source code</a>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/vite.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+			</Card>
 
-			<span slot='description'>
-				Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
-			</span>
+			<Card>
+				<h3 slot='title'>Search Suggestions</h3>
+				<span slot='category'>API</span>
 
-			<span slot='homepage'>/bombparty</span>
-		</Card>
+				<span slot='description'>
+					A bundle of different search suggestions providers with the same json output. Optimized for Cloudflare
+					Workers, but also work as a standalone module.
+					<!-- <a>More about this API</a> -->
+				</span>
 
-		<Card lang='en' source='https://github.com/victrme?tab=repositories'>
-			<img
-				slot='picture'
-				src='/images/previews/others-light.webp'
-				loading='lazy'
-				draggable='false'
-				alt='list of repos'
-				draggable='false'
-			/>
-			<span slot='title'>i18n quotes, reward & more</span>
-			<span slot='category'>Various</span>
+				<a slot='link' href='https://suggestions.victr.me' lang='en'>suggestions.victr.me</a>
+				<a slot='link' href='https://github.com/victrme/search-suggestions'>source code</a>
 
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/javascript.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/typescript.svg' />
-			<img slot='tag' loading='lazy' draggable='false' alt='' src='/images/tags/html.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+			</Card>
+		</div>
 
-			<span slot='description'>
-				Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
-			</span>
-		</Card>
-	</ul>
+		<h2>Sites and Webapps</h2>
+
+		<div class='projects'>
+			<Card>
+				<h3 slot='title'>La Curieuse</h3>
+				<span slot='category'>Website</span>
+
+				<span slot='description'>
+					A single page showcase website for the savonnerie La Curieuse. Updated with Tailwind & Astro. Perfect score
+					on lighthouse !
+				</span>
+
+				<a slot='link' href='https://savonnerielacurieuse.com' lang='fr'>savonnerielacurieuse.com</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/tailwindcss.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/svelte.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/astro.svg' />
+
+				<img
+					slot='image'
+					srcset='/images/previews/savonnerie-200w.webp 1x, /images/previews/savonnerie-340w.webp 2x'
+					src='/images/previews/savonnerie-200w.webp'
+					alt='savonnerielacurieuse landing page'
+					loading='lazy'
+				/>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>Polytronome</h3>
+				<span slot='category'>Webapp</span>
+
+				<span slot='description'>
+					A webapp where you can add multiple metronomes with different rythms to see what it sounds like. I learned
+					that the sweet spot in React between not capable and completely overkill is very small.
+				</span>
+
+				<a slot='link' href='https://polytronome.victr.me' lang='en'>polytronome.victr.me</a>
+				<a slot='link' href='https://github.com/victrme/polytronome'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/react.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/sass.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+
+				<img
+					slot='image'
+					class='light-preview'
+					srcset='/images/previews/polytronome-200w-light.webp 1x, /images/previews/polytronome-340w-light.webp 2x'
+					src='/images/previews/polytronome-200w-light.webp'
+					alt='polytronome interface'
+					loading='lazy'
+				/>
+				<img
+					slot='image'
+					class='dark-preview'
+					srcset='/images/previews/polytronome-200w-dark.webp 1x, /images/previews/polytronome-340w-dark.webp 2x'
+					src='/images/previews/polytronome-200w-dark.webp'
+					alt='polytronome interface'
+					loading='lazy'
+				/>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>Portfolio</h3>
+				<span slot='category'>Website</span>
+
+				<span slot='description'>
+					This 6th version of my portfolio was made with Astro with the smallest config possible. Improved
+					accessibility from previous versions.
+				</span>
+
+				<a slot='link' href='https://github.com/victrme/portfolio'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/astro.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/html.svg' />
+
+				<img
+					slot='image'
+					class='light-preview'
+					srcset='/images/previews/portfolio-200w-light.webp 1x, /images/previews/portfolio-340w-light.webp 2x'
+					src='/images/previews/portfolio-200w-light.webp'
+					alt='sketch of this portfolio'
+					loading='lazy'
+				/>
+				<img
+					slot='image'
+					class='dark-preview'
+					srcset='/images/previews/portfolio-200w-dark.webp 1x, /images/previews/portfolio-340w-dark.webp 2x'
+					src='/images/previews/portfolio-200w-dark.webp'
+					alt='sketch of this portfolio'
+					loading='lazy'
+				/>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>Bombparty Genius</h3>
+				<span slot='category'>Webapp</span>
+
+				<span slot='description'>
+					This web app was created not to cheat at bombparty by quickly switching tab, writing the requested letters,
+					and write the output in your current game. Not sure if it even works in practice.
+				</span>
+
+				<a slot='link' href='https://bombparty.victr.me' lang='fr'>bombparty.victr.me</a>
+				<a slot='link' href='https://github.com/victrme/bombparty'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/vite.svg' />
+			</Card>
+		</div>
+
+		<h2>Various forks, pages & other works</h2>
+
+		<div class='projects'>
+			<Card>
+				<h3 slot='title'>@victr/<wbr />deepmerge</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://www.npmjs.com/package/@victr/deepmerge'>npmjs</a>
+				<a slot='link' href='https://github.com/victrme/deepmerge'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					An ES module port of @fastify/deepmerge. Fastify has the best deepmerge implementation, but it is commonjs
+					only. Types and benchmarks are working properly.
+				</span>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>@victr/<br />prism-live</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://www.npmjs.com/package/@victr/prism-live'>npmjs</a>
+				<a slot='link' href='https://github.com/victrme/prism-live'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/javascript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					Prism-powered code editor. Getting ahead of PrismJS/live development by publishing a working package. Old
+					prototype Javascript is a very interesting coding style to work on.
+				</span>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>i18n quotes, reward & more</h3>
+				<span slot='category'>Various</span>
+
+				<span slot='description'>
+					There is more stuff I could add in here but your scrolling finger will get tired. All my other works are in <a
+						href='https://github.com/victrme?tab=repositories'>my repositories</a
+					>.
+				</span>
+			</Card>
+		</div>
+	</Projects>
+
+	<div id='backtotop'>
+		<a href='#'>Back to top</a>
+	</div>
 </Layout>
