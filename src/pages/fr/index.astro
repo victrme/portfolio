@@ -31,7 +31,11 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Extension</span>
 
 				<span slot='description'>
-					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+					Une page d'accueil minimal pour chrome et firefox. Même avec toute cette personnalisation, elle reste
+					toujours extrêmement légère. Avec plus de 100k utilisateurs heureux ! En collaboration avec <a
+						href='https://tahoe.be'>tahoe.be</a
+					>.
+					<!-- <a>Read more about it</a>. -->
 				</span>
 
 				<a slot='link' href='https://bonjourr.fr/fr' lang='fr'>bonjourr.fr</a>
@@ -54,8 +58,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Cloudflare Worker</span>
 
 				<span slot='description'>
-					This is Bonjourr's backend. It is a collection of small services bundled into one REST API, currently
-					serving millions of requests per month.
+					C'est le backend de Bonjourr. Il s'agit d'une collection de petits services regroupés dans une API REST.
+					Reçoit actuellement des millions de requêtes par mois.
 					<!-- <a>More on the changes it went through</a>. -->
 				</span>
 
@@ -71,8 +75,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Site statique</span>
 
 				<span slot='description'>
-					A tiny showcase website and documentation for Bonjourr. Originaly made by
-					<a href='https://tahoe.be'>tahoe.be</a>, I then migrated the website from Gatsby to Astro.
+					Un petit site de présentation et de documentation pour Bonjourr. Réalisé à l'origine par
+					<a href='https://tahoe.be'>tahoe.be</a>, J'ai ensuite migré le site web de Gatsby vers Astro.
 					<!-- <a>On why we had no choice but to migrate</a>. -->
 				</span>
 
@@ -92,7 +96,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Node module</span>
 
 				<span slot='description'>
-					Notion-styled text editor that returns markdown. Created with the goal of loading as fast as pure html.
+					Editeur de texte de style Notion qui renvoie du markdown. Créé dans le but de charger aussi rapidement que
+					du html pur.
 					<!-- <a>On my first npm package</a>. -->
 				</span>
 
@@ -108,7 +113,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>API</span>
 
 				<span slot='description'>
-					Edge function to fetch the best favicon from any websites. Replacement for the defunct favicon grabber.
+					Edge function pour récupérer la meilleure favicon de n'importe quel site web. Remplace le défunt favicon
+					grabber.
 					<!-- <a>About favicon APIs</a> -->
 				</span>
 
@@ -123,8 +129,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>API</span>
 
 				<span slot='description'>
-					A bundle of different search suggestions providers with the same json output. Optimized for Cloudflare
-					Workers, but also work as a standalone module.
+					Un ensemble de différents fournisseurs de suggestions de recherche avec la même sortie JSON. Optimisé pour
+					Cloudflare Workers, mais fonctionne aussi comme un module node.
 					<!-- <a>More about this API</a> -->
 				</span>
 
@@ -143,8 +149,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Site statique</span>
 
 				<span slot='description'>
-					A single page showcase website for the savonnerie La Curieuse. Updated with Tailwind & Astro. Perfect score
-					on lighthouse !
+					Un site web vitrine pour la savonnerie La Curieuse. Mis à jour avec Tailwind & Astro. Score parfait sur
+					lighthouse !
 				</span>
 
 				<a slot='link' href='https://savonnerielacurieuse.com' lang='fr'>savonnerielacurieuse.com</a>
@@ -167,8 +173,9 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
-					A webapp where you can add multiple metronomes with different rythms to see what it sounds like. I learned
-					that the sweet spot in React between not capable and completely overkill is very small.
+					Une application web où vous pouvez ajouter plusieurs métronomes avec des rythmes différents pour voir ce
+					que ça donne. J'ai appris que la marge de manœuvre de React entre "pas capable" et "overkill" est très
+					faible.
 				</span>
 
 				<a slot='link' href='https://polytronome.victr.me' lang='en'>polytronome.victr.me</a>
@@ -181,17 +188,17 @@ import Card from '../../components/Card.astro'
 				<img
 					slot='image'
 					class='light-preview'
-					srcset='/images/previews/polytronome-170w-light.webp 1x, /images/previews/polytronome-340w-light.webp 2x'
-					src='/images/previews/polytronome-170w-light.webp'
-					alt=' interface de polytronome'
+					srcset='/images/previews/polytronome-200w-light.webp 1x, /images/previews/polytronome-340w-light.webp 2x'
+					src='/images/previews/polytronome-200w-light.webp'
+					alt='polytronome interface'
 					loading='lazy'
 				/>
 				<img
 					slot='image'
 					class='dark-preview'
-					srcset='/images/previews/polytronome-170w-dark.webp 1x, /images/previews/polytronome-340w-dark.webp 2x'
-					src='/images/previews/polytronome-170w-dark.webp'
-					alt=' interface de polytronome'
+					srcset='/images/previews/polytronome-200w-dark.webp 1x, /images/previews/polytronome-340w-dark.webp 2x'
+					src='/images/previews/polytronome-200w-dark.webp'
+					alt='polytronome interface'
 					loading='lazy'
 				/>
 			</Card>
@@ -201,8 +208,8 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Website</span>
 
 				<span slot='description'>
-					This 6th version of my portfolio was made with Astro with the smallest config possible. Improved
-					accessibility from previous versions.
+					Cette 6ème version de mon portfolio a été réalisée avec Astro avec la plus petite configuration possible.
+					L'accessibilité a été améliorée par rapport aux versions précédentes.
 				</span>
 
 				<a slot='link' href='https://github.com/victrme/portfolio'>source code</a>
@@ -213,17 +220,17 @@ import Card from '../../components/Card.astro'
 				<img
 					slot='image'
 					class='light-preview'
-					srcset='/images/previews/portfolio-170w-light.webp 1x, /images/previews/portfolio-340w-light.webp 2x'
-					src='/images/previews/portfolio-170w-light.webp'
-					alt='sketch de ce portfolio'
+					srcset='/images/previews/portfolio-200w-light.webp 1x, /images/previews/portfolio-340w-light.webp 2x'
+					src='/images/previews/portfolio-200w-light.webp'
+					alt='sketch of this portfolio'
 					loading='lazy'
 				/>
 				<img
 					slot='image'
 					class='dark-preview'
-					srcset='/images/previews/portfolio-170w-dark.webp 1x, /images/previews/portfolio-340w-dark.webp 2x'
-					src='/images/previews/portfolio-170w-dark.webp'
-					alt='sketch de ce portfolio'
+					srcset='/images/previews/portfolio-200w-dark.webp 1x, /images/previews/portfolio-340w-dark.webp 2x'
+					src='/images/previews/portfolio-200w-dark.webp'
+					alt='sketch of this portfolio'
 					loading='lazy'
 				/>
 			</Card>
@@ -233,8 +240,9 @@ import Card from '../../components/Card.astro'
 				<span slot='category'>Webapp</span>
 
 				<span slot='description'>
-					This web app was created not to cheat at bombparty by quickly switching tab, writing the requested letters,
-					and write the output in your current game. Not sure if it even works in practice.
+					Cette application web a été créée pour ne pas tricher à bombparty en changeant rapidement d'onglet, en
+					écrivant les lettres demandées, et en écrivant le résultat dans votre jeu actuel. Même pas sûr que ça
+					fonctionne en pratique.
 				</span>
 
 				<a slot='link' href='https://bombparty.victr.me' lang='fr'>bombparty.victr.me</a>
@@ -248,6 +256,39 @@ import Card from '../../components/Card.astro'
 
 		<div class='projects'>
 			<Card>
+				<h3 slot='title'>@victr/<wbr />deepmerge</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://www.npmjs.com/package/@victr/deepmerge'>npmjs</a>
+				<a slot='link' href='https://github.com/victrme/deepmerge'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/typescript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					Un portage ESM de @fastify/deepmerge. Fastify a la meilleure implémentation de deepmerge, mais c'est
+					seulement commonjs. Les types et les benchmarks fonctionnent correctement.
+				</span>
+			</Card>
+
+			<Card>
+				<h3 slot='title'>@victr/prism-live</h3>
+				<span slot='category'>Module fork</span>
+
+				<a slot='link' href='https://www.npmjs.com/package/@victr/prism-live'>npmjs</a>
+				<a slot='link' href='https://github.com/victrme/prism-live'>source code</a>
+
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/javascript.svg' />
+				<img slot='tag' width='16' height='16' loading='lazy' alt='' src='/images/tags/npm.svg' />
+
+				<span slot='description'>
+					Editeur de code powered par Prism. J'ai prit de l'avance sur le développement de PrismJS/live en publiant
+					un package fonctionnel. Le vieux Javascript prototypique est un style de codage très intéressant à
+					travailler.
+				</span>
+			</Card>
+
+			<Card>
 				<img
 					slot='picture'
 					src='/images/previews/others-light.webp'
@@ -256,17 +297,14 @@ import Card from '../../components/Card.astro'
 					alt='screenshot du profil github'
 					draggable='false'
 				/>
-				<h3 slot='title'>i18n quotes, reward, et plus</h3>
+				<h3 slot='title'>i18n quotes, shjs, et plus</h3>
 				<span slot='category'>Divers</span>
 
-				<a slot='link' href='https://github.com/victrme?tab=repositories'>all repositories</a>
-
-				<img slot='tag' loading='lazy' alt='' src='/images/tags/javascript.svg' />
-				<img slot='tag' loading='lazy' alt='' src='/images/tags/typescript.svg' />
-				<img slot='tag' loading='lazy' alt='' src='/images/tags/html.svg' />
-
 				<span slot='description'>
-					Bonjourr is a minimal chrome and firefox homepage addon. In collaboration with Tahoe Beetschen.
+					Il y a encore beaucoup de choses que je pourrais ajouter ici, mais votre doigt va se fatiguer à faire
+					défiler les pages. Tous mes autres travaux sont dans <a href='https://github.com/victrme?tab=repositories'
+						>mes dépots Github</a
+					>.
 				</span>
 			</Card>
 		</div>

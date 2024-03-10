@@ -93,7 +93,7 @@
 	font-size: 1.4em;
 	line-height: 1em;
 	margin: 0;
-	word-break: break-word;
+	word-break: keep-all;
 }
 
 .card-tags {
