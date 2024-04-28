@@ -83,6 +83,11 @@
 }
 
 :root[data-theme='dark'] .card picture img.light-preview,
+:root[data-theme='light'] .card picture img.light-preview {
+	display: initial;
+}
+
+:root[data-theme='dark'] .card picture img.light-preview,
 :root[data-theme='light'] .card picture img.dark-preview {
 	display: none;
 }
