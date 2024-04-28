@@ -82,6 +82,23 @@
 	background: var(--color-image-background);
 }
 
+:root[data-theme='dark'] .card picture img.light-preview,
+:root[data-theme='light'] .card picture img.dark-preview {
+	display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.card picture img.light-preview {
+		display: none;
+	}
+}
+
+@media not (prefers-color-scheme: dark) {
+	.card picture img.dark-preview {
+		display: none;
+	}
+}
+
 .card-heading {
 	display: flex;
 	justify-content: space-between;

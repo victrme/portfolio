@@ -8,15 +8,31 @@ header a {
 	border-color: var(--color-underline);
 }
 
+header button {
+	user-select: all;
+}
+
 header a:hover,
 header button:hover {
 	color: var(--color-accent);
 	border-bottom: 0.15em solid var(--color-accent);
 }
 
-:root[data-theme='light'] #theme-btn-dark,
-:root[data-theme='dark'] #theme-btn-light {
+:root[data-theme='dark'] #theme-btn-light,
+:root[data-theme='light'] #theme-btn-dark {
 	display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	#theme-btn-light {
+		display: none;
+	}
+}
+
+@media not (prefers-color-scheme: dark) {
+	#theme-btn-dark {
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
