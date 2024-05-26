@@ -67,7 +67,7 @@ body {
 	margin: 5vh auto 10vh;
 	font-weight: 500;
 	font-size: 18px;
-	font-family: 'DM Sans', -apple-system, -system-ui, sans-serif;
+	font-family: system-ui, sans-serif;
 	line-height: 1.5em;
 }
 

@@ -7,23 +7,16 @@ const lang = en ? 'fr' : 'en'
 ---
 
 <header aria-label={props.label}>
-	<slot name='text' />
+	<slot name="text" />
 
-	<a href={href} lang={lang}>
-		<slot name='lang' />
-	</a>
+	<a href={href} lang={lang}><slot name="lang" /></a>
 
-	<slot name='with' />
+	<slot name="with" />
 
-	<button id='theme-btn-light'>
-		<slot name='light' class='test' />
-	</button>
+	<button id="theme-btn-light"><slot name="light" /></button>
+	<button id="theme-btn-dark"><slot name="dark" /></button>
 
-	<button id='theme-btn-dark'>
-		<slot name='dark' />
-	</button>
-
-	<slot name='theme' />
+	<slot name="theme" />
 </header>
 
 <script>
@@ -42,7 +35,7 @@ const lang = en ? 'fr' : 'en'
 	setTheme(
 		localStorage.dark === undefined
 			? window.matchMedia('(prefers-color-scheme: dark)').matches
-			: localStorage.dark === 'true'
+			: localStorage.dark === 'true',
 	)
 
 	document.getElementById('theme-btn-light')?.addEventListener('click', () => setTheme())

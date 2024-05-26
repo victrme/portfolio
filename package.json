@@ -7,7 +7,6 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"@fontsource/dm-sans": "^5.0.19",
-		"astro": "^4.4.15"
+		"astro": "^4.9.1"
 	}
 }
