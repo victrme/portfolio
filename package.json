@@ -7,6 +7,6 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"astro": "^4.15.4"
+		"astro": "^4.15.9"
 	}
 }
