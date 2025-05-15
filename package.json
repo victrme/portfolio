@@ -8,5 +8,12 @@
 	},
 	"devDependencies": {
 		"astro": "^4.15.9"
+	},
+	"prettier": {
+		"singleQuote": false,
+		"printWidth": 144,
+		"useTabs": true,
+		"semi": false,
+		"tabWidth": 4
 	}
 }
