@@ -18,13 +18,13 @@ header button:hover {
 	border-bottom: 0.15em solid var(--color-accent);
 }
 
-:root[data-theme='light'] #theme-btn-light,
-:root[data-theme='dark'] #theme-btn-dark {
+:root[data-theme="light"] #theme-btn-light,
+:root[data-theme="dark"] #theme-btn-dark {
 	display: initial;
 }
 
-:root[data-theme='light'] #theme-btn-dark,
-:root[data-theme='dark'] #theme-btn-light {
+:root[data-theme="light"] #theme-btn-dark,
+:root[data-theme="dark"] #theme-btn-light {
 	display: none;
 }
 

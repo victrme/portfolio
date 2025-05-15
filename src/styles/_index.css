@@ -1,13 +1,13 @@
-@import url('./header.css');
-@import url('./intro.css');
-@import url('./contact.css');
-@import url('./projects.css');
+@import url("./header.css");
+@import url("./intro.css");
+@import url("./contact.css");
+@import url("./projects.css");
 
 :root {
 	--color-image-background: linear-gradient(45deg, rgba(69, 142, 232, 0.6), rgba(69, 142, 232, 0.2));
 }
 
-:root[data-theme='light'] {
+:root[data-theme="light"] {
 	color-scheme: light only;
 	--color-text: #3a3b3c;
 	--color-accent: #458ee8;
@@ -18,7 +18,7 @@
 	--color-more-background: #f3f8fd;
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
 	color-scheme: dark only;
 	--color-text: #ddd;
 	--color-accent: #458ee8;
@@ -78,6 +78,15 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+a:hover {
+	color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+
+a:active {
+	opacity: 0.8;
 }
 
 picture img {

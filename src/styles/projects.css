@@ -24,17 +24,17 @@
 	column-gap: 2em;
 	grid-template-columns: 240px 1fr;
 	grid-template-areas:
-		'title desc'
-		'links desc'
-		'hr hr';
+		"title desc"
+		"links desc"
+		"hr hr";
 }
 
 .card:has(picture img) {
 	grid-template-areas:
-		'image title'
-		'image desc'
-		'links desc'
-		'hr hr';
+		"image title"
+		"image desc"
+		"links desc"
+		"hr hr";
 }
 
 .card hr {
@@ -82,13 +82,13 @@
 	background: var(--color-image-background);
 }
 
-:root[data-theme='dark'] .card picture img.light-preview,
-:root[data-theme='light'] .card picture img.light-preview {
+:root[data-theme="dark"] .card picture img.light-preview,
+:root[data-theme="light"] .card picture img.light-preview {
 	display: initial;
 }
 
-:root[data-theme='dark'] .card picture img.light-preview,
-:root[data-theme='light'] .card picture img.dark-preview {
+:root[data-theme="dark"] .card picture img.light-preview,
+:root[data-theme="light"] .card picture img.dark-preview {
 	display: none;
 }
 
@@ -159,25 +159,8 @@
 	margin-top: 0.4em;
 }
 
-.card-links a::after {
-	content: none;
-	width: 0.8em;
-	height: 0.8em;
-	background-size: cover;
-	background-image: url('/images/arrows/right.svg');
-}
-
-.card-links a[href='#'] {
+.card-links a[href="#"] {
 	display: none;
-}
-
-.card-links a:hover {
-	color: var(--color-accent);
-	border-color: var(--color-accent);
-}
-
-.card-links a:hover::after {
-	content: '';
 }
 
 .card button:active {
@@ -217,11 +200,11 @@
 	.card {
 		row-gap: 1em;
 		grid-template-columns: 1fr;
-		grid-template-areas: 'title' 'desc' 'more' 'links' 'hr';
+		grid-template-areas: "title" "desc" "more" "links" "hr";
 	}
 
 	.card:has(picture img) {
-		grid-template-areas: 'image' 'title' 'desc' 'more' 'links' 'hr';
+		grid-template-areas: "image" "title" "desc" "more" "links" "hr";
 	}
 
 	.card picture img {
