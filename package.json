@@ -7,7 +7,7 @@
 		"preview": "astro build && astro preview"
 	},
 	"devDependencies": {
-		"astro": "^5.7.13"
+		"astro": "^5.15.3"
 	},
 	"prettier": {
 		"singleQuote": false,
