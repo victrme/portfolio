@@ -1,19 +1,14 @@
 {
-	"name": "portfolio",
-	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
-		"preview": "astro build && astro preview"
+		"preview": "astro build && astro preview",
+		"lint": "biome lint",
+		"format": "biome format",
+		"fix": "biome lint --write && biome format --write"
 	},
 	"devDependencies": {
-		"astro": "^5.16.15"
-	},
-	"prettier": {
-		"singleQuote": false,
-		"printWidth": 144,
-		"useTabs": true,
-		"semi": false,
-		"tabWidth": 4
+		"@biomejs/biome": "2.4.14",
+		"astro": "^6.3.1"
 	}
 }
