@@ -1,9 +1,9 @@
 ---
 const props = Astro.props
 
-const en = props.lang === 'en'
-const href = en ? '/fr' : '/'
-const lang = en ? 'fr' : 'en'
+const en = props.lang === "en"
+const href = en ? "/fr" : "/"
+const lang = en ? "fr" : "en"
 ---
 
 <header aria-label={props.label}>
